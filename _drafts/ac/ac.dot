@@ -1,0 +1,50 @@
+digraph {
+
+    node [shape=circle];
+
+	{
+		node [shape=doublecircle];
+		2, 5, 7, 9;
+	}
+
+	{
+		rank=same;
+		edge[style=invis];
+		0 -> 1 -> 2 -> 8 -> 9;
+	}
+
+	{
+		rank=same;
+		edge[style=invis];
+		6 -> 7;
+	}
+
+	{
+		rank=same;
+		edge[style=invis];
+	    3 -> 4 -> 5;
+    }
+
+
+	{
+		edge [style=dashed, dir=back, arrowtail=vee];
+		# 0 -> 1, 2, 3, 6, 8;
+		1 -> 4;
+		2 -> 5;
+		3 -> 7, 9;
+	}
+
+	{
+		edge [arrowhead=vee];
+		0 -> 1 [label=h];
+		0 -> 3 [label=s];
+		1 -> 2 [label=e];
+		1 -> 6 [label=i];
+		2 -> 8 [label=r];
+		8 -> 9 [label=s];
+		6 -> 7 [label=s];
+		3 -> 4 [label=h];
+		4 -> 5 [label=e];
+	}
+
+}

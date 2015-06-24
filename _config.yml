@@ -1,4 +1,8 @@
-markdown: redcarpet
+# markdown: redcarpet
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 redcarpet:
   extensions: [strikethrough, tables, with_toc_data]
