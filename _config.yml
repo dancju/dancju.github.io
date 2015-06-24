@@ -1,0 +1,9 @@
+markdown: redcarpet
+
+redcarpet:
+  extensions: [strikethrough, tables, with_toc_data]
+
+sass:
+    style: :compressed
+
+timezone: Asia/Chongqing

@@ -1,0 +1,72 @@
+---
+---
+
+.navbar-default .navbar-nav > .active > a
+  border-left: 2px solid indianred
+
+@media (min-width: 768px)
+  .navbar-default .navbar-nav > .active > a
+    border-left: none
+    border-top: 2px solid indianred
+    padding-top: 13px
+
+footer
+  border-top: 1px solid indianred
+  margin-top: 128px
+  padding: 32px
+  text-align: center
+  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.15), inset 0 1px 5px rgba(0,0,0,0.075)
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15), inset 0 1px 5px rgba(0,0,0,0.075)
+
+footer > img
+  margin: 8px
+  width: 128px
+
+.flip-x
+  -moz-transform: scaleX(-1)
+  -webkit-transform: scaleX(-1)
+  -o-transform: scaleX(-1)
+  transform: scaleX(-1)
+
+.affix-bottom
+  position: absolute
+
+main h1
+  color: indianred
+  text-align: center
+
+main h2
+  color: indianred
+
+main h3
+  color: gray
+
+main h4
+  font-weight: bold
+
+aside>div
+  display: none
+  a
+    color: gray
+  .active > a
+    border-right: indianred solid 2px
+    font-weight: bold
+    color: indianred
+  > .nav .nav
+    display: none
+    padding-left: 1em
+  > .nav > .active > .nav
+    display: block
+
+aside>div.affix
+  top: 20px
+
+@media (min-width: 992px)
+  aside>div
+    display: block
+    width: 213px
+
+@media (min-width: 1200px)
+  aside>div
+    display: block
+    width: 263px

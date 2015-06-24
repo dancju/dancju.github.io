@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en zh-Hant">
+  {% include head.html %}
+  <body data-spy="scroll" data-target="aside">
+    {% include header.html %}
+    <div class="container">
+      <aside class="col-md-3 hidden-print">
+        <div>
+          <ul class="nav">
+          </ul>
+        </div>
+      </aside>
+      <main class="col-md-9">
+        <div class="page-header">
+          <h1>
+            {{ page.title }}
+            <br>
+            <small>{{ page.subtitle }}</small>
+          </h1>
+        </div>
+        <div>
+          {{ content }}
+        </div>
+        <hr>
+        <h5>
+          <span class="glyphicon glyphicon-copyright-mark flip-x"></span>
+          Created by <i>Daniel Chau</i> on <b>{{ page.date | date_to_string }}</b>, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </h5>
+      </main>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
