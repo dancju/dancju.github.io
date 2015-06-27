@@ -3,14 +3,11 @@ layout: post
 title: Suffix oracle
 ---
 
-A suffix oracle is a DFA that recognizes all suffix strings of a text and some
-other weird strings. A suffix oracle contains exact `N+1` states and can be
-constructed in `𝚯(N)` time where `N` is the length of the text.
+A suffix oracle is a DFA that recognizes all suffix strings of a text and some other weird strings. A suffix oracle contains exact `N+1` states and can be constructed in $\Theta(N)$ time where `N` is the length of the text.
 
-I reinvented this wheel when learning suffix automaton. But I don't know if this
-is of any use in algorithm contests.
+I reinvented this wheel when learning suffix automaton. But I don't know if this is of any use in algorithm contests.
 
-## The suffix oracle class
+## A C++ implementation
 ```cpp
 template<char SIGMA> class SuffixOracle {
   char *text;

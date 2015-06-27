@@ -3,19 +3,19 @@ layout: post
 title: Arch Linux 入門指南
 ---
 
-折騰 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對一個程序員的工作效率的提升有巨大的幫助。在筆者折騰 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙，我起初認為發行版並不重要，只是包管理器命令的差異、軟件版本新舊的差異而已；而用了 Arch Linux 後我再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
+折騰 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對一個程序員的工作效率的提升有巨大的幫助。在筆者折騰 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；而用了 Arch Linux 後我再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
 
-有朋友在我的慫恿下安裝 Arch Linux，可是官方 wiki 上幾千字的新手指南和幾千字的安裝教程就嚇走了一半人，剩下的一半人艱難地跟著官方 wiki 安裝，結果不是連不上 wifi，就是啟動不了 X Window System。誠然使用 Arch Linux 需要很大的學習成本，但在筆者看來，學習過程中的困難是每個熟練的 Linux 用戶必須經歷的，也是值得每個程序員嘗試的。Arch Linux 就像 Linux 發行版中的雙節棍，難以為新手所駕馭，只在高手的手裡展現最大的威力。
+有朋友在我的慫恿下安裝 Arch Linux，可是官方 wiki 上幾千字的新手指南和幾千字的安裝教程就嚇走了一半人，剩下的一半人艱難地跟著官方 wiki 安裝，結果不是連不上 wifi，就是啟動不了 X Window System。使用 Arch Linux 需要很大的學習成本，但學習過程中的困難是每個熟練的 Linux 用戶必須經歷的，也是值得每個程序員嘗試的。Arch Linux 就像 Linux 發行版中的雙節棍，難以為新手所駕馭，只在高手的手裡展現最大的威力。
 
 鑑於官方文檔雖然詳盡但對新手並不友好，本文的目的是幫助有 Linux 使用經驗的人從 Ubuntu、Fedora 等「傻瓜型」發行版切換到 Arch Linux。
 
 ## 為什麼用 Arch Linux？
 
-有人說用什麼操作系統並不重要，只要能寫出好代碼就是好程序員。誠然，從一個高難度的工具裡尋找虛榮心是很愚蠢的。但當我在 Cygwin 裡手動 make 軟件包時，我會想念 Arch Linux 裡一行命令的暢快；當我幫別人給 Ubuntu 找私有軟件源時，我會想念 Arch Linux 裡超全的倉庫帶來的整潔感。Arch Linux 雖然難以學習，但熟練掌握了所有常用功能後，Arch Linux 會成為一個很方便的工具。
+我起初認為發行版並不重要，只是包管理器命令的差異、軟件版本新舊的差異而已。有人說用什麼操作系統並不重要，只要能寫出好代碼就是好程序員。誠然，從工具裡尋找虛榮心是很愚蠢的。但當我在 Cygwin 裡手動 make 軟件包時，我會想念 Arch Linux 裡一行命令的暢快感；當我幫別人給 Ubuntu 找私有軟件源時，我會想念 Arch Linux 裡超全的软件倉庫帶來的整潔感。Arch Linux 雖然難以學習，但熟練掌握了常用功能後，Arch Linux 會成為一個很方便的工具。
 
 ### 為什麼不用 Windows？
 
-程序員嚴重依賴各種命令行工具，所以一個 Unix Shell 在他們的工作生活裡是十分必要的。他們會選擇 Linux 發行版、BSD、或者 Mac OS X。雖然微軟公司在 2013 年推出了 PowerShell 以取代飽受詬病的 Windows 命令提示符，但由於缺乏第三方工具的支持，已難以挽回 Unix 程序員的青睞。
+許多程序員重度依賴命令行工具，一個 Unix Shell 在他們的工作生活中是十分必要的。他們會選擇 Linux 發行版、BSD、或者 Mac OS X。雖然 Windows 裡有一個 PowerShell，但這個姍姍來遲的 shell 已難以挽回 Unix 程序員的青睞。
 
 [有一些非程序員用戶也用 Linux](http://www.reddit.com/r/linux/comments/2sm5yk/more_and_more_people_at_my_uni_are_running_linux/){:target="_blank"}，因為：
 
@@ -42,23 +42,27 @@ title: Arch Linux 入門指南
 
 ### 為什麼不用 LFS、Gentoo、Slackware？
 
-就使用難度來看，LFS > Gentoo > Slackware > Arch Linux。難度越高，用戶對操作系統的控制越靈活。筆者認為應當熟練使用 Arch Linux 後再考慮這幾個發行版。另外，Slackware 要求用戶手動處理包依賴；Gentoo 要求用戶編譯所有的軟件包而不是直接下載可執行的二進製程序；LFS 更是要求用戶編譯整個內核，這導致這幾個發行版在日常使用中不便。
+就使用難度來看，LFS > Gentoo > Slackware > Arch Linux。難度越高，用戶對操作系統的控制越靈活。但是：Slackware 要求用戶手動處理包依賴；Gentoo 要求用戶編譯所有的軟件包而不是直接下載可執行的二進製程序；LFS 更是要求用戶編譯整個內核。因此，筆者認為這幾個發行版不便於日常使用。
 
 ### Arch Linux 的優缺點
 
-以下所述 Arch Linux 之特點，都體現了 Arch Linux 明確的用戶定位：只適合足夠熟練的用戶。
+下述 Arch Linux 之特點，都體現了 Arch Linux 明確的用戶定位：只適合足夠熟練的用戶。
 
 #### 軟件版本新
 
+Arch Linux 方便使用新版本軟件的同時；要求用戶手動處理新版本中偶爾出現的 bug。
+
 通常在上游軟件發佈正式版後，各發行版會在分別在自己的平臺上做測試，確認穩定後再加入官方倉庫。而由於維護人員的缺乏，且軟件包數量龐大，發行版官方倉庫裡的軟件通常是半年前的版本。
 
-而 Arch Linux 的機制是由官方維護者和「授信用戶」自己發佈軟件包更新。由於有一個非常活躍的用戶群，通常一旦上游軟件發佈正式版，幾天內就會出現在 Arch Linux 的官方倉庫中。但偶爾上游軟件會有 bug，bug 會隨之進入 Arch Linux 的倉庫。這種情況需要用戶自行回滾舊版本。
+而 Arch Linux 的機制是由官方維護者和「授信用戶」自己發佈軟件包更新。由於有一個非常活躍的用戶群，通常一旦上游軟件發佈正式版，幾天內就會出現在 Arch Linux 的官方倉庫中。但偶爾上游軟件會有 bug，bug 會隨之進入 Arch Linux 的倉庫。這種情況需要用戶手動回滾舊版本。
 
 #### 滾動更新
 
+只要維護得當，用戶永遠不需要重裝系統；但當 Arch Linux 偶爾有重大更新時，用戶需要遵照官方的指導手動維護系統。
+
 其他發行版定期發佈新版本，用戶需要隨之重裝系統才能保持系統最新。這是因為包管理器無法更新較底層的模塊。
 
-Arch Linux 採用滾動升級策略，一次安裝後可以持續升級並一直保持最新。當新版本變動了較底層的模塊，需要用戶手動更改底層的部署和配置（例如服務管理系統 Systemd、啟動加載器 Syslinux）。如果用戶在必要時沒有遵照官方新聞手動維護，可能導致操作系統啟動失敗。
+Arch Linux 採用滾動升級策略，一次安裝後可以持續升級並一直保持最新。當新版本變動了較底層的模塊，需要用戶手動更改底層的部署和配置（例如服務管理系統 Systemd、啟動加載器 Syslinux）。如果用戶在必要時沒有遵照官方的指導手動維護，可能導致操作系統啟動失敗。
 
 #### 簡潔優雅
 
@@ -72,7 +76,7 @@ Arch Linux 等於一個 Linux 內核加上一個好用的包管理器 Pacman。�
 
 ### 硬盤分區與文件系統
 
-對於新手，建議使用 cgdisk 建立 GUID 分區表，可以最大程度地降低對命令的使用。
+對於新手，建議使用 cgdisk 建立 GUID 分區表，可以最大程度地減少使用命令。
 
 文件系統建議使用 Btrfs。
 
@@ -108,7 +112,7 @@ Server = http://mirrors.163.com/archlinux/$repo/os/i686
 # pacstrap /mnt base base-devel syslinux grml-zsh-config gnome-shell xorg-server xorg-xinit
 ```
 
-其中 `base-devel` 是常用底層開發工具分組；`syslinux` 是啟動加載器；`grml-zsh-config` 提供一個十分友好的 Shell 接口；`gnome-shell` 是圖形接口；`xorg-server` 和 `xorg-xinit` 是圖形接口的底層服務。
+其中 `base-devel` 是常用底層開發工具分組；`syslinux` 是啟動加載器；`grml-zsh-config` 提供一個十分友好的 Shell 接口；`gnome-shell` 是圖形接口；`xorg-server` 和 `xorg-xinit` 是圖形界面的底層服務。
 
 還需要根據顯卡廠商安裝顯卡驅動：Nvidia 卡安裝 `xf86-video-nouveau`；AMD 卡安裝 `xf86-video-ati`；Intel 卡安裝 `xf86-video-intel`；虛擬機和其他顯卡安裝 `xf86-video-vesa`。例如虛擬機中應運行：
 
@@ -159,6 +163,7 @@ Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處�
         ```
         $ sudo apt-get update
         ```
+
         ```
         $ sudo apt-get install google-chrome-stable
         ```
@@ -187,7 +192,7 @@ Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處�
 ```shell
 comm -3 <(yaourt -Qg base base-devel | sort | uniq) <(yaourt -Qe | sort) | sed -r 's/^.//'
 ```
-此命令方便用戶保持 Linux 的整潔。由於此組合命令較常用，故筆者在 `.zshrc` 中將此命令映射為一個較短的命令：
+這條命令的原理此處不便展開。此命令方便用戶保持 Linux 的整潔。由於此組合命令較常用，故筆者在 `.zshrc` 中將其映射為一條較短的命令：
 
 ```shell
 alias pkgleaves="comm -3 <(yaourt -Qg base base-devel | sort | uniq) <(yaourt -Qe | sort) | sed -r 's/^.//' | less"
