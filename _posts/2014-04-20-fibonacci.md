@@ -3,7 +3,7 @@ layout: post
 title: Find $\sum_{i=1}^n F_i^k$ within $\Theta\left(k^3\log n\right)$ time
 ---
 
-I encountered some weird problems in contests in the past week.
+In the past week, I encountered some weird problems in contests.
 
 <div>
 \[
