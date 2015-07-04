@@ -2,15 +2,23 @@
 ---
 
 $ ->
-  renderMathInElement document.body,
-    {
-      delimiters: [
-        { left: '$$', right: '$$', display: true },
-        { left: '\\[', right: '\\]', display: true },
-        { left: '$', right: '$', display: false },
-        { left: '\\(', right: '\\)', display: false }
-      ]
+  # renderMathInElement document.body,
+  #   {
+  #     delimiters: [
+  #       { left: '$$', right: '$$', display: true },
+  #       { left: '\\[', right: '\\]', display: true },
+  #       { left: '$', right: '$', display: false },
+  #       { left: '\\(', right: '\\)', display: false }
+  #     ]
+  #   }
+  MathJax.Hub.Config {
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    'HTML-CSS': {
+      matchFontHeight: true,
+      availableFonts: [],
+      webFont: 'TeX'
     }
+  }
 
 $('main').ready ->
   main = $($('main').children()[1])

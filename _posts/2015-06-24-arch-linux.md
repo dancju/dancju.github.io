@@ -3,15 +3,15 @@ layout: post
 title: Arch Linux 入門指南
 ---
 
-折騰 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對一個程序員的工作效率的提升有巨大的幫助。在筆者折騰 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；而用了 Arch Linux 後我再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
+玩 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對一個程序員的工作效率的提升有巨大的幫助。在筆者折騰 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；而用了 Arch Linux 後我再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
 
-有朋友在我的慫恿下安裝 Arch Linux，可是官方 wiki 上幾千字的新手指南和幾千字的安裝教程就嚇走了一半人，剩下的一半人艱難地跟著官方 wiki 安裝，結果不是連不上 wifi，就是啟動不了 X Window System。使用 Arch Linux 需要很大的學習成本，但學習過程中的困難是每個熟練的 Linux 用戶必須經歷的，也是值得每個程序員嘗試的。Arch Linux 就像 Linux 發行版中的雙節棍，難以為新手所駕馭，只在高手的手裡展現最大的威力。
+有朋友在我的慫恿下安裝 Arch Linux，可是官方 wiki 上幾千字的新手指南和幾千字的安裝教程就嚇走了一半人，剩下的一半人艱難地跟著官方 wiki 安裝，結果不是連不上 Wifi，就是啟動不了 X Window System。使用 Arch Linux 需要很大的學習成本，但學習過程中的困難是每個熟練的 Linux 用戶必須經歷的。Arch Linux 就像 Linux 發行版中的雙節棍，難以為新手所駕馭，只在高手的手裡展現最大的威力。
 
 鑑於官方文檔雖然詳盡但對新手並不友好，本文的目的是幫助有 Linux 使用經驗的人從 Ubuntu、Fedora 等「傻瓜型」發行版切換到 Arch Linux。
 
 ## 為什麼用 Arch Linux？
 
-我起初認為發行版並不重要，只是包管理器命令的差異、軟件版本新舊的差異而已。有人說用什麼操作系統並不重要，只要能寫出好代碼就是好程序員。誠然，從工具裡尋找虛榮心是很愚蠢的。但當我在 Cygwin 裡手動 make 軟件包時，我會想念 Arch Linux 裡一行命令的暢快感；當我幫別人給 Ubuntu 找私有軟件源時，我會想念 Arch Linux 裡超全的软件倉庫帶來的整潔感。Arch Linux 雖然難以學習，但熟練掌握了常用功能後，Arch Linux 會成為一個很方便的工具。
+有人說用什麼操作系統並不重要，只要能寫出好代碼就是好程序員。誠然，從工具裡尋找虛榮心是很愚蠢的。但當我在 Cygwin 裡手動 make 軟件包時，我會想念 Arch Linux 裡一行命令的暢快感；當我幫別人給 Ubuntu 找私有軟件源時，我會想念 Arch Linux 裡一個超全的软件倉庫帶來的整潔感。Arch Linux 雖然難以學習，但熟練掌握了常用功能後，Arch Linux 會成為一個很方便的工具。
 
 ### 為什麼不用 Windows？
 
@@ -42,7 +42,7 @@ title: Arch Linux 入門指南
 
 ### 為什麼不用 LFS、Gentoo、Slackware？
 
-就使用難度來看，LFS > Gentoo > Slackware > Arch Linux。難度越高，用戶對操作系統的控制越靈活。但是：Slackware 要求用戶手動處理包依賴；Gentoo 要求用戶編譯所有的軟件包而不是直接下載可執行的二進製程序；LFS 更是要求用戶編譯整個內核。因此，筆者認為這幾個發行版不便於日常使用。
+就使用難度來看，LFS > Gentoo > Slackware > Arch Linux。難度越高，用戶對操作系統的控制越靈活。但是：Slackware 要求用戶手動處理包依賴；Gentoo 要求用戶編譯所有的軟件包而不是直接下載可執行的二進製程序；LFS 更是要求用戶編譯整個內核。因此，筆者認為這幾個發行版不適合日常使用。
 
 ### Arch Linux 的優缺點
 
@@ -72,7 +72,7 @@ Arch Linux 等於一個 Linux 內核加上一個好用的包管理器 Pacman。�
 
 ## 安裝技巧
 
-不同於其他發行版的嚮導式、圖形化的安裝方式，Arch Linux 需要用戶從另一個 Linux（通常是光盤或閃存上的 Arch Linux）用一條條命令搭建。無論是新手還是熟練用戶，都須遵照<a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank">這個官方 wiki 頁面</a>安裝 Arch Linux。本節是給新手的在安裝時的一些建議。
+不同於其他發行版的嚮導式、圖形化的安裝方式，Arch Linux 需要用戶從另一個 Linux（通常是光盤或閃存上的 Arch Linux）用一條條命令搭建。無論是新手還是熟練用戶，都須遵照<a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank">這個官方 wiki 頁面</a>安裝 Arch Linux（因爲安裝步驟可能會變）。本節是給新手的在安裝時的一些建議。
 
 ### 硬盤分區與文件系統
 
@@ -130,7 +130,7 @@ Server = http://mirrors.163.com/archlinux/$repo/os/i686
 # syslinux-install_update -i -a
 ```
 
-編輯配置文件 `/boot/syslinux/syslinux.cfg`。將 `LABEL arch` 和 `LABEL archfallback` 兩行下的 `APPEND root=/dev/sda2 rw` 中的 `sda2` 分別改為 `sda1`。
+編輯配置文件 `/boot/syslinux/syslinux.cfg`。將 `LABEL arch` 和 `LABEL archfallback` 兩行下的 `APPEND root=/dev/sda2 rw` 中的 `sda2` 分別改為 `\` 所在分區。
 
 ## 包管理器
 
@@ -183,7 +183,7 @@ Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處�
 
 ### 使用技巧
 
-初學者應從[官方 wiki 中的 Pacman 詞條](https://wiki.archlinux.org/index.php/Pacman)學習 Pacman 的使用技巧。
+初學者應從[官方 Pacman 詞條](https://wiki.archlinux.org/index.php/Pacman)學習 Pacman 的使用技巧。
 
 下面介紹筆者最常用的一條技巧。
 

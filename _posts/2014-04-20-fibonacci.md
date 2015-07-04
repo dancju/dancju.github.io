@@ -6,7 +6,7 @@ title: Find $\sum_{i=1}^n F_i^k$ within $\Theta\left(k^3\log n\right)$ time
 In the past week, I encountered some weird problems in contests.
 
 <div>
-\[
+$$
 \left(\begin{matrix}
 1&\binom{k}{0}&\binom{k}{1}&\cdots&\binom{k}{k-1}&\binom{k}{k} \\
 &\binom{k}{0}&\binom{k}{1}&\cdots&\binom{k}{k-1}&\binom{k}{k} \\
@@ -35,5 +35,5 @@ F_{n+1}^{k-1}F_n^1 \\
 F_{n+1}^1F_n^{k-1} \\
 F_{n+1}^0F_n^k
 \end{matrix}\right)
-\]
+$$
 </div>

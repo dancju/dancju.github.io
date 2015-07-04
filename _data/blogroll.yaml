@@ -17,6 +17,8 @@ subscription:
     name: "LiuHanYu"
   - url:  "http://tinyfool.org/"
     name: "Tinyfool"
+  - url:  "http://xudifsd.org/"
+    name: "xudifsd"
   - url:  "http://blog.csdn.net/zzwu?viewmode=contents"
     name: "zzwu"
   - url:  "http://mindhacks.cn/"
