@@ -3,15 +3,15 @@ layout: post
 title: Arch Linux 入門指南
 ---
 
-玩 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對一個程序員的工作效率的提升有巨大的幫助。在筆者折騰 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；而用了 Arch Linux 後我再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
+玩 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對工作效率有巨大的提升。在筆者玩 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；而用了 Arch Linux 後再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
 
-有朋友在我的慫恿下安裝 Arch Linux，可是官方 wiki 上幾千字的新手指南和幾千字的安裝教程就嚇走了一半人，剩下的一半人艱難地跟著官方 wiki 安裝，結果不是連不上 Wifi，就是啟動不了 X Window System。使用 Arch Linux 需要很大的學習成本，但學習過程中的困難是每個熟練的 Linux 用戶必須經歷的。Arch Linux 就像 Linux 發行版中的雙節棍，難以為新手所駕馭，只在高手的手裡展現最大的威力。
+有朋友在我的慫恿下安裝 Arch Linux，可是官方 wiki 上幾千字的新手指南和幾千字的安裝教程就嚇走了一半人，剩下的一半人艱難地跟著官方 wiki 安裝，結果不是連不上 Wifi，就是啟動不了 X Window System。使用 Arch Linux 需要很大的學習成本，但學習過程中的困難是每個熟練的 Linux 用戶必須經歷的。Arch Linux 就像 Linux 發行版中的雙節棍，難以為新手所駕馭，只在高手的手裡展現威力。
 
 鑑於官方文檔雖然詳盡但對新手並不友好，本文的目的是幫助有 Linux 使用經驗的人從 Ubuntu、Fedora 等「傻瓜型」發行版切換到 Arch Linux。
 
-## 為什麼用 Arch Linux？
+## 為什麼不用——
 
-有人說用什麼操作系統並不重要，只要能寫出好代碼就是好程序員。誠然，從工具裡尋找虛榮心是很愚蠢的。但當我在 Cygwin 裡手動 make 軟件包時，我會想念 Arch Linux 裡一行命令的暢快感；當我幫別人給 Ubuntu 找私有軟件源時，我會想念 Arch Linux 裡一個超全的软件倉庫帶來的整潔感。Arch Linux 雖然難以學習，但熟練掌握了常用功能後，Arch Linux 會成為一個很方便的工具。
+有人說用什麼操作系統並不重要，只要能寫出好代碼就是好程序員。誠然，從工具裡尋找虛榮心是很愚蠢的。但當我在 Cygwin 裡手動 make 軟件包時，我會想念 Arch Linux 裡一行命令的暢快感；當我幫別人給 Ubuntu 找私有軟件源時，我會想念 Arch Linux 裡一個超全的软件倉庫帶來的整潔感。雖然難以學習，但熟練掌握了常用功能後，Arch Linux 會成為一個很方便的工具。
 
 ### 為什麼不用 Windows？
 
@@ -42,37 +42,88 @@ title: Arch Linux 入門指南
 
 ### 為什麼不用 LFS、Gentoo、Slackware？
 
-就使用難度來看，LFS > Gentoo > Slackware > Arch Linux。難度越高，用戶對操作系統的控制越靈活。但是：Slackware 要求用戶手動處理包依賴；Gentoo 要求用戶編譯所有的軟件包而不是直接下載可執行的二進製程序；LFS 更是要求用戶編譯整個內核。因此，筆者認為這幾個發行版不適合日常使用。
+就使用難度來看，LFS > Gentoo > Slackware > Arch Linux。難度越高，用戶使用操作系統的自由度越大。但是：Slackware 要求用戶手動處理包依賴；Gentoo 要求用戶編譯所有的軟件包而不是直接下載可執行的二進製程序；LFS 更是要求用戶編譯整個內核。因此，筆者認為這幾個發行版不適合日常使用。
 
-### Arch Linux 的優缺點
+## 為什麼用 Arch Linux？
 
 下述 Arch Linux 之特點，都體現了 Arch Linux 明確的用戶定位：只適合足夠熟練的用戶。
 
-#### 軟件版本新
-
-Arch Linux 方便使用新版本軟件的同時；要求用戶手動處理新版本中偶爾出現的 bug。
-
-通常在上游軟件發佈正式版後，各發行版會在分別在自己的平臺上做測試，確認穩定後再加入官方倉庫。而由於維護人員的缺乏，且軟件包數量龐大，發行版官方倉庫裡的軟件通常是半年前的版本。
-
-而 Arch Linux 的機制是由官方維護者和「授信用戶」自己發佈軟件包更新。由於有一個非常活躍的用戶群，通常一旦上游軟件發佈正式版，幾天內就會出現在 Arch Linux 的官方倉庫中。但偶爾上游軟件會有 bug，bug 會隨之進入 Arch Linux 的倉庫。這種情況需要用戶手動回滾舊版本。
-
-#### 滾動更新
-
-只要維護得當，用戶永遠不需要重裝系統；但當 Arch Linux 偶爾有重大更新時，用戶需要遵照官方的指導手動維護系統。
-
-其他發行版定期發佈新版本，用戶需要隨之重裝系統才能保持系統最新。這是因為包管理器無法更新較底層的模塊。
-
-Arch Linux 採用滾動升級策略，一次安裝後可以持續升級並一直保持最新。當新版本變動了較底層的模塊，需要用戶手動更改底層的部署和配置（例如服務管理系統 Systemd、啟動加載器 Syslinux）。如果用戶在必要時沒有遵照官方的指導手動維護，可能導致操作系統啟動失敗。
-
-#### 簡潔優雅
+### 簡潔優雅
 
 Arch Linux 的設計哲學認為，其他發行版過分追求「用戶友好」使得用戶離核心太遠，從而用戶難以定製、裁剪自己的操作系統。
 
 Arch Linux 等於一個 Linux 內核加上一個好用的包管理器 Pacman。因此自動化程度很低，所有維護都需要用戶用命令和腳本完成。
 
+### 軟件版本新
+
+Arch Linux 方便使用新版本軟件的同時；要求用戶手動處理新版本中偶爾出現的 bug。
+
+通常在上游軟件發佈正式版後，各發行版會在分別在自己的平臺上做測試，確認穩定後再加入官方倉庫。而由於維護人員的缺乏，且軟件包數量龐大，發行版官方倉庫裡的軟件通常是半年前的版本。
+
+而 Arch Linux 的機制是由官方維護者和「授信用戶」自己發佈軟件包更新。由於有一個非常活躍的用戶群，通常一旦上游軟件發佈正式版，幾天內就會出現在 Arch Linux 的官方倉庫中。但偶爾上游軟件會有 bug，bug 會隨之進入 Arch Linux 的倉庫。這種情況需要用戶手動回滾舊版本，或者暫且忍受直到下個版本發佈。
+
+### 滾動更新
+
+只要維護得當，用戶永遠不需要重裝系統；但當 Arch Linux 偶爾有重大更新時，用戶需要遵照官方郵件列表的指導手動維護系統。
+
+其他發行版定期發佈新版本，用戶需要隨之重裝系統才能保持系統最新。這是因為包管理器無法更新較底層的模塊。
+
+Arch Linux 採用滾動升級策略，一次安裝後可以持續升級並一直保持最新。當新版本變動了較底層的模塊，需要用戶手動更改底層的部署和配置（例如服務管理系統 Systemd、啟動加載器 Syslinux）。如果用戶在必要時沒有遵照官方的指導手動維護，可能導致操作系統啟動失敗。
+
+### 超好用的包管理器
+
+Pacman 包管理器是 Arch Linux 中最獨特的組件。其特點是能以統一的風格管理官方倉庫的軟件包和用戶自己創建的軟件包。
+
+Arch 用戶軟件倉庫（AUR）是由用戶自己創建、維護的軟件倉庫。
+
+Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處理官方倉庫裡的和 AUR 裡的軟件包。
+
+這種管理軟件包的方式非常易用：
+
+1. __方便__
+
+    在 Ubuntu 中，安裝 Google Chrome 需要：
+
+    1. 將 Google 的 SSH 公鑰添加到 APT 中：
+
+        ```
+        $ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        ```
+
+    1. 添加 Google 的軟件源：
+
+        ```
+        $ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+        ```
+
+    1. 安裝 Google Chrome：
+
+        ```
+        $ sudo apt-get update
+        ```
+
+        ```
+        $ sudo apt-get install google-chrome-stable
+        ```
+
+    而在一個安裝有 Yaourt 的 Arch Linux 中，安裝 Google Chrome 只需一行命令：
+
+    ```
+    $ yaourt -S google-chrome
+    ```
+
+1. __軟件包全__
+
+    其他發行版都存在一個缺陷：軟件包不夠全。或者說，對於非自由軟件、非大眾化軟件，用戶必須從非官方途徑的獲取資源，甚至需要手動 make。而在 AUR 的五萬多個軟件包中，包含許多非自由的（如 Google Chrome）、小眾的軟件。
+
+1. __軟件包新__
+
+    相比其他發行版軟件倉庫中緩慢的更新週期，Arch Linux 官方倉庫和 AUR 中熱門的軟件包相對上游軟件的更新遲滯通常不超過一天。
+
+
 ## 安裝技巧
 
-不同於其他發行版的嚮導式、圖形化的安裝方式，Arch Linux 需要用戶從另一個 Linux（通常是光盤或閃存上的 Arch Linux）用一條條命令搭建。無論是新手還是熟練用戶，都須遵照<a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank">這個官方 wiki 頁面</a>安裝 Arch Linux（因爲安裝步驟可能會變）。本節是給新手的在安裝時的一些建議。
+不同於其他發行版的嚮導式、圖形化的安裝方式，Arch Linux 需要用戶從另一個 Linux（通常是光盤或閃存上的 Arch Linux）用一條條命令搭建。無論是新手還是熟練用戶，都須遵照<a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank">這個官方 wiki 頁面</a>安裝 Arch Linux（因爲安裝步驟可能會變）。本節是給筆者的一些安裝經驗。
 
 ### 硬盤分區與文件系統
 
@@ -130,70 +181,14 @@ Server = http://mirrors.163.com/archlinux/$repo/os/i686
 # syslinux-install_update -i -a
 ```
 
-編輯配置文件 `/boot/syslinux/syslinux.cfg`。將 `LABEL arch` 和 `LABEL archfallback` 兩行下的 `APPEND root=/dev/sda2 rw` 中的 `sda2` 分別改為 `\` 所在分區。
+編輯配置文件 `/boot/syslinux/syslinux.cfg`。將 `LABEL arch` 和 `LABEL archfallback` 兩行下的 `APPEND root=/dev/sda2 rw` 中的 `sda2` 分別改為 `/` 所在分區。
 
-## 包管理器
+## 使用技巧
 
-Pacman 包管理器是 Arch Linux 中最獨特的組件。其特點是能以統一的風格管理官方倉庫的軟件包和用戶自己創建的軟件包。
-
-Arch 用戶軟件倉庫（AUR）是由用戶自己創建、維護的軟件倉庫。
-
-Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處理官方倉庫裡的和 AUR 裡的軟件包。
-
-這種管理軟件包的方式非常易用：
-
-1. __方便__
-
-    在 Ubuntu 中，安裝 Google Chrome 需要：
-
-    1. 將 Google 的 SSH 公鑰添加到 APT 中：
-
-        ```
-        $ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        ```
-
-    1. 添加 Google 的軟件源：
-
-        ```
-        $ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-        ```
-
-    1. 安裝 Google Chrome：
-
-        ```
-        $ sudo apt-get update
-        ```
-
-        ```
-        $ sudo apt-get install google-chrome-stable
-        ```
-
-    而在一個安裝有 Yaourt 的 Arch Linux 中，安裝 Google Chrome 只需一行命令：
-    ```
-    $ yaourt -S google-chrome
-    ```
-
-1. __軟件包全__
-
-    其他發行版都存在一個缺陷：軟件包不夠全。或者說，對於非自由軟件、非大眾化軟件，用戶必須從非官方途徑的獲取資源，甚至需要手動 make。而在 AUR 的五萬多個軟件包中，包含許多非自由的（如 Google Chrome）、小眾的（如 Emscripten）軟件。
-
-1. __軟件包新__
-
-    相比其他發行版軟件倉庫中緩慢的更新週期，Arch Linux 官方倉庫和 AUR 中熱門的軟件包相對上游軟件的更新遲滯通常不超過一天。
-
-### 使用技巧
-
-初學者應從[官方 Pacman 詞條](https://wiki.archlinux.org/index.php/Pacman)學習 Pacman 的使用技巧。
-
-下面介紹筆者最常用的一條技巧。
-
-下述命令的作用為：輸出所有由用戶安裝的且不屬於 base 和 base-devel 包組的軟件包。
+筆者的 `.zshrc` 裏有一行：
 
 ```bash
-comm -3 <(yaourt -Qg base base-devel | sort | uniq) <(yaourt -Qe | sort) | sed -r 's/^.//'
+alias pacleaves="comm -23 <(yaourt -Qe | sort) <(yaourt -Qg base base-devel | sort) | less"
 ```
-這條命令的原理此處不便展開。此命令方便用戶保持 Linux 的整潔。由於此組合命令較常用，故筆者在 `.zshrc` 中將其映射為一條較短的命令：
 
-```bash
-alias pkgleaves="comm -3 <(yaourt -Qg base base-devel | sort | uniq) <(yaourt -Qe | sort) | sed -r 's/^.//' | less"
-```
+用戶可以用命令 `pacleaves` 列出在 base 和 base-devel 包組之外所有用戶主動安裝的包。
