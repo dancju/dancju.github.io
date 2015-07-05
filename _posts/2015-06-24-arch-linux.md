@@ -17,7 +17,7 @@ title: Arch Linux 入門指南
 
 許多程序員重度依賴命令行工具，一個 Unix Shell 在他們的工作生活中是十分必要的。他們會選擇 Linux 發行版、BSD、或者 Mac OS X。雖然 Windows 裡有一個 PowerShell，但這個姍姍來遲的 shell 已難以挽回 Unix 程序員的青睞。
 
-[有一些非程序員用戶也用 Linux](http://www.reddit.com/r/linux/comments/2sm5yk/more_and_more_people_at_my_uni_are_running_linux/){:target="_blank"}，因為：
+[有一些非程序員用戶也用 Linux](http://www.reddit.com/r/linux/comments/2sm5yk/more_and_more_people_at_my_uni_are_running_linux/)，因為：
 
 1. 不懂 Shell 命令的用戶也能用 Ubuntu 等新手友好的發行版；
 1. 不會有一個日漸臃腫的 C 盤；
@@ -189,11 +189,11 @@ Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處�
 
 下述命令的作用為：輸出所有由用戶安裝的且不屬於 base 和 base-devel 包組的軟件包。
 
-```shell
+```bash
 comm -3 <(yaourt -Qg base base-devel | sort | uniq) <(yaourt -Qe | sort) | sed -r 's/^.//'
 ```
 這條命令的原理此處不便展開。此命令方便用戶保持 Linux 的整潔。由於此組合命令較常用，故筆者在 `.zshrc` 中將其映射為一條較短的命令：
 
-```shell
+```bash
 alias pkgleaves="comm -3 <(yaourt -Qg base base-devel | sort | uniq) <(yaourt -Qe | sort) | sed -r 's/^.//' | less"
 ```

@@ -1,13 +1,14 @@
-# markdown: redcarpet
+highlighter: pygments
+
+markdown: redcarpet
 
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
 
 redcarpet:
-  extensions: [strikethrough, tables, with_toc_data]
+  extensions: [autolink, no_intra_emphasis, strikethrough, tables, with_toc_data]
 
 sass:
     style: :compressed
 
-timezone: Asia/Chongqing
+timezone: Asia/Shanghai
