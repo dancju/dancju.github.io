@@ -1,8 +1,8 @@
 var defaultEncoding = 1; // 預設語言：1-繁體中文 | 2-简体中文
 var translateDelay = 0;
 var cookieDomain = window.location.hostname;   // 修改爲你的部落格地址
-var msgToTraditionalChinese = "正體字";  // 簡轉繁時所顯示的文字
-var msgToSimplifiedChinese = "简化字";   // 繁转简时所显示的文字
+var msgToTraditionalChinese = "繁";  // 簡轉繁時所顯示的文字
+var msgToSimplifiedChinese = "简";   // 繁转简时所显示的文字
 var translateButtonId = "translateLink";  // 「轉換」<A>鏈接標籤ID
 
 var currentEncoding = defaultEncoding;
