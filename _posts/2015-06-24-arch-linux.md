@@ -3,7 +3,7 @@ layout: post
 title: Arch Linux 入門指南
 ---
 
-玩 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對工作效率有巨大的提升。在筆者玩 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；而用了 Arch Linux 後再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
+玩 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對工作效率有巨大的提升。在筆者玩 Linux 的六年曆史裡，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；只有 Arch Linux 上手後再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今為止 Arch Linux 的表現仍讓我滿意。
 
 有朋友在我的慫恿下安裝 Arch Linux，可是官方 wiki 上幾千字的新手指南和幾千字的安裝教程就嚇走了一半人，剩下的一半人艱難地跟著官方 wiki 安裝，結果不是連不上 Wifi，就是啟動不了 X Window System。使用 Arch Linux 需要很大的學習成本，但學習過程中的困難是每個熟練的 Linux 用戶必須經歷的。Arch Linux 就像 Linux 發行版中的雙節棍，難以為新手所駕馭，只在高手的手裡展現威力。
 
@@ -70,7 +70,7 @@ Arch Linux 方便使用新版本軟件的同時；要求用戶手動處理新版
 
 Arch Linux 採用滾動升級策略，一次安裝後可以持續升級並一直保持最新。當新版本變動了較底層的模塊，需要用戶手動更改底層的部署和配置（例如服務管理系統 Systemd、啟動加載器 Syslinux）。如果用戶在必要時沒有遵照官方的指導手動維護，可能導致操作系統啟動失敗。
 
-### 超好用的包管理器
+### 好用的包管理器
 
 Pacman 包管理器是 Arch Linux 中最獨特的組件。其特點是能以統一的風格管理官方倉庫的軟件包和用戶自己創建的軟件包。
 
@@ -173,7 +173,7 @@ Server = http://mirrors.163.com/archlinux/$repo/os/i686
 
 另外可以根據需要安裝更多包，例如編輯器 `emacs` 或 `vim`、漢字字體 `wqy-zenhei`、瀏覽器 `firefox`、終端模擬器 `gnome-terminal`。
 
-### 配置啟動加載器
+### 配置啟動加載器 Syslinux
 
 自動配置 Syslinux：
 
