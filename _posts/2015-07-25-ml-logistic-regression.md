@@ -81,10 +81,14 @@ $$
 \begin{align}
 J(\theta)
 &=-\frac{1}{m}\sum_{i=1}^m\left\{y^{(i)}\ln\left[h\left(\mathbf x^{(i)};\theta\right)\right]+\left(1-y^{(i)}\right)\ln\left[1-h\left(\mathbf x^{(i)};\theta\right)\right]\right\}\\
-&=-\frac{1}{m}\left\{\ln\left[g\left(\mathbf X\theta\right)\right]^\mathsf T\mathbf y+\ln\left[1-g\left(\mathbf X\theta\right)\right]^\mathsf T\left(1-\mathbf y\right)\right\}\,.
+&=-\frac{1}{m}\left\{\ln\left[g\left(\mathbf X\theta\right)\right]^\mathsf T\mathbf y+\ln\left[\mathbf 1-g\left(\mathbf X\theta\right)\right]^\mathsf T\left(\mathbf 1-\mathbf y\right)\right\}\,.
 \end{align}
 $$
 </div>
+
+> It is feasible to define the cost function as
+> $$J(\theta)=\frac{1}{m}\left[\exp(-\mathbf X\theta)^\mathsf T\mathbf y+\exp(\mathbf X\theta)^\mathsf T(\mathbf1-\mathbf y)\right]\,,$$
+> since it is similar in shape to above?
 
 ## Gradient descent
 
