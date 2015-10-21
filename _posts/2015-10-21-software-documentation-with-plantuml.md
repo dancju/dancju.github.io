@@ -28,9 +28,10 @@ title: "用 PlantUML 寫軟件文檔"
 pu=$(notdir $(wildcard src/*.pu))
 png=$(patsubst %.pu,%.png,$(pu))
 
-all: $(addprefix uml/, $(png)) main.png
+.PHONY: all
+all: $(addprefix uml/, $(png)) main.pdf
 
-main.png: src/main.tex
+main.pdf: src/main.tex
   xelatex src/main.tex
 
 uml/%.png: src/%.pu
