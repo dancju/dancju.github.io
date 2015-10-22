@@ -9,26 +9,26 @@ title: "用 PlantUML 寫軟件文檔"
 
 以下是一個示例文檔工程的目錄結構。
 
-```
+<pre>
 ├ src
 │ ├ bar.pu
 │ ├ foo.pu
 │ └ main.tex
 ├ uml
-│ ├ bar.png
-│ └ foo.png
-├ main.pdf
+│ ├ <i>bar.png</i>
+│ └ <i>foo.png</i>
+├ <i>main.pdf</i>
 └ Makefile
-```
+</pre>
 
 其中 `src/main.tex` 是主文件；`bar.pu` 和 `foo.pu` 是 PlantUML 源代碼。`uml` 目錄中的文件是由 PlantUML 生成的圖片，默認爲 PNG 格式，也可以用 PDF 和 EPS 等矢量圖格式，取決於你用的是 LaTeX 還是 PDFLaTeX。
 
 ```makefile
 # Makefile
+
 pu=$(notdir $(wildcard src/*.pu))
 png=$(patsubst %.pu,%.png,$(pu))
 
-.PHONY: all
 all: $(addprefix uml/, $(png)) main.pdf
 
 main.pdf: src/main.tex
@@ -36,4 +36,9 @@ main.pdf: src/main.tex
 
 uml/%.png: src/%.pu
   plantuml -o uml $^
+
+clean:
+  rm -f *.toc *.aux *.log *.out
+
+.PHONY: all clean
 ```
