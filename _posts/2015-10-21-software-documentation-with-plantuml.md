@@ -21,7 +21,7 @@ title: "用 PlantUML 寫軟件文檔"
 └ Makefile
 </pre>
 
-其中 `src/main.tex` 是主文件；`bar.pu` 和 `foo.pu` 是 PlantUML 源代碼。`uml` 目錄中的文件是由 PlantUML 生成的圖片，默認爲 PNG 格式，也可以用 PDF 和 EPS 等矢量圖格式，取決於你用的是 LaTeX 還是 PDFLaTeX。
+其中 `src/main.tex` 是主文件；`bar.pu` 和 `foo.pu` 是 PlantUML 源代碼。`uml` 目錄中的文件是由 PlantUML 生成的圖片，默認爲 PNG 格式，也可以用 PDF 和 EPS 這兩個矢量圖格式，取決於你用的是 LaTeX 還是 PDFLaTeX。
 
 ```makefile
 # Makefile

@@ -1,4 +1,5 @@
-highlighter: pygments
+gems:
+  - jekyll-coffeescript
 
 markdown: redcarpet
 
@@ -9,6 +10,6 @@ redcarpet:
   extensions: [autolink, no_intra_emphasis, strikethrough, tables, with_toc_data]
 
 sass:
-    style: :compressed
+  style: :compressed
 
 timezone: Asia/Shanghai
