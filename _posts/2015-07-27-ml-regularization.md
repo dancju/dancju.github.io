@@ -30,7 +30,7 @@ $$J(\theta)=\frac{1}{2m}\left|\mathbf X\theta-\mathbf y\right|^2+\lambda\sum_{j=
 
 The $\lambda$, or the regularization parameter, determines how much the costs of our theta parameters are inflated. If it is chosen too laryge, it would cause underfitting.
 
-Note that the bias parameter $\theta_0$ is not penalized. That is because regularization is a dumb simulation of removing redundant features, while the bias feature $x\_0$ is not the one we want to remove.
+Note that the bias parameter $\theta_0$ is not penalized. That is because regularization is a dumb simulation of removing redundant features, while the bias feature $x_0$ is not the one we want to remove.
 
 > I am not confident in the last paragraph. Please feel free to criticize if you find any suspicious point in my blog.
 

@@ -19,13 +19,13 @@ $x_j^{(i)}$ denotes feature $j$ of the $i$-th training example.
 
 Let $\mathbf x^{(i)}$ be the row vector of all the features of the $i$-th training example, viz.
 
-$$\mathbf x^{(i)}=\begin{pmatrix}x\_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
+$$\mathbf x^{(i)}=\begin{pmatrix}x_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
 
 where $x_0^{(i)}=1$ for all $i\,.$
 
 Let $\mathbf x_j$ be the column vector of all the $j$-th features of all the training examples, viz.
 
-$$\mathbf x\_j^\mathsf T=\begin{pmatrix}x\_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
+$$\mathbf x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
 
 Let $\mathbf X$ be a matrix whose rows are all the features of all the training examples, viz.
 
@@ -56,7 +56,7 @@ $$\mathbf y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
 
 ### Output
 
-$$\theta^\mathsf T=\begin{pmatrix}\theta\_0&\cdots&\theta_n\end{pmatrix}\,.$$
+$$\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
 
 ### The problem
 
