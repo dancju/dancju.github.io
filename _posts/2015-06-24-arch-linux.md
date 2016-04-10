@@ -1,6 +1,15 @@
 ---
 layout: post
 title: Arch Linux 入門指南
+comments:
+  - author:
+      type: full
+      displayName: nerdDan
+      url: 'https://github.com/nerdDan'
+      picture: 'https://avatars.githubusercontent.com/u/3108734?v=3&s=73'
+    content: 'test!'
+    date: 2016-04-10T03:23:05.787Z
+
 ---
 
 玩 Linux 不僅很有趣，於程序員而言，調教出一個足夠順手的工作站對工作效率有巨大的提升。在筆者玩 Linux 的六年曆史裏，Ubuntu、Fedora、Cent OS、OpenSUSE 如過眼雲煙；只有 Arch Linux 上手後再也沒有換過，甚至在 Raspberry Pi 上也用 Arch Linux。迄今爲止 Arch Linux 的表現仍讓我滿意。
