@@ -2,15 +2,6 @@
 ---
 
 $ ->
-  # renderMathInElement document.body,
-  #   {
-  #     delimiters: [
-  #       { left: '$$', right: '$$', display: true },
-  #       { left: '\\[', right: '\\]', display: true },
-  #       { left: '$', right: '$', display: false },
-  #       { left: '\\(', right: '\\)', display: false }
-  #     ]
-  #   }
   MathJax.Hub.Config {
     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
     'HTML-CSS': {
@@ -34,9 +25,8 @@ $('main').ready ->
       a = $('<a>', { href: '#'+this.id }).text(this.innerHTML)
       li = $('<li>').append(a)
       ul.append li
-
-$('aside>div').affix { offset: {
-  top: 51,
-  bottom: ->
-    (this.bottom = $('footer').outerHeight(true))
-  }}
+  $('#contents').affix { offset: {
+    top: 51,
+    bottom: ->
+      this.bottom = $('footer').outerHeight(true)+$('#comments').outerHeight(true)+41+155
+    }}

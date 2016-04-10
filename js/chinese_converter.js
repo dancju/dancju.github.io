@@ -139,4 +139,6 @@ function translateInitilization() {
   }
 }
 
-translateInitilization();
+$(function() {
+  translateInitilization();
+});
