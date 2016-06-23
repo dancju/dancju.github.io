@@ -1,0 +1,109 @@
+<!doctype HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator for APR of Installment</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+.page-header {
+  color: gray;
+  font-size: xx-large;
+  text-align: center;
+}
+div {
+  font-size: large;
+  margin-bottom: .5em;
+  text-align: center;
+}
+.input {
+  color: indianred;
+}
+.input>input {
+  border: none;
+  border-bottom: 1px solid;
+  color: indianred;
+  font-family: monospace;
+  font-size: xx-large;
+  text-align: right;
+}
+.input>span {
+  border-bottom: 1px solid;
+  font-family: monospace;
+  font-size: xx-large;
+  padding-bottom: 1px;
+}
+.output {
+  color: gray;
+}
+.output>span {
+  font-family: monospace;
+  font-size: xx-large;
+}
+</style>
+<script>
+var benchmark = function(period, fee, apr) {
+  var res = Math.pow(1/(1+apr), 1/12);
+  res = res*(1-Math.pow(res, period))/(1-res);
+  res *= 1/period+fee;
+  return res;
+};
+var getPay = function(period, fee) {
+  return 1/period+fee;
+}
+var getAPR = function(period, fee) {
+  var lo = 0, hi = 1;
+  while(hi-lo>Number.EPSILON) {
+    var mi = (lo+hi)/2;
+    if(benchmark(period, fee, mi) < 1)
+      hi = mi;
+    else
+      lo = mi;
+  }
+  return lo;
+};
+var update = function() {
+  var peroid = parseInt(document.getElementById('peroid').value);
+  var fee = parseFloat(document.getElementById('fee').value)/100;
+  document.getElementById('apr').innerText = (getAPR(peroid, fee)*100).toFixed(2)
+  document.getElementById('pay').innerText = (getPay(peroid, fee)*100).toFixed(2)
+};
+window.onload = function() {
+  update();
+  document.getElementById('peroid').onkeyup = update;
+  document.getElementById('fee').onchange = update;
+};
+</script>
+</head>
+<body>
+
+<h1 class="page-header">
+分期年化利率计算器
+<br>
+Calculator for APR of Installment
+<hr>
+</h1>
+
+<div class="input">
+分 <input id="peroid" style="max-width: 1.2em;" value="12"> 期偿还
+<br>
+每期费率为 <input id="fee" style="max-width: 3em;" value="0.35"><span>%</span>
+</div>
+
+<div class="output">
+❦
+<br>
+每期偿还本金的 <span id="pay"></span><span>%</span>
+<br>
+年化利率为 <span id="apr"></span><span>%</span>
+</div>
+
+<div class="output">
+❦
+<br>
+日利率 0.05% 的年化利率为 20.02%
+</div>
+
+</body>
+</html>
