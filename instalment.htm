@@ -90,6 +90,9 @@ window.onload = function() {
   document.getElementById('peroid').onkeyup = update;
   document.getElementById('fee').onkeyup = update;
   document.getElementById('gap').onkeyup = update;
+  document.getElementById('peroid').onchange = update;
+  document.getElementById('fee').onchange = update;
+  document.getElementById('gap').onchange = update;
 };
 </script>
 </head>
@@ -107,7 +110,7 @@ IRR of Monthly Instalment
 <br>
 每期费率为 <input id="fee" type="number" min="0" step="0.01" style="max-width: 3.6em;" value="0.35"><span>%</span>，
 <br>
-消费／取现与第一次还款间隔 <input id="gap" type="number" min="0" style="max-width: 2.4em;" value="48"> 天．
+消费／取现与第一次还款间隔 <input id="gap" type="number" min="0" style="max-width: 2.4em;" value="30"> 天．
 </div>
 
 <div class="red">
