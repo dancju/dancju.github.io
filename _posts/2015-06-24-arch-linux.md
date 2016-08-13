@@ -7,8 +7,15 @@ comments:
       displayName: nerdDan
       url: 'https://github.com/nerdDan'
       picture: 'https://avatars.githubusercontent.com/u/3108734?v=3&s=73'
-    content: 'test!'
+    content: test!
     date: 2016-04-10T03:23:05.787Z
+  - author:
+      type: github
+      displayName: plus7wist
+      url: 'https://github.com/plus7wist'
+      picture: 'https://avatars.githubusercontent.com/u/9365270?v=3&s=73'
+    content: '&#x543C;&#x3002;'
+    date: 2016-08-13T07:20:00.532Z
 
 ---
 
