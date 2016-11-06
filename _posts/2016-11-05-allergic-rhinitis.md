@@ -1,0 +1,251 @@
+---
+layout: post
+title: "過敏性鼻炎患者求生指南"
+---
+
+全面總結了當前醫學界認可的所有治療過敏性鼻炎的方法。作者 Daniel Zhou 是一個多年的鼻炎患者。由於作者沒有專業的生物或醫療背景，而且沒有給所有內容都標註參考文獻，所以文章謬誤不可避免。如果閣下有異議或疑問請給我留言或提 pull request。
+
+<div class="alert alert-danger" role="alert">
+<strong>免責聲明</strong> 本文作者不是醫生！沒有處方權！不能給予醫療建議！請向執業醫師尋求醫療服務！
+</div>
+
+## 成因
+
+過敏性鼻炎（allergic rhinitis）是免疫系統受到空氣中的過敏源刺激導致的鼻炎。成因主要包括：
+
+- 先天性致敏。過敏性鼻炎可能遺傳。若父母患病，子女患病的可能性更大。其中母親遺傳的概率較父親遺傳更大。
+- 後天性致敏。長期受過敏源刺激而致病。
+- 某些精神疾病也可誘發過敏性鼻炎，比如抑鬱症。
+
+過敏源通常通常包括花粉、黴、動物毛髮、蟎蟲、灰塵。
+
+患者接觸或吸入致敏原後，體內的 IgE 引起肥大細胞釋放組織胺，造成過敏反應[^wheatley2015]。
+
+## 症狀
+
+接觸過敏源後立刻引發的症狀包括：
+
+- 鼻、口、眼、喉、皮膚癢；
+- 流清涕；
+- 打噴嚏；
+- 流眼淚。
+
+隨後引發的症狀包括：
+
+- 鼻黏膜水腫，鼻塞；
+- 咳嗽；
+- 耳道堵塞；
+- 嗓子痠痛；
+- 黑眼圈；
+- 下眼瞼腫脹；
+- 頭痛；
+- 疲勞易怒。
+
+## 緩解症狀
+
+### 隔離過敏源
+
+患者應改變生活習慣，避免接觸過敏源，以預防過敏發作。以下措施可有效減輕或防止症狀出現：
+
+- 避免接觸灰塵和塵蟎；
+  - 頻繁清洗枕頭和牀蓐；
+  - 避免穿著羊毛衣物、接觸公仔；
+  - 避免使用地毯和厚窗簾；
+  - 使用新風系統（HEPA）或空氣淨化器；
+  - 污染嚴重的時候避免出門；
+  - 室外帶防霾口罩（宜閱[此文](https://www.douban.com/note/345004477/){:target="_blank"}）；
+  - 遷徙到[乾淨的地方](http://aqicn.org/map/world){:target="_blank"}；
+- 避免接觸黴菌；
+  - 檢查織物、地毯、寵物、書、牆紙受否發黴，是否足夠乾燥；
+  - 檢查管道系統、空調是否漏水；
+  - 避免靜置溼衣服、溼毛巾；
+  - 適度給空氣除溼；
+  - 定期薰醋；
+- 避免接觸花粉、乾草、動物毛髮及皮屑；
+  - 花粉季避免出門；
+  - 避免種開花的盆栽；
+  - 避免養寵物；
+- 避免接觸可能觸發過敏的化妝品、油漆、樟腦、殺蟲劑；
+- 充分休息，忌過度勞累，忌精神壓力。
+
+### 鹽水洗鼻
+
+過敏性鼻炎本身只令人分泌清涕，但長時間鼻塞仍然會產生黃綠粘稠的膿鼻涕。使用生理鹽水沖洗鼻腔可以有效清理粘液和膿。研究表明定期沖洗鼻腔可降低鼻竇感染的可能[^rabago2002]。
+
+- 買洗鼻工具。網上有各種各樣洗鼻工具，它們作用相同，保健效果相同。請選擇用起來順手的工具。
+- 使用濃度合適的鹽水。注射用的生理鹽水是最理想的，但生理鹽水在中國屬於處方藥。方便的做法是自行調配濃度合適的鹽水。
+  - 按每升水 4 茶匙食鹽（9g）的濃度調配鹽水[^talbot1997]。用濃度過高或過低的水或者清水洗鼻會感到刺痛。
+  - 使用安全潔淨的水。唾液和胃酸能殺滅飲用水中的大量微生物，但鼻腔不能，微生物可透過鼻粘膜進入血管。最好用純淨水，至少應該用開水。
+  - 使用溫熱的水。過冷或過熱的水會刺激鼻粘膜。
+  - 應使用無碘鹽。
+  - 每升水可額外加入 1 茶匙小蘇打[^talbot1997]。
+  - 可購買專用的洗鼻鹽，免去稱量的麻煩。網上以「海鹽」之類的噱頭高價售賣的洗鼻鹽不可信，沒有任何額外的保健或治療效果。
+- 洗鼻前洗手，洗鼻後保持洗鼻工具乾燥。
+
+[示範錄像](https://www.youtube.com/watch?v=I9cTqt2yPQE){:target="_blank"}
+
+### 抗組胺藥
+
+[抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5){:target="_blank"}（antihistamine）通常指 H1 受體拮抗劑（[H1 antagonist](https://en.wikipedia.org/wiki/H1_antagonist){:target="_blank"}）。本文中的抗組胺藥都是 H1 受體拮抗劑。
+
+- 抗組胺藥控制過敏症狀效果很好，在症狀不嚴重的時候也可以用。
+- 抗組胺鼻噴霧效果很好。請遵醫囑使用，或自己買非處方藥用。在中國屬於非處方藥的抗組胺鼻噴霧中，筆者所知的只有兩種：**富馬酸酮替芬鼻噴霧**、**鹽酸左卡巴斯汀鼻噴霧**。
+- 抗組胺滴眼液可以減輕眼睛癢。請遵醫囑使用，或自己買非處方藥用。在中國屬於非處方藥的抗組胺滴眼液中，筆者所知的只有一種：**富馬酸酮替芬滴眼液**。
+- 除非有全身性的過敏症狀，口服抗組胺藥物的必要性不大。
+- 某些抗組胺藥導致嗜睡，如果服用了這類藥應避免開車或其他有危險的活動。
+
+抗組胺藥分三代：第二代比第一代副作用更小；第三代比第二代副作用更小（第三代的優勢在學界存爭議）。部分抗組胺藥列舉如下：
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th><th>中文名</th><th>拉丁名</th><th>給藥途徑</th><th>美國法律</th><th>中國法律</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="8">第<br>二<br>代</td>
+      <td>鹽酸氮卓斯汀</td>
+      <td>Azelastine hydrocholoride</td>
+      <td>噴鼻、滴眼</td>
+      <td>℞</td>
+      <td>℞</td>
+    </tr>
+    <tr>
+      <td rowspan="3">富馬酸酮替芬</td>
+      <td rowspan="3">Ketotifen fumarate</td>
+      <td>口服</td>
+      <td>℞</td>
+      <td>OTC</td>
+    </tr>
+    <tr>
+      <td>滴眼</td>
+      <td>OTC</td>
+      <td>OTC</td>
+    </tr>
+    <tr>
+      <td>噴鼻</td>
+      <td>無</td>
+      <td>OTC</td>
+    </tr>
+    <tr>
+      <td rowspan="2">鹽酸左卡巴斯汀</td>
+      <td rowspan="2">Levocabastine hydrochloride</td>
+      <td>噴鼻</td>
+      <td>℞</td>
+      <td>OTC</td>
+    </tr>
+    <tr>
+      <td>滴眼</td>
+      <td>℞</td>
+      <td>無</td>
+    </tr>
+    <tr>
+      <td rowspan="2">鹽酸奧洛他定</td>
+      <td rowspan="2">Olopatadine hydrochloride</td>
+      <td>口服、滴眼</td>
+      <td>℞</td>
+      <td>℞</td>
+    </tr>
+    <tr>
+      <td>噴鼻</td>
+      <td>℞</td>
+      <td>無</td>
+    </tr>
+    <tr>
+      <td rowspan="3">第<br>三<br>代</td>
+      <td>地氯雷他定</td>
+      <td>Desloratadine</td>
+      <td>口服</td>
+      <td>℞</td>
+      <td>℞</td>
+    </tr>
+    <tr>
+      <td>鹽酸非索非那定</td>
+      <td>Fexofenadine hydrocholoride</td>
+      <td>口服</td>
+      <td>OTC</td>
+      <td>℞</td>
+    </tr>
+    <tr>
+      <td>鹽酸左西替利嗪</td>
+      <td>Levocetirizine hydrocholoride</td>
+      <td>口服</td>
+      <td>℞</td>
+      <td>℞</td>
+    </tr>
+  </tbody>
+</table>
+
+### 皮質類固醇
+
+皮質類固醇（corticosteroid）氣霧劑是緩解過敏性鼻炎症狀最有效的藥物，亦可用於治療鼻息肉。每日使用效果最佳，亦可在過敏發作期間短暫使用。孕婦可以使用。部分種類兩歲以上兒童可以使用。請遵醫囑使用，或自己買非處方藥用。可能產生的副作用有：
+
+- 鼻腔乾燥、灼燒感、刺痛。洗澡後或用蒸汽浸潤鼻腔後再用藥可減輕此副作用。
+- 打噴嚏。
+- 嗓子癢。
+- 鼻腔感染。
+- 少數情況下，頭痛，流鼻血。
+- 極少數情況下，如果向鼻中隔噴而不是鼻外壁噴，會導致鼻腔穿孔。
+
+皮質類固醇氣霧劑列舉如下：
+
+{:.table}
+| 中文名         | 拉丁名                      | 美國法律 | 中國法律 |
+| -------------- | --------------------------- | -------- | -------- |
+| 二丙酸倍氯米鬆 | Beclomethasone dipropionate |          | OTC      |
+| 布地奈德       | Budesonide                  |          | OTC      |
+| 環索奈德       | Ciclesonide                 | ℞        | ℞        |
+| 氟尼縮鬆       | Flunisolide                 |          | 無       |
+| 糠酸氟替卡鬆   | Fluticasone furoate         | ℞        |          |
+| 丙酸氟替卡鬆   | Fluticasone propionate      | OTC      | OTC      |
+| 糠酸莫米鬆     | Mometasone furoate          | ℞        |          |
+| 曲安奈德       | Triamcinolone acetonide     |          |          |
+
+### 色甘酸鈉
+
+色甘酸鈉（sodium cromoglicate 或 cromolyn sodium）可抑制肥大細胞釋放組胺，從而控制過敏症狀。色甘酸鈉鼻噴霧在美國是 OTC 藥，但筆者沒有在國內找到色甘酸鈉鼻噴霧，只找到了用於治療哮喘的色甘酸鈉吸入劑和用於治療過敏性結膜炎的色甘酸鈉滴眼液，所以沒有多做瞭解。
+
+### 白三烯抑制劑
+
+白三烯抑制劑（antileukotriene）指與白三烯（leukotriene）相關的酶抑制劑或受體阻斷劑。研究表明白三烯抑制劑對過敏性鼻炎的效果與抗組胺藥效果相當[^rodrigo2006]。
+
+### 減充血劑（慎用）
+
+減充血劑（decongestant）鼻噴霧可減輕鼻塞。一旦停藥，鼻塞會反彈得更嚴重。不可連用超過三天至七天，過量使用會引起藥物性鼻炎（比過敏性鼻炎更慘）[^ramey2006]。若要使用，應嚴格遵醫囑用藥。常見的減充血劑有：
+
+{:.table}
+| 中文名         | 拉丁名                       | 美國法律 | 中國法律 | 備註             |
+| -------------- | ---------------------------- | -------- | -------- | ---------------- |
+| 麻黃鹼         | Ephedrine                    |
+| 左旋甲基苯丙胺 | Levomethamphetamine          | 管制藥品 | 精神藥品 | 冰毒的一種       |
+| 鹽酸萘甲唑啉   | Naphazoline hydrocholoride   |          |          | 易引起藥物性鼻炎 |
+| 鹽酸羥甲唑啉   | Oxymetazoline hydrocholoride | OTC      |
+| 去氧腎上腺素   | Phenylephrine                | OTC      |
+| 苯丙醇胺       | Phenylpropanolamine          | 禁用     |          | 易引起中風       |
+| 丙己君         | Propylhexedrine              | OTC      | 精神藥品 |
+| 偽麻黃鹼       | Pseudoephedrine              | BTC      |
+| 辛弗林         | Synephrine                   |
+| 四唑啉         | Tetryzoline                  |
+| 曲馬唑啉       | Tramazoline                  |
+| 賽洛唑啉       | Xylometazoline               | OTC      |
+
+## 變應原免疫治療
+
+變應原免疫治療（allergen immunotherapy，AIT）（未完成）
+
+### 皮下注射脫敏治療
+
+### 舌下脫敏治療
+
+### 口服脫敏治療
+
+## 針艾治療
+
+## 參考文獻
+
+[^rabago2002]: Rabago, David, et al. "Efficacy of daily hypertonic saline nasal irrigation among patients with sinusitis: a randomized controlled trial." Journal of Family Practice 51.12 (2002): 1049-1055.
+[^ramey2006]: Ramey, J. T., E. Bailen, and R. F. Lockey. "Rhinitis medicamentosa." Journal of Investigational Allergology and Clinical Immunology 16.3 (2006): 148.
+[^rodrigo2006]: Rodrigo, Gustavo J., and Anahi Yañez. "The role of antileukotriene therapy in seasonal allergic rhinitis: a systematic review of randomized trials." Annals of Allergy, Asthma & Immunology 96.6 (2006): 779-786.
+[^talbot1997]: Talbot, Andrew R., Timothy M. Herr, and David S. Parsons. "Mucociliary clearance and buffered hypertonic saline solution." The Laryngoscope 107.4 (1997): 500-503.
+[^wheatley2015]: L. M. Wheatley, and A. Togias, “Allergic Rhinitis,” N. Engl. J. Med., vol. 372, no. 5, pp. 456–463, Jan. 2015.
