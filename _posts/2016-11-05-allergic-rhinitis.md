@@ -3,11 +3,7 @@ layout: post
 title: "過敏性鼻炎患者求生指南"
 ---
 
-全面總結了當前醫學界認可的所有治療過敏性鼻炎的方法。作者 Daniel Zhou 是一個多年的鼻炎患者。由於作者沒有專業的生物或醫療背景，而且沒有給所有內容都標註參考文獻，所以文章謬誤不可避免。如果閣下有異議或疑問請給我留言或提 pull request。
-
-<div class="alert alert-danger" role="alert">
-<strong>免責聲明</strong> 本文作者不是醫生！沒有處方權！不能給予醫療建議！請向執業醫師尋求醫療服務！
-</div>
+本文全面總結了當前醫學界認可的過敏性鼻炎治療方法。作者 Daniel Zhou 是一個多年的鼻炎患者。由於作者沒有專業的生物或醫療背景，而且沒有給所有內容都標註參考文獻，所以文章謬誤不可避免。如果閣下有異議或疑問請給我留言或提 pull request。
 
 ## 成因
 
@@ -17,7 +13,7 @@ title: "過敏性鼻炎患者求生指南"
 - 後天性致敏。長期受過敏源刺激而致病。
 - 某些精神疾病也可誘發過敏性鼻炎，比如抑鬱症。
 
-過敏源通常通常包括花粉、黴、動物毛髮、蟎蟲、灰塵。
+過敏源通常通常包括花粉、蟎蟲、灰塵、黴菌孢子、動物毛髮。
 
 患者接觸或吸入致敏原後，體內的 IgE 引起肥大細胞釋放組織胺，造成過敏反應[^wheatley2015]。
 
@@ -72,12 +68,12 @@ title: "過敏性鼻炎患者求生指南"
 
 過敏性鼻炎本身只令人分泌清涕，但長時間鼻塞仍然會產生黃綠粘稠的膿鼻涕。使用生理鹽水沖洗鼻腔可以有效清理粘液和膿。研究表明定期沖洗鼻腔可降低鼻竇感染的可能[^rabago2002]。
 
-- 買洗鼻工具。網上有各種各樣洗鼻工具，它們作用相同，保健效果相同。請選擇用起來順手的工具。
-- 使用濃度合適的鹽水。注射用的生理鹽水是最理想的，但生理鹽水在中國屬於處方藥。方便的做法是自行調配濃度合適的鹽水。
+- 買洗鼻工具。網上可以買到各種各樣的洗鼻工具，它們作用相同。請選擇方便使用、方便消毒的工具。
+- 使用濃度合適的鹽水。注射用的生理鹽水是最理想的，但生理鹽水在中國屬於處方藥。如果不方便買到生理鹽水，可以自行調配濃度合適的鹽水。
   - 按每升水 4 茶匙食鹽（9g）的濃度調配鹽水[^talbot1997]。用濃度過高或過低的水或者清水洗鼻會感到刺痛。
-  - 使用安全潔淨的水。唾液和胃酸能殺滅飲用水中的大量微生物，但鼻腔不能，微生物可透過鼻粘膜進入血管。最好用純淨水，至少應該用開水。
+  - 使用安全潔淨的水。最好用純淨水，至少應該用開水。
   - 使用溫熱的水。過冷或過熱的水會刺激鼻粘膜。
-  - 應使用無碘鹽。
+  - 應使用無碘無添加劑的食鹽以免刺激鼻粘膜。
   - 每升水可額外加入 1 茶匙小蘇打[^talbot1997]。
   - 可購買專用的洗鼻鹽，免去稱量的麻煩。網上以「海鹽」之類的噱頭高價售賣的洗鼻鹽不可信，沒有任何額外的保健或治療效果。
 - 洗鼻前洗手，洗鼻後保持洗鼻工具乾燥。
@@ -86,9 +82,8 @@ title: "過敏性鼻炎患者求生指南"
 
 ### 抗組胺藥
 
-[抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5){:target="_blank"}（antihistamine）通常指 H1 受體拮抗劑（[H1 antagonist](https://en.wikipedia.org/wiki/H1_antagonist){:target="_blank"}）。本文中的抗組胺藥都是 H1 受體拮抗劑。
+[抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5){:target="_blank"}（antihistamine）通常指 H1 受體拮抗劑（[H1 antagonist](https://en.wikipedia.org/wiki/H1_antagonist){:target="_blank"}）。本文中的抗組胺藥都是 H1 受體拮抗劑。抗組胺藥控制過敏症狀效果很好，在症狀不嚴重的時候也可以用。
 
-- 抗組胺藥控制過敏症狀效果很好，在症狀不嚴重的時候也可以用。
 - 抗組胺鼻噴霧效果很好。請遵醫囑使用，或自己買非處方藥用。在中國屬於非處方藥的抗組胺鼻噴霧中，筆者所知的只有兩種：**富馬酸酮替芬鼻噴霧**、**鹽酸左卡巴斯汀鼻噴霧**。
 - 抗組胺滴眼液可以減輕眼睛癢。請遵醫囑使用，或自己買非處方藥用。在中國屬於非處方藥的抗組胺滴眼液中，筆者所知的只有一種：**富馬酸酮替芬滴眼液**。
 - 除非有全身性的過敏症狀，口服抗組胺藥物的必要性不大。
@@ -179,28 +174,21 @@ title: "過敏性鼻炎患者求生指南"
 
 ### 皮質類固醇
 
-皮質類固醇（corticosteroid）氣霧劑是緩解過敏性鼻炎症狀最有效的藥物，亦可用於治療鼻息肉。每日使用效果最佳，亦可在過敏發作期間短暫使用。孕婦可以使用。部分種類兩歲以上兒童可以使用。請遵醫囑使用，或自己買非處方藥用。可能產生的副作用有：
-
-- 鼻腔乾燥、灼燒感、刺痛。洗澡後或用蒸汽浸潤鼻腔後再用藥可減輕此副作用。
-- 打噴嚏。
-- 嗓子癢。
-- 鼻腔感染。
-- 少數情況下，頭痛，流鼻血。
-- 極少數情況下，如果向鼻中隔噴而不是鼻外壁噴，會導致鼻腔穿孔。
-
-皮質類固醇氣霧劑列舉如下：
+皮質類固醇（corticosteroid）氣霧劑是緩解過敏性鼻炎症狀最有效的藥物，亦可用於治療鼻息肉。**每日使用效果最佳**，亦可在過敏發作期間短暫使用。孕婦可以使用。部分種類的皮質類固醇兩歲以上兒童可以使用。請遵醫囑使用，或自己買非處方藥用。皮質類固醇氣霧劑列舉如下：
 
 {:.table}
-| 中文名         | 拉丁名                      | 美國法律 | 中國法律 |
-| -------------- | --------------------------- | -------- | -------- |
-| 二丙酸倍氯米鬆 | Beclomethasone dipropionate |          | OTC      |
-| 布地奈德       | Budesonide                  |          | OTC      |
-| 環索奈德       | Ciclesonide                 | ℞        | ℞        |
-| 氟尼縮鬆       | Flunisolide                 |          | 無       |
-| 糠酸氟替卡鬆   | Fluticasone furoate         | ℞        |          |
-| 丙酸氟替卡鬆   | Fluticasone propionate      | OTC      | OTC      |
-| 糠酸莫米鬆     | Mometasone furoate          | ℞        |          |
-| 曲安奈德       | Triamcinolone acetonide     |          |          |
+| 中文名         | 拉丁名                      | 美國法律<br>（噴鼻） | 中國法律<br>（噴鼻） |
+| -------------- | --------------------------- | -------------------- | -------------------- |
+| 二丙酸倍氯米鬆 | Beclomethasone dipropionate |                      | OTC                  |
+| 布地奈德       | Budesonide                  |                      | OTC                  |
+| 環索奈德       | Ciclesonide                 | ℞                    | ℞                    |
+| 氟尼縮鬆       | Flunisolide                 |                      | 無                   |
+| 糠酸氟替卡鬆   | Fluticasone furoate         | ℞                    |                      |
+| 丙酸氟替卡鬆   | Fluticasone propionate      | OTC                  | OTC                  |
+| 糠酸莫米鬆     | Mometasone furoate          | ℞                    |                      |
+| 曲安奈德       | Triamcinolone acetonide     |                      |                      |
+
+皮質類固醇是激素類物質，但上表所列的幾種皮質類固醇通過鼻黏膜等途徑外用後，全身吸收效率極低或幾乎不吸收，因此被醫學界廣泛認爲可以安全地長期使用。
 
 ### 色甘酸鈉
 
@@ -234,13 +222,17 @@ title: "過敏性鼻炎患者求生指南"
 
 變應原免疫治療（allergen immunotherapy，AIT）（未完成）
 
-### 皮下注射脫敏治療
+### 皮下注射免疫治療
 
-### 舌下脫敏治療
+### 舌下免疫治療
 
-### 口服脫敏治療
+### 口服免疫治療
 
-## 針艾治療
+## 替代療法／偏方
+
+### 針灸治療
+
+調研認爲，目前的研究無法充分證明針刺和艾灸對過敏性鼻炎的療效。[^xiao2009] [^terr2004]針刺對某些常年性過敏性鼻炎（perennial allergic rhinitis，PAR）患者可能有效，需要更多實驗樣本以進一步論證針刺對過敏性鼻炎的效果。[^witt2010]
 
 ## 參考文獻
 
@@ -248,4 +240,7 @@ title: "過敏性鼻炎患者求生指南"
 [^ramey2006]: Ramey, J. T., E. Bailen, and R. F. Lockey. "Rhinitis medicamentosa." Journal of Investigational Allergology and Clinical Immunology 16.3 (2006): 148.
 [^rodrigo2006]: Rodrigo, Gustavo J., and Anahi Yañez. "The role of antileukotriene therapy in seasonal allergic rhinitis: a systematic review of randomized trials." Annals of Allergy, Asthma & Immunology 96.6 (2006): 779-786.
 [^talbot1997]: Talbot, Andrew R., Timothy M. Herr, and David S. Parsons. "Mucociliary clearance and buffered hypertonic saline solution." The Laryngoscope 107.4 (1997): 500-503.
-[^wheatley2015]: L. M. Wheatley, and A. Togias, “Allergic Rhinitis,” N. Engl. J. Med., vol. 372, no. 5, pp. 456–463, Jan. 2015.
+[^terr2004]: Terr, A. I. "Unproven and controversial forms of immunotherapy." Clinical allergy and immunology 18 (2004): 703.
+[^witt2010]: Witt, C. M., and B. Brinkhaus. "Efficacy, effectiveness and cost-effectiveness of acupuncture for allergic rhinitis—an overview about previous and ongoing studies." Autonomic Neuroscience 157.1 (2010): 42-45.
+[^wheatley2015]: Wheatley, Lisa M., and Alkis Togias. "Allergic rhinitis." New England Journal of Medicine 372.5 (2015): 456-463.
+[^xiao2009]: Xiao, L., et al. "Systematic evaluation of the randomized controlled trials about acupuncture and moxibustion treatment of allergic rhinitis." Chinese acupuncture & moxibustion 29.6 (2009): 512-516.
