@@ -94,11 +94,11 @@ title: "過敏性鼻炎患者求生指南"
 
 <small>註：本表數據爲經鼻黏膜給藥時的情況。</small>
 
-皮質類固醇是激素類物質，但上表所列的幾種皮質類固醇通過鼻黏膜等途徑外用後，全身吸收效率極低或幾乎不吸收，因此被廣泛認爲可以長期使用。
+皮質類固醇是激素類物質，但上表所列的幾種皮質類固醇經鼻黏膜給藥後，生物利用率（bioavailability）極低，因此可以長期使用。
 
 ### 抗組胺藥
 
-[抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5){:target="_blank"}（antihistamine）通常指 H1 受體拮抗劑（[H1 antagonist](https://en.wikipedia.org/wiki/H1_antagonist){:target="_blank"}）。本文中的抗組胺藥都是 H1 受體拮抗劑。
+[抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5){:target="_blank"}（antihistamine）通常指 H<sub>1</sub> 受體拮抗劑（[H<sub>1</sub> antagonist](https://en.wikipedia.org/wiki/H1_antagonist){:target="_blank"}）。本文中的抗組胺藥都是 H<sub>1</sub> 受體拮抗劑。
 
 - 抗組胺鼻噴霧控制過敏症狀效果很好且副作用較小，在症狀不嚴重的時候也可以用。
 - 抗組胺滴眼液可以緩解眼睛癢。
