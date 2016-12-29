@@ -1,6 +1,15 @@
 ---
 layout: post
-title: "過敏性鼻炎患者求生指南"
+title: 過敏性鼻炎患者求生指南
+comments:
+  - author:
+      type: full
+      displayName: hychn
+      url: 'https://github.com/hychn'
+      picture: 'https://avatars.githubusercontent.com/u/16100433?v=3&s=73'
+    content: '&#x8D5E;'
+    date: 2016-12-02T14:41:19.508Z
+
 ---
 
 本文全面總結了當前醫學界認可的過敏性鼻炎治療方法。
