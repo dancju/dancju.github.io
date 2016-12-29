@@ -1,5 +1,4 @@
 gems:
-  - jekyll-archives
   - jekyll-coffeescript
 kramdown:
   input: GFM
