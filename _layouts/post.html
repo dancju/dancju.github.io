@@ -35,7 +35,7 @@
         {% for c in sorted_comments %}
           <div class="media">
             <div class="media-left">
-              <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
+              <img src="{{ c.author.picture }}" alt="{{ c.author.displayName }}" class="img-circle" height="64" width="64">
             </div>
             <div class="media-body">
               <p class="text-muted">
@@ -46,7 +46,7 @@
             <hr>
             </div>
           </div>
-          {% endfor %}
+        {% endfor %}
       {% else %}
         There are no comments on this post.
         <hr>

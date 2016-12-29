@@ -1,10 +1,8 @@
 gems:
+  - jekyll-archives
   - jekyll-coffeescript
-
 kramdown:
   input: GFM
-
 sass:
   style: :compressed
-
 timezone: Asia/Shanghai

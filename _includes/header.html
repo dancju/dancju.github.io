@@ -15,8 +15,8 @@
       <p class="navbar-text navbar-right"><a href="" class="navbar-link" id="translateLink">简</a></p>
       <p class="navbar-text navbar-right"><a href="/atom.xml" class="navbar-link">Atom feed</a></p>
       <ul class="nav navbar-nav navbar-right">
+        <li {% if page.url == "/archive.html" %} class="active" {% endif %}><a href="/archive.html">Archive</a></li>
         <li {% if page.url == "/about.html" %} class="active" {% endif %}><a href="/about.html">About</a></li>
-        <li {% if page.url == "/blogroll.html" %} class="active" {% endif %}><a href="/blogroll.html">Blogroll</a></li>
       </ul>
     </div>
 
