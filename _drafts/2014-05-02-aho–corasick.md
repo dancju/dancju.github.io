@@ -407,5 +407,4 @@ int main() {
 
 ## References
 
-[doi:10.1145/360825.360855](http://dx.doi.org/10.1145%2F360825.360855) (No, I
-haven't actually read this yet)
+[^aho1975efficient]: Aho, Alfred V., and Margaret J. Corasick. "Efficient string matching: an aid to bibliographic search." Communications of the ACM 18.6 (1975): 333-340.

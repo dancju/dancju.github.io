@@ -15,28 +15,28 @@ $m$ denotes the number of training examples.
 
 $n$ denotes the number of features.
 
-$x_j^{(i)}$ denotes feature $j$ of the $i$-th training example.
+$x_j^{(i)}$ denotes the $j^\rm{th}$ feature of the $i^\rm{th}$ training example.
 
-Let $\mathbf x^{(i)}$ be the row vector of all the features of the $i$-th training example, viz.
+Let $\boldsymbol x^{(i)}$ be the row vector of all the features of the $i$-th training example, viz.
 
-$$\mathbf x^{(i)}=\begin{pmatrix}x_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
+$$\boldsymbol x^{(i)}=\begin{pmatrix}x_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
 
 where $x_0^{(i)}=1$ for all $i\,.$
 
-Let $\mathbf x_j$ be the column vector of all the $j$-th features of all the training examples, viz.
+Let $\boldsymbol x_j$ be the column vector of all the $j$-th features of all the training examples, viz.
 
-$$\mathbf x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
+$$\boldsymbol x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
 
-Let $\mathbf X$ be a matrix whose rows are all the features of all the training examples, viz.
+Let $\boldsymbol X$ be a matrix whose rows are all the features of all the training examples, viz.
 
 <div>
 $$
-\mathbf X
+\boldsymbol X
 =
 \begin{pmatrix}
-\mathbf x^{(1)}\\
+\boldsymbol x^{(1)}\\
 \vdots\\
-\mathbf x^{(m)}
+\boldsymbol x^{(m)}
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -50,13 +50,13 @@ $$
 
 $y^{(i)}$ denotes the output of the $i$-th training example. For all training examples, the output $y^{(i)}\in\\{0,1\\}\,.$
 
-Let $\mathbf y$ be the column vector of the outputs of all the training examples, viz.
+Let $\boldsymbol y$ be the column vector of the outputs of all the training examples, viz.
 
-$$\mathbf y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
+$$\boldsymbol y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
 
 ### Output
 
-$$\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
+$$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
 
 ### The problem
 
@@ -68,9 +68,9 @@ The __hypothesis__ denotes the probability of the estimated output being $1\,,$ 
 
 <div>
 $$
-h\left(\mathbf x^{(i)};\theta\right)
+h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)
 =g\left(\sum_{j=0}^n\theta_jx_j^{(i)}\right)
-=g\left(\mathbf x^{(i)}\theta\right)\,.
+=g\left(\boldsymbol x^{(i)}\boldsymbol\theta\right)\,.
 $$
 </div>
 
@@ -79,31 +79,31 @@ The __cost function__ is
 <div>
 $$
 \begin{align}
-J(\theta)
-&=-\frac{1}{m}\sum_{i=1}^m\left\{y^{(i)}\ln\left[h\left(\mathbf x^{(i)};\theta\right)\right]+\left(1-y^{(i)}\right)\ln\left[1-h\left(\mathbf x^{(i)};\theta\right)\right]\right\}\\
-&=-\frac{1}{m}\left\{\ln\left[g\left(\mathbf X\theta\right)\right]^\mathsf T\mathbf y+\ln\left[\mathbf 1-g\left(\mathbf X\theta\right)\right]^\mathsf T\left(\mathbf 1-\mathbf y\right)\right\}\,.
+J(\boldsymbol\theta)
+&=-\frac{1}{m}\sum_{i=1}^m\left\{y^{(i)}\ln\left[h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)\right]+\left(1-y^{(i)}\right)\ln\left[1-h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)\right]\right\}\\
+&=-\frac{1}{m}\left\{\ln\left[g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\boldsymbol y+\ln\left[\boldsymbol 1-g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\left(\boldsymbol 1-\boldsymbol y\right)\right\}\,.
 \end{align}
 $$
 </div>
 
 > It is feasible to define the cost function as
-> $$J(\theta)=\frac{1}{m}\left[\exp(-\mathbf X\theta)^\mathsf T\mathbf y+\exp(\mathbf X\theta)^\mathsf T(\mathbf1-\mathbf y)\right]\,,$$
+> $$J(\boldsymbol\theta)=\frac{1}{m}\left[\exp(-\boldsymbol X\boldsymbol\theta)^\mathsf T\boldsymbol y+\exp(\boldsymbol X\boldsymbol\theta)^\mathsf T(\boldsymbol1-\boldsymbol y)\right]\,,$$
 > since it is similar in shape to above?
 
 ## Gradient descent
 
 <div>
-$$\nabla J(\theta)
+$$\nabla J(\boldsymbol\theta)
 =
-\begin{pmatrix}\frac{\partial J(\theta)}{\partial\theta_0}\\\vdots\\\frac{\partial J(\theta)}{\partial\theta_n}\end{pmatrix}
-=
-\frac{1}{m}
-\begin{pmatrix}\sum_{i=1}^mx_0^{(i)}\left[g\left(\mathbf x^{(i)}\theta\right)-y^{(i)}\right]\\\vdots\\\sum_{i=1}^mx_n^{(i)}\left[g\left(\mathbf x^{(i)}\theta\right)-y^{(i)}\right]\end{pmatrix}
+\begin{pmatrix}\frac{\partial J(\boldsymbol\theta)}{\partial\theta_0}\\\vdots\\\frac{\partial J(\boldsymbol\theta)}{\partial\theta_n}\end{pmatrix}
 =
 \frac{1}{m}
-\begin{pmatrix}\mathbf x_0^\mathsf T[g(\mathbf X\theta)-\mathbf y]\\\vdots\\\mathbf x_n^\mathsf T[g(\mathbf X\theta)-\mathbf y]\end{pmatrix}
+\begin{pmatrix}\sum_{i=1}^mx_0^{(i)}\left[g\left(\boldsymbol x^{(i)}\boldsymbol\theta\right)-y^{(i)}\right]\\\vdots\\\sum_{i=1}^mx_n^{(i)}\left[g\left(\boldsymbol x^{(i)}\boldsymbol\theta\right)-y^{(i)}\right]\end{pmatrix}
 =
-\frac{1}{m}\mathbf X^\mathsf T\left[g(\mathbf X\theta)-\mathbf y\right]
+\frac{1}{m}
+\begin{pmatrix}\boldsymbol x_0^\mathsf T[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y]\\\vdots\\\boldsymbol x_n^\mathsf T[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y]\end{pmatrix}
+=
+\frac{1}{m}\boldsymbol X^\mathsf T\left[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y\right]
 \,.$$
 </div>
 

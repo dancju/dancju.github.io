@@ -14,7 +14,7 @@ There are two main options to solve the issue of overfitting:
 * Reduce the number of features.
   * Manually select which features to keep.
   * Use a model selection algorithm.
-* Regularization: Keep all the features, but reduce the parameters $\theta\,.$
+* Regularization: Keep all the features, but reduce the parameters $\boldsymbol\theta$.
 
 Reducing redundant features is the decent approach, of which the regularization is a dumb simulation.
 
@@ -22,11 +22,11 @@ Reducing redundant features is the decent approach, of which the regularization 
 
 Recall the original cost function is
 
-$$J(\theta)=\frac{1}{2m}\left|\mathbf X\theta-\mathbf y\right|^2\,.$$
+$$J(\boldsymbol\theta)=\frac{1}{2m}\left|\boldsymbol X\boldsymbol\theta-\boldsymbol y\right|^2\,.$$
 
 The regularized cost function is
 
-$$J(\theta)=\frac{1}{2m}\left|\mathbf X\theta-\mathbf y\right|^2+\lambda\sum_{j=1}^n\theta_j^2\,.$$
+$$J(\boldsymbol\theta)=\frac{1}{2m}\left|\boldsymbol X\boldsymbol\theta-\boldsymbol y\right|^2+\lambda\sum_{j=1}^n\theta_j^2\,.$$
 
 The $\lambda$, or the regularization parameter, determines how much the costs of our theta parameters are inflated. If it is chosen too laryge, it would cause underfitting.
 
@@ -38,12 +38,12 @@ Note that the bias parameter $\theta_0$ is not penalized. That is because regula
 
 <div>
 $$
-\nabla J(\theta)
+\nabla J(\boldsymbol\theta)
 =
 \frac{1}{m}
-\mathbf X^\mathsf T\left(\mathbf X\theta-\mathbf y\right)
+\boldsymbol X^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)
 +
-\frac{\lambda}{m}\mathbf l
+\frac{\lambda}{m}\boldsymbol l
 \,,
 $$
 </div>
@@ -52,7 +52,7 @@ where
 
 <div>
 $$
-\mathbf l^\mathsf T
+\boldsymbol l^\mathsf T
 =
 \begin{pmatrix}0&\theta_1&\cdots&\theta_n\end{pmatrix}\,.
 $$
@@ -60,14 +60,14 @@ $$
 
 ### Normal equation
 
-Solve the first-order condition $\nabla J(\theta)=\mathbf0$ we obtain
+Solve the first-order condition $\nabla J(\boldsymbol\theta)=\boldsymbol0$ we obtain
 
-$$\theta=\left(\mathbf{X^\mathsf TX+}\lambda\mathbf L\right)^{-1}\mathbf{X^\mathsf Ty}\,,$$
+$$\boldsymbol\theta=\left(\boldsymbol{X^\mathsf TX+}\lambda\boldsymbol L\right)^{-1}\boldsymbol{X^\mathsf Ty}\,,$$
 
 where
 
 <div>
-$$\mathbf L=\begin{pmatrix}0\\&1\\&&\ddots\\&&&1\end{pmatrix}\,.$$
+$$\boldsymbol L=\begin{pmatrix}0\\&1\\&&\ddots\\&&&1\end{pmatrix}\,.$$
 </div>
 
 ## Logistic regression
@@ -76,8 +76,8 @@ Recall the original cost function is
 
 <div>
 $$
-J(\theta)
-=-\frac{1}{m}\left\{\ln\left[g\left(\mathbf X\theta\right)\right]^\mathsf T\mathbf y+\ln\left[\mathbf 1-g\left(\mathbf X\theta\right)\right]^\mathsf T\left(\mathbf 1-\mathbf y\right)\right\}\,.
+J(\boldsymbol\theta)
+=-\frac{1}{m}\left\{\ln\left[g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\boldsymbol y+\ln\left[\boldsymbol 1-g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\left(\boldsymbol 1-\boldsymbol y\right)\right\}\,.
 $$
 </div>
 
@@ -85,9 +85,9 @@ Similarly to the linear regression, the regularized cost function of logistic re
 
 <div>
 $$
-J(\theta)
+J(\boldsymbol\theta)
 =
--\frac{1}{m}\left\{\ln\left[g\left(\mathbf X\theta\right)\right]^\mathsf T\mathbf y+\ln\left[\mathbf 1-g\left(\mathbf X\theta\right)\right]^\mathsf T\left(\mathbf 1-\mathbf y\right)\right\}
+-\frac{1}{m}\left\{\ln\left[g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\boldsymbol y+\ln\left[\boldsymbol 1-g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\left(\boldsymbol 1-\boldsymbol y\right)\right\}
 +\frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2
 \,.
 $$
@@ -96,11 +96,11 @@ $$
 ### Gradient descent
 
 <div>
-$$\nabla J(\theta)
+$$\nabla J(\boldsymbol\theta)
 =
-\frac{1}{m}\mathbf X^\mathsf T\left[g(\mathbf X\theta)-\mathbf y\right]
+\frac{1}{m}\boldsymbol X^\mathsf T\left[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y\right]
 +
-\frac{\lambda}{m}\mathbf l
+\frac{\lambda}{m}\boldsymbol l
 \,,$$
 </div>
 
@@ -108,7 +108,7 @@ where
 
 <div>
 $$
-\mathbf l^\mathsf T
+\boldsymbol l^\mathsf T
 =
 \begin{pmatrix}0&\theta_1&\cdots&\theta_n\end{pmatrix}\,.
 $$

@@ -5,7 +5,7 @@ title: Aho-Corasick
 
 TODO 看論文
 
-通常各種算法書都會先講 KMP 算法，再講 Aho-Corasick 算法。但是筆者發現通過理解 Aho-Corasick 來理解 KMP 算法非常容易。雖然前者比後者更復雜（其實，後者在邏輯上是前者的一個特例），但前者也許更容易理解。所以，不管你懂不懂 KMP，都可以看懂這篇最好懂的 Aho-Corasick 算法講解。
+通常各種算法書都會先講 KMP 算法，再講 Aho-Corasick 算法。但是筆者發現通過理解 Aho-Corasick 來理解 KMP 算法非常容易。雖然後者在邏輯上是前者的一個特例，但前者也許更容易理解。所以，不管你懂不懂 KMP，都可以看懂這篇最好懂的 Aho-Corasick 算法講解。
 
 ## 什麼是 Aho-Corasick 算法
 

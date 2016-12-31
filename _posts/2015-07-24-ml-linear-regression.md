@@ -13,28 +13,28 @@ $m$ denotes the number of training examples.
 
 $n$ denotes the number of features.
 
-$x_j^{(i)}$ denotes feature $j$ of the $i$-th training example.
+$x_j^{(i)}$ denotes the $j^\rm{th}$ feature of the $i^\rm{th}$ training example.
 
-Let $\mathbf x^{(i)}$ be the row vector of all the features of the $i$-th training example, viz.
+Let $\boldsymbol x^{(i)}$ be the row vector of all the features of the $i$-th training example, viz.
 
-$$\mathbf x^{(i)}=\begin{pmatrix}x_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
+$$\boldsymbol x^{(i)}=\begin{pmatrix}x_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
 
 where $x_0^{(i)}=1$ for all $i\,.$
 
-Let $\mathbf x_j$ be the column vector of all the $j$-th features of all the training examples, viz.
+Let $\boldsymbol x_j$ be the column vector of all the $j$-th features of all the training examples, viz.
 
-$$\mathbf x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
+$$\boldsymbol x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
 
-Let $\mathbf X$ be a matrix whose rows are all the features of all the training examples, viz.
+Let $\boldsymbol X$ be a matrix whose rows are all the features of all the training examples, viz.
 
 <div>
 $$
-\mathbf X
+\boldsymbol X
 =
 \begin{pmatrix}
-\mathbf x^{(1)}\\
+\boldsymbol x^{(1)}\\
 \vdots\\
-\mathbf x^{(m)}
+\boldsymbol x^{(m)}
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -48,13 +48,13 @@ $$
 
 $y^{(i)}$ denotes the output of the $i$-th training example.
 
-Let $\mathbf y$ be the column vector of the outputs of all the training examples, viz.
+Let $\boldsymbol y$ be the column vector of the outputs of all the training examples, viz.
 
-$$\mathbf y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
+$$\boldsymbol y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
 
 ### Output
 
-$$\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
+$$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
 
 ### The problem
 
@@ -65,13 +65,13 @@ $$
 J(\theta)
 =
 \frac{1}{2m}\sum_{i=1}^m\left(\sum_{j=0}^n\theta_j x_j^{(i)}-y^{(i)}\right)^2
-=\frac{1}{2m}\left|\mathbf X\theta-\mathbf y\right|^2\,.
+=\frac{1}{2m}\left|\boldsymbol X\boldsymbol\theta-\boldsymbol y\right|^2\,.
 $$
 </div>
 
-Our aim is finding the optimum $\theta$ to minimize the cost function $J(\theta)$.
+Our aim is finding the optimum $\boldsymbol\theta$ to minimize the cost function $J(\boldsymbol\theta)$.
 
-There are several approaches to the optimum $\theta$. The following two sections introduces two of them, naming gradient descent and normal equation.
+There are several approaches to the optimum $\boldsymbol\theta$. The following two sections introduces two of them, naming gradient descent and normal equation.
 
 > Other approaches includes stochastic gradient, simulated annealing, etc.
 
@@ -81,48 +81,48 @@ The __gradient descent__ algorithm iterately execute the following gradient desc
 
 The gradient descent rule can be expressed as:
 
-$$\theta\gets\theta-\alpha\nabla J(\theta)\,,$$
+$$\boldsymbol\theta\gets\boldsymbol\theta-\alpha\nabla J(\boldsymbol\theta)\,,$$
 
 where
 
 <div>
 $$
-\nabla J(\theta)
+\nabla J(\boldsymbol\theta)
 =
 \begin{pmatrix}\frac{\partial J(\theta)}{\partial\theta_0}\\\vdots\\\frac{\partial J(\theta)}{\partial\theta_n}\end{pmatrix}
 =
 \frac{1}{m}
-\begin{pmatrix}\sum_{i=1}^mx_0^{(i)}\left[\mathbf x^{(i)}\theta-y^{(i)}\right]\\\vdots\\\sum_{i=1}^mx_n^{(i)}\left[\mathbf x^{(i)}\theta-y^{(i)}\right]\end{pmatrix}
+\begin{pmatrix}\sum_{i=1}^mx_0^{(i)}\left[\boldsymbol x^{(i)}\boldsymbol\theta-y^{(i)}\right]\\\vdots\\\sum_{i=1}^mx_n^{(i)}\left[\boldsymbol x^{(i)}\boldsymbol\theta-y^{(i)}\right]\end{pmatrix}
 =
 \frac{1}{m}
-\begin{pmatrix}\mathbf x_0^\mathsf T\left(\mathbf X\theta-\mathbf y\right)\\\vdots\\\mathbf x_n^\mathsf T\left(\mathbf X\theta-\mathbf y\right)\end{pmatrix}
+\begin{pmatrix}\boldsymbol x_0^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)\\\vdots\\\boldsymbol x_n^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)\end{pmatrix}
 =
 \frac{1}{m}
-\mathbf X^\mathsf T\left(\mathbf X\theta-\mathbf y\right)
+\boldsymbol X^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)
 \,.
 $$
 </div>
 
 Hence, the gradient descent rule is equivalent to
 
-$$\theta\gets\theta-\frac{\alpha}{m}\mathbf X^\mathsf T\left(\mathbf X\theta-\mathbf y\right)\,.$$
+$$\boldsymbol\theta\gets\boldsymbol\theta-\frac{\alpha}{m}\boldsymbol X^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)\,.$$
 
 The complexity of gradient descent is $O(kmn)\,,$ where $k$ is the number of iteration.
 
-Note that the gradient descent finds a numerical solution of the optimum $\theta$.
+Note that the gradient descent finds a numerical solution of the optimum $\boldsymbol\theta$.
 
 ## Normal equation
 
-The __Normal equation__ is an approach by finding the optimum $\theta$ via first-order condition, viz.
+The __Normal equation__ is an approach by finding the optimum $\boldsymbol\theta$ via first-order condition, viz.
 
-$$\nabla J(\theta)=\mathbf0\,.$$
+$$\nabla J(\boldsymbol\theta)=\boldsymbol0\,.$$
 
 Solving the equation yields
 
-$$\theta=\left(\mathbf X^\mathsf T\mathbf X\right)^{-1}\mathbf X^\mathsf T\mathbf y\,.$$
+$$\boldsymbol\theta=\left(\boldsymbol X^\mathsf T\boldsymbol X\right)^{-1}\boldsymbol X^\mathsf T\boldsymbol y\,.$$
 
-> Conjecture: $\mathbf X^\mathsf T\mathbf X$ is non-invertible iff local optima exist.
+> Conjecture: $\boldsymbol X^\mathsf T\boldsymbol X$ is non-invertible iff local optima exist.
 
 The complexity of normal equation could be $O\left(mn^2+n^{2.373}\right)$ if optimized CW-like algorithms are applied.
 
-Note that the gradient descent finds a algebraic solution of the optimum $\theta$.
+Note that the gradient descent finds a algebraic solution of the optimum $\boldsymbol\theta$.
