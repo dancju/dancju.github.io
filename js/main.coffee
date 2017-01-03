@@ -1,15 +1,7 @@
 ---
 ---
 
-$ ->
-  MathJax.Hub.Config {
-    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-    'HTML-CSS': {
-      matchFontHeight: true,
-      availableFonts: [],
-      webFont: 'TeX'
-    }
-  }
+$ -> MathJax.Hub.Config { tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } }
 
 $('main').ready ->
   main = $($('main').children()[1])
