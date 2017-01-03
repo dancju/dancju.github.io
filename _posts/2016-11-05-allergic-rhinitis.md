@@ -9,7 +9,6 @@ comments:
       picture: 'https://avatars.githubusercontent.com/u/16100433?v=3&s=73'
     content: '&#x8D5E;'
     date: 2016-12-02T14:41:19.508Z
-
 ---
 
 本文全面總結了當前醫學界認可的過敏性鼻炎治療方法。
@@ -213,7 +212,6 @@ comments:
 | 中文名         | 拉丁名                       | 美國法律 | 中國法律 | 備註             |
 | -------------- | ---------------------------- | -------- | -------- | ---------------- |
 | 麻黃鹼         | Ephedrine                    |
-| 左旋甲基苯丙胺 | Levomethamphetamine          | 管制藥品 | 精神藥品 | 冰毒的一種       |
 | 鹽酸萘甲唑啉   | Naphazoline hydrocholoride   |          |          | 易引起藥物性鼻炎 |
 | 鹽酸羥甲唑啉   | Oxymetazoline hydrocholoride | OTC      | OTC
 | 去氧腎上腺素   | Phenylephrine                | OTC      |
