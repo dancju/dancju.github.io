@@ -3,7 +3,7 @@ layout: post
 title: "Machine learning: logistic regression"
 ---
 
-This post is a lecture note about logistic regression.
+This is a lecture note about logistic regression.
 
 Logistic regression is actually an approach to classification problems instead of regression problems.
 
@@ -74,19 +74,19 @@ h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)
 $$
 </div>
 
-The __cost function__ is
+The __loss function__ is
 
 <div>
 $$
 \begin{align}
 J(\boldsymbol\theta)
 &=-\frac{1}{m}\sum_{i=1}^m\left\{y^{(i)}\ln\left[h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)\right]+\left(1-y^{(i)}\right)\ln\left[1-h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)\right]\right\}\\
-&=-\frac{1}{m}\left\{\ln\left[g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\boldsymbol y+\ln\left[\boldsymbol 1-g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\left(\boldsymbol 1-\boldsymbol y\right)\right\}\,.
+&=-\frac{1}{m}\left(\ln\left[g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\boldsymbol y+\ln\left[\boldsymbol 1-g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\left(\boldsymbol 1-\boldsymbol y\right)\right)\,.
 \end{align}
 $$
 </div>
 
-> It is feasible to define the cost function as
+> It is feasible to define the loss function as
 > $$J(\boldsymbol\theta)=\frac{1}{m}\left[\exp(-\boldsymbol X\boldsymbol\theta)^\mathsf T\boldsymbol y+\exp(\boldsymbol X\boldsymbol\theta)^\mathsf T(\boldsymbol1-\boldsymbol y)\right]\,,$$
 > since it is similar in shape to above?
 

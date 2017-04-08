@@ -223,9 +223,9 @@ comments:
 | 曲馬唑啉       | Tramazoline                  |
 | 賽洛唑啉       | Xylometazoline               | OTC      | OTC
 
-## 變應原免疫治療
+## 過敏原免疫治療
 
-變應原免疫治療（allergen immunotherapy，AIT）
+過敏原免疫治療（allergen immunotherapy，AIT）
 
 ### 皮下注射免疫治療
 

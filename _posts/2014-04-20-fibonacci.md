@@ -3,9 +3,8 @@ layout: post
 title: Find $\sum_{i=1}^n F_i^k$ within $\Theta\left(k^3\log n\right)$ time
 ---
 
-In the past week, I encountered some weird problems in contests.
+I encountered a interesting problems in a programming contest last week. The problem requires calculating $\sum_{i=1}^nF_i^k$ under a dramatically short time limit, where $F$ is the Fibonacci sequence. The supposed solution is exponentiation by squaring upon the following formula.
 
-<div>
 $$
 \begin{pmatrix}
 1&\binom{k}{0}&\binom{k}{1}&\cdots&\binom{k}{k-1}&\binom{k}{k} \\
@@ -33,4 +32,3 @@ F_{n+1}^1F_n^{k-1} \\
 F_{n+1}^0F_n^k
 \end{pmatrix}
 $$
-</div>

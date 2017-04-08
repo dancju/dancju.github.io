@@ -3,7 +3,7 @@ layout: post
 title: "Machine learning: linear regression"
 ---
 
-This post is a lecture note about linear regression.
+This is a lecture note about linear regression.
 
 ## Definitions
 
@@ -58,7 +58,7 @@ $$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatri
 
 ### The problem
 
-The cost function is:
+Consider the quadric loss function
 
 <div>
 $$
@@ -69,9 +69,9 @@ J(\theta)
 $$
 </div>
 
-Our aim is finding the optimum $\boldsymbol\theta$ to minimize the cost function $J(\boldsymbol\theta)$.
+Our aim is finding the optimum $\boldsymbol\theta$ to minimize the loss function $J(\boldsymbol\theta)$.
 
-There are several approaches to the optimum $\boldsymbol\theta$. The following two sections introduces two of them, naming gradient descent and normal equation.
+There are several approaches to the optimum $\boldsymbol\theta$. The following two sections introduces two of them, naming *gradient descent* and *normal equation*.
 
 > Other approaches includes stochastic gradient, simulated annealing, etc.
 

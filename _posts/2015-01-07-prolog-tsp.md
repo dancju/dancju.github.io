@@ -3,7 +3,7 @@ layout: post
 title: Two Prolog solutions to TSP
 ---
 
-Just been learning Prolog for days. I'm posting these code here because I could not find a briefer solution.
+I'm posting these code here because I can not find a briefer solution.
 
 ## Brute force search
 
@@ -42,7 +42,7 @@ min_hami_cycle(Path, Cost) :-
 
 ## Held-Karp algorithm
 
-This implementation is far from elegance. You can see a C thinking style in this code. I tried to write a better one but bogged into bugs of mystery. Hopefully I will reimplement this algorithm again someday.
+This following implementation is far from elegance. You can perceive a C thinking style in this code. I tried to make a better one but bogged into bugs of mystery. Hopefully I would revise this piece of code someday.
 
 ```prolog
 arc(a, b, 10).

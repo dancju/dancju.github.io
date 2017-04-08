@@ -3,7 +3,7 @@ layout: post
 title: "Machine learning: regularization"
 ---
 
-This post is a lecture note about regularization.
+This is a lecture note about regularization.
 
 ## Overfitting
 
@@ -20,19 +20,17 @@ Reducing redundant features is the decent approach, of which the regularization 
 
 ## Linear regression
 
-Recall the original cost function is
+Recall the original loss function is
 
 $$J(\boldsymbol\theta)=\frac{1}{2m}\left|\boldsymbol X\boldsymbol\theta-\boldsymbol y\right|^2\,.$$
 
-The regularized cost function is
+The regularized loss function is
 
 $$J(\boldsymbol\theta)=\frac{1}{2m}\left|\boldsymbol X\boldsymbol\theta-\boldsymbol y\right|^2+\lambda\sum_{j=1}^n\theta_j^2\,.$$
 
-The $\lambda$, or the regularization parameter, determines how much the costs of our theta parameters are inflated. If it is chosen too laryge, it would cause underfitting.
+The $\lambda$, or the regularization parameter, determines how much the costs of our theta parameters are inflated. If it is chosen too large, it would cause underfitting.
 
 Note that the bias parameter $\theta_0$ is not penalized. That is because regularization is a dumb simulation of removing redundant features, while the bias feature $x_0$ is not the one we want to remove.
-
-> I am not confident in the last paragraph. Please feel free to criticize if you find any suspicious point in my blog.
 
 ### Gradient descent
 
@@ -72,7 +70,7 @@ $$\boldsymbol L=\begin{pmatrix}0\\&1\\&&\ddots\\&&&1\end{pmatrix}\,.$$
 
 ## Logistic regression
 
-Recall the original cost function is
+Recall the original loss function is
 
 <div>
 $$
@@ -81,7 +79,7 @@ J(\boldsymbol\theta)
 $$
 </div>
 
-Similarly to the linear regression, the regularized cost function of logistic regression is
+Similarly to the linear regression, the regularized loss function of logistic regression is
 
 <div>
 $$
