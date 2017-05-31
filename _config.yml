@@ -1,7 +1,13 @@
 gems:
-  - jekyll-coffeescript
+ - jekyll-coffeescript
+ - jekyll-paginate
+
 kramdown:
   input: GFM
+  hard_wrap: false
+
 sass:
   style: :compressed
-timezone: Asia/Shanghai
+
+pygments_options:
+  tabsize: 4

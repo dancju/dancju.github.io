@@ -1,8 +1,6 @@
 ---
 ---
 
-$ -> MathJax.Hub.Config { tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } }
-
 $('main').ready ->
   main = $($('main').children()[1])
   aside = $('aside').children().children()
