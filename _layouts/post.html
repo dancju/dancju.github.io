@@ -31,7 +31,7 @@
     <hr>
     <div class="container" id="comments">
       {%if page.comments %}
-        {% assign sorted_comments = (page.comments | sort: 'date') %}
+        {% assign sorted_comments = page.comments | sort: 'date' %}
         {% for c in sorted_comments %}
           <div class="media">
             <div class="media-left">
