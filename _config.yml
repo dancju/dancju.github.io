@@ -1,5 +1,4 @@
 plugins:
- - jekyll-coffeescript
  - jekyll-paginate
 
 kramdown:
@@ -10,4 +9,4 @@ sass:
   style: :compressed
 
 pygments_options:
-  tabsize: 4
+  tabsize: 2
