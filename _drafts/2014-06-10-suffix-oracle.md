@@ -19,16 +19,16 @@ template<char SIGMA> class SuffixOracle {
   vector<Node> val;
 public:
   SuffixOracle(char *lo, char *hi) {
-    assert(lo<hi);
+    assert(lo < hi);
     size = hi-lo;
     text = new char[size];
     memcpy(text, lo, size);
     vector<int> fail(hi-lo+1);
     val.push_back(Node());
-    for(char *i = lo; i!=hi; i++) {
+    for(char *i = lo; i != hi; i++) {
       for(int j = i-lo; ;) {
         if(val[j].trans[*i]) {
-          if(i-lo+1!=val[j].trans[*i])
+          if(i-lo+1 != val[j].trans[*i])
             fail[i-lo+1] = val[j].trans[*i];
           break;
         } else
@@ -43,16 +43,16 @@ public:
   ~SuffixOracle() { delete[] text; }
   inline void print() const {
     printf("        ");
-    for(int i = 0; i<SIGMA; i++)
+    for(int i = 0; i < SIGMA; i++)
       printf("%3c", i+'a');
     puts("");
-    for(int x = 0; x<val.size(); x++) {
+    for(int x = 0; x < val.size(); x++) {
       assert(0<=x && x<val.size());
       if(val[x].accept)
         printf("((%2d)) :", x);
       else
         printf(" (%2d)  :", x);
-      for(char i = 0; i<SIGMA; i++)
+      for(char i = 0; i < SIGMA; i++)
         if(val[x].trans[i])
           printf("%3d", val[x].trans[i]);
         else

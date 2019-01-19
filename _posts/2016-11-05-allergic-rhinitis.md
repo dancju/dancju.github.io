@@ -9,9 +9,9 @@ comments:
       picture: 'https://avatars.githubusercontent.com/u/16100433?v=3&s=73'
     content: '&#x8D5E;'
     date: 2016-12-02T14:41:19.508Z
----
 
-本文全面總結了當前醫學界認可的過敏性鼻炎治療方法。
+---
+本文試圖儘量全面地總結當前可靠的過敏性鼻炎治療方法。
 
 ## 成因
 

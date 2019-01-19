@@ -3,7 +3,7 @@ layout: post
 title: Suffix automaton
 
 ---
-A suffix automaton is a Deterministic Finite Automaton (DFA) that accepts all suffix of a given string.
+A suffix automaton is a Deterministic Finite Automaton (DFA) that accepts all suffix of a given string. I built [a web app](http://nerddan.github.io/sam) that converting strings to suffix automata.
 
 ## The suffix automaton C++ class
 

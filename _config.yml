@@ -1,12 +1,21 @@
-plugins:
- - jekyll-paginate
-
+encoding: UTF-8
+future: true
+gfm_quirks: paragraph_end
+github: [metadata]
+jailed: false
 kramdown:
   input: GFM
   hard_wrap: false
-
+plugins:
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
 sass:
   style: :compressed
 
-pygments_options:
-  tabsize: 2
+title: Daniel Zhou's Chaos
+author: Daniel Zhou

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Find $\sum_{i=1}^n F_i^k$ within $\Theta\left(k^3\log n\right)$ time
----
 
+---
 I encountered a interesting problems in a programming contest last week. The problem requires calculating $\sum_{i=1}^nF_i^k$ under a dramatically short time limit, where $F$ is the Fibonacci sequence. The supposed solution is exponentiation by squaring upon the following formula.
 
 $$

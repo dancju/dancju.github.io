@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Machine learning: logistic regression"
----
 
+---
 This is a lecture note about logistic regression.
 
 Logistic regression is actually an approach to classification problems instead of regression problems.

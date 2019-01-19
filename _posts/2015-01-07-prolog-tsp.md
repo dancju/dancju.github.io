@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Two Prolog solutions to TSP
----
 
+---
 I'm posting these code here because I can not find a briefer solution.
 
 ## Brute force search

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Machine learning: linear regression"
----
 
+---
 This is a lecture note about linear regression.
 
 ## Definitions

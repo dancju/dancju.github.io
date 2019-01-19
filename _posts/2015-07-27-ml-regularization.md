@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Machine learning: regularization"
----
 
+---
 This is a lecture note about regularization.
 
 ## Overfitting
