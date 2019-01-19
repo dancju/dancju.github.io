@@ -3,11 +3,9 @@ layout: post
 title: Suffix automaton
 
 ---
-A suffix automaton is a DFA that accepts all suffix strings of a given text.
+A suffix automaton is a Deterministic Finite Automaton (DFA) that accepts all suffix of a given string.
 
-Actually, I don't really understand the following code.
-
-## Template
+## The suffix automaton C++ class
 
 ```cpp
 template<uint8_t SIGMA, size_t CAPACITY> class SAM {
@@ -340,4 +338,4 @@ int main() {
 
 ### POJ 3294
 
-\[\]([https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp](https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp "solution"))
+[my solution](https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp "solution")

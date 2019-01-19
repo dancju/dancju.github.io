@@ -58,7 +58,7 @@ comments:
   - 使用新風系統（HEPA）或空氣淨化器；
   - 污染嚴重的時候避免出門；
   - 室外帶防霾口罩（宜閱[此文](https://www.douban.com/note/345004477/){:target="_blank"}）；
-  - 遷徙到[乾淨的地方](http://aqicn.org/map/world){:target="_blank"}；
+  - 遷徙至[潔淨之處](http://aqicn.org/map/world){:target="_blank"}；
 - 避免接觸黴菌；
   - 檢查織物、地毯、寵物、書、牆紙受否發黴，是否足夠乾燥；
   - 檢查管道系統、空調是否漏水；
