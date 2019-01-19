@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Suffix automaton
----
 
+---
 A suffix automaton is a DFA that accepts all suffix strings of a given text.
 
 Actually, I don't really understand the following code.
@@ -339,4 +339,5 @@ int main() {
 ```
 
 ### POJ 3294
-My codd is too ugly to be showed off here :(
+
+\[\]([https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp](https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp "solution"))
