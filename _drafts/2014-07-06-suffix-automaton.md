@@ -27,7 +27,7 @@ public:
   inline void insert(uint8_t x) {
     assert(0<=x && x<SIGMA);
     State *p = last, *np = _end++;
-    assert(_end<=pool+CAPACITY);
+    assert(_end <= pool+CAPACITY);
     np->val = p->val+1;
     memset(np->trans, 0, sizeof np->trans);
     for(; p && p->trans[x]==0; p = p->pare)
@@ -42,7 +42,7 @@ public:
       np->pare = q;
     else {
       State *nq = _end++;
-      assert(_end<=pool+CAPACITY);
+      assert(_end <= pool+CAPACITY);
       nq->val = p->val+1;
       memcpy(nq->trans, q->trans, sizeof q->trans);
       nq->pare = q->pare;
@@ -58,12 +58,12 @@ public:
   inline const State& operator[](size_t x) const { return pool[x]; }
   inline void print(char i2c(uint8_t)) const {
     printf("    ");
-    for(uint8_t j = 0; j<SIGMA; j++)
+    for(uint8_t j = 0; j < SIGMA; j++)
       printf("%3c", i2c(j));
     puts("");
-    for(iterator i = pool; i<_end; i++) {
+    for(iterator i = pool; i < _end; i++) {
       printf("%2ld |", i-pool);
-      for(uint8_t j = 0; j<SIGMA; j++)
+      for(uint8_t j = 0; j < SIGMA; j++)
         if(i->trans[j])
           printf("%3ld", i->trans[j]-pool);
         else
@@ -121,13 +121,13 @@ int main() {
   size_t len = strlen(s);
   for(char *i = s; *i; i++)
     sam.insert(*i-'a');
-  for(long i = 0; i<sam.size(); i++)
+  for(long i = 0; i < sam.size(); i++)
     cnt[sam[i].val]++;
-  for(long i = 0; i<len; i++)
+  for(long i = 0; i < len; i++)
     cnt[i+1] += cnt[i];
-  for(long i = sam.size()-1; i>=0; i--)
+  for(long i = sam.size()-1; i >= 0; i--)
     topo[--cnt[sam[i].val]] = i;
-  for(long p = 0; p<sam.size(); p++)
+  for(long p = 0; p < sam.size(); p++)
     v0[p] = sam[p].val;
   while(~scanf("%s", s)) {
     memset(v1, 0, sizeof(v1));
@@ -141,14 +141,14 @@ int main() {
         t = sam[p].val;
       } else
         i++;
-    for(size_t *i = topo+sam.size()-1; i>=topo; i--) {
+    for(size_t *i = topo+sam.size()-1; i >= topo; i--) {
       if(*i)
         maximize(v1[sam[*i].pare-sam.begin()], v1[*i]);
       minimize(v0[*i], v1[*i]);
     }
   }
   size_t res = 0;
-  for(long p = 0; p<sam.size(); p++)
+  for(long p = 0; p < sam.size(); p++)
     maximize(res, v0[p]);
   printf("%ld\n", res);
   return 0;
@@ -168,21 +168,21 @@ int main() {
   int len = (int)strlen(raw);
   for(char *i = raw; *i; i++)
     sam.insert(*i = *i-'a');
-  for(SAM<26, M>::iterator i = sam.begin(); i!=sam.end(); i++)
+  for(SAM<26, M>::iterator i = sam.begin(); i != sam.end(); i++)
     val[i->val]++;
-  for(long i = 0; i<len; i++)
+  for(long i = 0; i < len; i++)
     val[i+1] += val[i];
-  for(int i = 0; i<sam.size(); i++)
+  for(int i = 0; i < sam.size(); i++)
     topo[--val[sam[i].val]] = i;
-  for(int i = 0, p = 0; i<len; i++)
+  for(int i = 0, p = 0; i < len; i++)
     cnt[p = (int)(sam[p].trans[raw[i]]-sam.begin())]++;
-  for(int *i = topo+sam.size()-1; i>topo; i--) {
+  for(int *i = topo+sam.size()-1; i > topo; i--) {
     maximize(f[sam[*i].val], cnt[*i]);
     cnt[sam[*i].pare-sam.begin()] += cnt[*i];
   }
-  for(long i = len-1; i>=0; i--)
+  for(long i = len-1; i >= 0; i--)
     maximize(f[i], f[i+1]);
-  for(long i = 1; i<=len; i++)
+  for(long i = 1; i <= len; i++)
     printf("%d\n", f[i]);
   return 0;
 }
@@ -201,7 +201,7 @@ inline void bazinga0() {
   n--;
   sam.clear();
   scanf("%d", &i1);
-  for(int i = 0; i<n; i++) {
+  for(int i = 0; i < n; i++) {
     i0 = i1;
     scanf("%d", &i1);
     sam.insert(raw[i] = i1-i0+87);
@@ -213,15 +213,15 @@ short first[M], last[M];
 
 inline void bazinga1() {
   memset(val, 0, sizeof val);
-  for(SAM<175, M>::iterator i = sam.begin(); i!=sam.end(); i++)
+  for(SAM<175, M>::iterator i = sam.begin(); i != sam.end(); i++)
     val[i->val]++;
   for(short i = 1; i<=n; i++)
     val[i] += val[i-1];
-  for(SAM<175, M>::iterator i = sam.begin(); i!=sam.end(); i++)
+  for(SAM<175, M>::iterator i = sam.begin(); i != sam.end(); i++)
     topo[--val[i->val]] = i-sam.begin();
   memset(first, 0x7f, sizeof first);
   memset(last, 0, sizeof last);
-  for(long p = 0, i = 0; i<n; i++) {
+  for(long p = 0, i = 0; i < n; i++) {
     p = sam[p].trans[raw[i]]-sam.begin();
     first[p] = last[p] = i+1;
   }
@@ -236,8 +236,8 @@ int res;
 
 inline void bazinga2() {
   res = -1;
-  for(int i = 1; i<sam.size(); i++)
-    if(first[i]+sam[i].val<last[i])
+  for(int i = 1; i < sam.size(); i++)
+    if(first[i]+sam[i].val < last[i])
       maximize(res, (int)sam[i].val);
 }
 
@@ -284,14 +284,14 @@ int val[N+1], topo[M], c[M];
 
 inline void bazinga1() {
   memset(val, 0, sizeof val);
-  for(SAM<52, M>::iterator i = sam.begin(); i!=sam.end(); i++)
+  for(SAM<52, M>::iterator i = sam.begin(); i != sam.end(); i++)
     val[i->val]++;
-  for(int i = 1; i<=n; i++)
+  for(int i = 1; i <= n; i++)
     val[i] += val[i-1];
-  for(SAM<52, M>::iterator i = sam.begin(); i!=sam.end(); i++)
+  for(SAM<52, M>::iterator i = sam.begin(); i != sam.end(); i++)
     topo[--val[i->val]] = (int)(i-sam.begin());
   memset(c, 0, sizeof c);
-  for(int p = 0, i = 0; i<n; i++)
+  for(int p = 0, i = 0; i < n; i++)
     c[p = (int)(sam[p].trans[s[i]]-sam.begin())]++;
   for(int *p = topo+sam.size()-1; *p; p--)
     c[sam[*p].pare-sam.begin()] += c[*p];
@@ -310,7 +310,7 @@ inline void bazinga2() {
       p = _-sam.begin();
       l++;
       i++;
-      if(l>=k) {
+      if(l >= k) {
         res += ((long long)l-max(k-1, (int)sam[p].pare->val))*c[p];
         t[_->pare-sam.begin()]++;
       }
@@ -322,10 +322,10 @@ inline void bazinga2() {
   }
   for(int *p = topo+sam.size()-1; *p; p--) {
     t[sam[*p].pare-sam.begin()] += t[*p];
-    if(sam[*p].val>=k)
+    if(sam[*p].val >= k)
       res += ((long long)sam[*p].val-max(k-1, (int)sam[*p].pare->val))*c[*p]*t[*p];
   }
-  cout<<res<<endl;
+  cout << res << endl;
 }
 
 int main() {

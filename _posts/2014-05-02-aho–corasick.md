@@ -1,16 +1,11 @@
 ---
 layout: post
 title: Aho–Corasick string matching algorithm
+
 ---
+For a given string $s$ and a given set of patterns $p\_i\|\_{i=1}^n$, the algorithm [^aho1975efficient] finds all sub-strings of $s$ which equals to any pattern $p\_i$. The asymptotic time complexity is $O\left(\|s\|+\sum_i\|p_i\|\right)$.
 
-The algorithm locates a finite set of patterns within a text string.
-
-The algorithm construct a trie storing all patterns, and attaches additional
-links (link from state A to state B iff B is associated with the longest suffix
-of that A associated with) which allow transition between failed pattern
-matches.
-
-## The Aho–Corasick automaton class
+## The Aho–Corasick automaton in C++ class
 
 ```cpp
 template<uint8_t SIGMA> struct AC {
@@ -28,7 +23,7 @@ template<uint8_t SIGMA> struct AC {
     state.push_back(State());
   }
   template<class I> inline void insertPattern(I lo, I hi) {
-    assert(lo<hi);
+    assert(lo < hi);
     size_t p = 0;
     for(I i = lo; i!=hi; i++) {
       assert(0<=*i && *i<SIGMA);
@@ -44,13 +39,13 @@ template<uint8_t SIGMA> struct AC {
   }
   inline void build() {
     queue<size_t> q;
-    for(uint8_t i = 0; i<SIGMA; i++)
+    for(uint8_t i = 0; i < SIGMA; i++)
       if(state[0].go[i])
         q.push(state[0].go[i]);
     while(q.size()) {
       size_t u = q.front();
       q.pop();
-      for(uint8_t i = 0; i<SIGMA; i++) {
+      for(uint8_t i = 0; i < SIGMA; i++) {
         size_t &v = state[u].go[i];
         if(v) {
           size_t j = state[u].fail;
@@ -79,7 +74,7 @@ template<uint8_t SIGMA> struct AC {
   template<class I> inline void match(I lo, I hi, void action(size_t, short)) {
     assert(lo<hi);
     size_t p = 0;
-    for(I i = lo; i!=hi; i++) {
+    for(I i = lo; i != hi; i++) {
       assert(0<=*i && *i<SIGMA);
       p = go(p, *i);
       for(vector<short>::iterator j = state[p].output.begin();
@@ -146,15 +141,15 @@ int main() {
     size_t _ = strlen(B);
     memset(A, -1, sizeof(A));
     A[0][0] = 0;
-    for(int i = 0; i<_; i++)
+    for(int i = 0; i < _; i++)
       for(int j = 0; j < ac.size(); j++)
-        if(A[i][j]!=UINT_MAX)
+        if(A[i][j] != UINT_MAX)
           for(short k = 0; k < 4; k++)
             if(!ac.output(ac.go(j, k)).size())
               A[i+1][ac.go(j, k)]
               = min(A[i+1][ac.go(j, k)], A[i][j]+(c2i(B[i])!=k));
     unsigned res = UINT_MAX;
-    for(int j = 0; j<ac.size(); j++)
+    for(int j = 0; j < ac.size(); j++)
       res = min(res, A[_][j]);
     printf("Case %hd: %d\n", kase, res);
   }
@@ -164,7 +159,7 @@ int main() {
 
 ### POJ 3691
 
-DP.
+Dynamic Programming.
 
 ```cpp
 inline char c2i(char c) {
@@ -223,13 +218,13 @@ int main() {
               A[i+1][ac.go(j, k)]
               = min(A[i+1][ac.go(j, k)], A[i][j]+(c2i(B[i])!=k));
     unsigned res = UINT_MAX;
-    for(int j = 0; j<ac.size(); j++)
+    for(int j = 0; j < ac.size(); j++)
       res = min(res, A[_][j]);
     printf("Case %hd: %d\n", kase, res);
   }
   return 0;
 }
-```cpp
+```
 
 ### UVa 11468
 
@@ -251,7 +246,7 @@ AC<62> ac;
 int main() {
   short nCase;
   scanf("%hd", &nCase);
-  for(short iCase = 1; iCase<=nCase; iCase++) {
+  for(short iCase = 1; iCase <= nCase; iCase++) {
     short t0;
     ac.clear();
     scanf("%hd", &t0);
@@ -274,14 +269,14 @@ int main() {
     scanf("%hd", &t0);
     memset(f, 0, sizeof(f));
     f[0][0] = 1;
-    for(int i = 0; i<t0; i++)
-      for(short j = 0; j<ac.size(); j++)
+    for(int i = 0; i < t0; i++)
+      for(short j = 0; j < ac.size(); j++)
         if(f[i][j])
           for(short k = 0; k < 62; k++)
             if(prob[k] && !ac.output(ac.go(j, k)).size())
               f[i+1][ac.go(j, k)] += f[i][j]*prob[k];
     double res = 0;
-    for(short j = 0; j<ac.size(); j++)
+    for(short j = 0; j < ac.size(); j++)
       res += f[t0][j];
     printf("Case #%hd: %lf\n", iCase, res);
   }
@@ -291,7 +286,7 @@ int main() {
 
 ### UVa 11019
 
-2-dimension string matching. Hashing is another method for this problem.
+Two-dimensional string matching. Hashing is another method for this problem.
 
 ```cpp
 inline uint8_t c2i(char x) {
@@ -309,7 +304,7 @@ AC<62> ac;
 int main() {
   short nCase;
   scanf("%hd", &nCase);
-  for(short iCase = 1; iCase<=nCase; iCase++) {
+  for(short iCase = 1; iCase <= nCase; iCase++) {
     short t0;
     ac.clear();
     scanf("%hd", &t0);
@@ -332,14 +327,14 @@ int main() {
     scanf("%hd", &t0);
     memset(f, 0, sizeof(f));
     f[0][0] = 1;
-    for(int i = 0; i<t0; i++)
-      for(short j = 0; j<ac.size(); j++)
+    for(int i = 0; i < t0; i++)
+      for(short j = 0; j < ac.size(); j++)
         if(f[i][j])
           for(short k = 0; k < 62; k++)
             if(prob[k] && !ac.output(ac.go(j, k)).size())
               f[i+1][ac.go(j, k)] += f[i][j]*prob[k];
     double res = 0;
-    for(short j = 0; j<ac.size(); j++)
+    for(short j = 0; j < ac.size(); j++)
       res += f[t0][j];
     printf("Case #%hd: %lf\n", iCase, res);
   }
@@ -349,7 +344,7 @@ int main() {
 
 ### POJ 2778
 
-Counting problem. Size of state space is `2000000000 × 95`, therefore we can't simply calculate all the states one by one. Since every row is a linear combination of the prior row, __exponentiation of matrices by squaring__ can be applied to optimize the algorithm asymptotically.
+Counting problem. Size of state space is `2000000000 × 95`, therefore we can't simply calculate all the states one by one. Since every row is a linear combination of the prior row, **exponentiation of matrices by squaring** can be applied to optimise the algorithm asymptotically.
 
 ```cpp
 inline uint8_t c2i(char x) {
@@ -367,7 +362,7 @@ AC<62> ac;
 int main() {
   short nCase;
   scanf("%hd", &nCase);
-  for(short iCase = 1; iCase<=nCase; iCase++) {
+  for(short iCase = 1; iCase <= nCase; iCase++) {
     short t0;
     ac.clear();
     scanf("%hd", &t0);
@@ -390,14 +385,14 @@ int main() {
     scanf("%hd", &t0);
     memset(f, 0, sizeof(f));
     f[0][0] = 1;
-    for(int i = 0; i<t0; i++)
-      for(short j = 0; j<ac.size(); j++)
+    for(int i = 0; i < t0; i++)
+      for(short j = 0; j < ac.size(); j++)
         if(f[i][j])
           for(short k = 0; k < 62; k++)
             if(prob[k] && !ac.output(ac.go(j, k)).size())
               f[i+1][ac.go(j, k)] += f[i][j]*prob[k];
     double res = 0;
-    for(short j = 0; j<ac.size(); j++)
+    for(short j = 0; j < ac.size(); j++)
       res += f[t0][j];
     printf("Case #%hd: %lf\n", iCase, res);
   }
