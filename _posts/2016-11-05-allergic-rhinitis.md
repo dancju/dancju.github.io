@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 過敏性鼻炎患者求生指南
+title: 過敏性鼻炎患者生存指南
 comments:
   - author:
       type: full
@@ -9,15 +9,15 @@ comments:
       picture: 'https://avatars.githubusercontent.com/u/16100433?v=3&s=73'
     content: '&#x8D5E;'
     date: 2016-12-02T14:41:19.508Z
-
 ---
+
 本文試圖儘量全面地總結當前可靠的過敏性鼻炎治療方法。
 
-## 成因
+# 成因
 
 過敏性鼻炎（allergic rhinitis）是免疫系統受到空氣中的過敏源刺激導致的鼻炎。成因主要包括：
 
-- 先天性致敏。過敏性鼻炎可能遺傳。若父母患病，子女患病的可能性更大。其中母親遺傳的概率較父親遺傳更大。
+- 先天性致敏。過敏性鼻炎可能遺傳。若父母患病，子女患病的可能性更大。
 - 後天性致敏。長期受過敏源刺激而致病。
 - 某些精神疾病也可誘發過敏性鼻炎，比如抑鬱症。
 
@@ -25,7 +25,7 @@ comments:
 
 患者接觸或吸入致敏原後，體內的 IgE 引起肥大細胞釋放組織胺，造成過敏反應[^wheatley2015]。
 
-## 症狀
+# 症狀
 
 接觸過敏源後立刻引發的症狀包括：
 
@@ -45,9 +45,9 @@ comments:
 - 頭痛；
 - 疲勞易怒。
 
-## 緩解症狀
+# 緩解症狀
 
-### 隔離過敏源
+## 隔離過敏源
 
 患者應改變生活習慣，避免接觸過敏源，以預防過敏發作。以下措施可有效減輕或防止症狀出現：
 
@@ -72,7 +72,7 @@ comments:
 - 避免接觸可能觸發過敏的化妝品、油漆、樟腦、殺蟲劑；
 - 充分休息，忌過度勞累，忌精神壓力。
 
-### 鹽水洗鼻
+## 鹽水洗鼻
 
 使用生理鹽水沖洗鼻腔可以有效清理附着在鼻黏膜表面的過敏源、細菌、粘液和膿。定期沖洗鼻腔可降低鼻竇感染的可能[^rabago2002]。兩歲以上兒童可以使用。沖洗方法宜參照[此文](http://zh.wikihow.com/%E4%BD%BF%E7%94%A8%E6%B4%97%E9%BC%BB%E5%A3%B6){:target="_blank"}和[此錄像](https://www.youtube.com/watch?v=I9cTqt2yPQE){:target="_blank"}。
 
@@ -84,7 +84,7 @@ comments:
 - 使用溫熱的鹽水。過冷的水會刺激鼻黏膜並加重鼻黏膜水腫。
 - 務必保證衛生，不能用未燒開的自來水。FDA 警告兩例腦部感染致死的案例可能與使用受污染的自來水洗鼻有關[^fda]。
 
-### 皮質類固醇（推薦）
+## 皮質類固醇（推薦）
 
 皮質類固醇（corticosteroid）氣霧劑是緩解過敏性鼻炎症狀最有效的藥物，亦可緩解鼻竇炎症狀、治療鼻息肉。皮質類固醇通過在鼻腔內減輕炎症、抑制組胺產生，可有效緩解鼻塞、鼻養、流泗和噴嚏。**每日使用效果最佳**，亦可在鼻炎發作期間短暫使用。孕婦可以使用。部分種類的皮質類固醇兩歲以上兒童可以使用。皮質類固醇氣霧劑列舉如下：
 
@@ -104,7 +104,7 @@ comments:
 
 皮質類固醇是激素類物質，但上表所列的幾種皮質類固醇經鼻黏膜給藥後，生物利用率（bioavailability）極低，因此可以長期使用。
 
-### 抗組胺藥
+## 抗組胺藥
 
 [抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5){:target="_blank"}（antihistamine）通常指 H<sub>1</sub> 受體拮抗劑（[H<sub>1</sub> antagonist](https://en.wikipedia.org/wiki/H1_antagonist){:target="_blank"}）。本文中的抗組胺藥都是 H<sub>1</sub> 受體拮抗劑。
 
@@ -196,15 +196,15 @@ comments:
   </tbody>
 </table>
 
-### 色甘酸鈉
+## 色甘酸鈉
 
-色甘酸鈉（sodium cromoglicate 或 cromolyn sodium）可抑制肥大細胞釋放組胺，從而控制過敏症狀。色甘酸鈉鼻噴霧在美國是 OTC 藥，但筆者沒有在國內找到色甘酸鈉鼻噴霧，只找到了用於治療哮喘的色甘酸鈉吸入劑和用於治療過敏性結膜炎的色甘酸鈉滴眼液，所以沒有多做瞭解。
+色甘酸鈉（sodium cromoglicate）可抑制肥大細胞釋放組胺，從而控制過敏症狀。色甘酸鈉鼻噴霧在美國是 OTC 藥；中國有用於治療哮喘的色甘酸鈉吸入劑和用於治療過敏性結膜炎的色甘酸鈉滴眼液，沒有色甘酸鈉鼻噴霧的批號。
 
-### 白三烯抑制劑
+## 白三烯抑制劑
 
 白三烯抑制劑（antileukotriene）指與白三烯（leukotriene）相關的酶抑制劑或受體阻斷劑。研究表明白三烯抑制劑對過敏性鼻炎的效果與抗組胺藥效果相當[^rodrigo2006]。
 
-### 減充血劑（慎用）
+## 減充血劑（慎用）
 
 減充血劑（decongestant）鼻噴霧可減輕鼻塞。一旦停藥，鼻塞會反彈得更嚴重。不可連用超過三天至七天，過量使用可能引起比過敏性鼻炎更嚴重的藥物性鼻炎[^ramey2006]。若要使用，應嚴格遵醫囑。常見的減充血劑有：
 
@@ -223,19 +223,19 @@ comments:
 | 曲馬唑啉       | Tramazoline                  |
 | 賽洛唑啉       | Xylometazoline               | OTC      | OTC
 
-## 變應原免疫治療
+# 變應原免疫治療
 
 變應原免疫治療（allergen immunotherapy，AIT）
 
-## 替代療法／偏方
+# 替代療法／偏方
 
-### 益生菌
+## 益生菌
 
-### 針灸
+## 針灸
 
 調研認爲，目前的研究無法充分證明針刺和艾灸對過敏性鼻炎的療效。[^xiao2009] [^terr2004]針刺對某些常年性過敏性鼻炎（perennial allergic rhinitis，PAR）患者可能有效，需要更多實驗樣本以進一步論證針刺對過敏性鼻炎的效果。[^witt2010]
 
-## 參考文獻
+# 參考文獻
 
 [^fda]: [Is Rinsing Your Sinuses Safe?](http://www.fda.gov/ForConsumers/ConsumerUpdates/ucm316375.htm){:target="_blank"}
 [^rabago2002]: Rabago, David, et al. "Efficacy of daily hypertonic saline nasal irrigation among patients with sinusitis: a randomized controlled trial." Journal of Family Practice 51.12 (2002): 1049-1055.

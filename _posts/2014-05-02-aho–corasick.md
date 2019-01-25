@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Aho–Corasick string matching algorithm
-
 ---
+
 For a given string $s$ and a given set of patterns $p\_i\|\_{i=1}^n$, the algorithm [^aho1975efficient] finds all sub-strings of $s$ which equals to any pattern $p\_i$. The asymptotic time complexity is $O\left(\|s\|+\sum_i\|p_i\|\right)$.
 
 Numerous introductions to Aho–Corasick algorithm can be found online and on textbooks. My personal suggestion is if you feel hard to understand Knuth–Morris–Pratt algorithm, maybe try to learn AC first, even though many textbooks put it after KMP. Strangely, even though AC is more complex than and actually an extension of KMP, but it's easier to understand. The following is my own implementation of the Aho-Corasick automaton in C++ class, and solutions to some problems.
 
-## The Aho–Corasick automaton in C++ class
+# The Aho–Corasick automaton in C++ class
 
 ```cpp
 template<uint8_t SIGMA> struct AC {
@@ -88,9 +88,9 @@ template<uint8_t SIGMA> struct AC {
 };
 ```
 
-## Problems
+# Problems
 
-### POJ 1204
+## POJ 1204
 
 String matching.
 
@@ -159,7 +159,7 @@ int main() {
 }
 ```
 
-### POJ 3691
+## POJ 3691
 
 Dynamic Programming.
 
@@ -228,7 +228,7 @@ int main() {
 }
 ```
 
-### UVa 11468
+## UVa 11468
 
 Probability.
 
@@ -286,7 +286,7 @@ int main() {
 }
 ```
 
-### UVa 11019
+## UVa 11019
 
 Two-dimensional string matching. Hashing is another method for this problem.
 
@@ -344,7 +344,7 @@ int main() {
 }
 ```
 
-### POJ 2778
+## POJ 2778
 
 Counting problem. Size of state space is `2000000000 × 95`, therefore we can't simply calculate all the states one by one. Since every row is a linear combination of the prior row, **exponentiation of matrices by squaring** can be applied to optimise the algorithm asymptotically.
 
@@ -402,6 +402,6 @@ int main() {
 }
 ```
 
-## References
+# References
 
 [^aho1975efficient]: Aho, Alfred V., and Margaret J. Corasick. "Efficient string matching: an aid to bibliographic search." Communications of the ACM 18.6 (1975): 333-340.

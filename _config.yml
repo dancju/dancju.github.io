@@ -6,6 +6,7 @@ jailed: false
 kramdown:
   input: GFM
   hard_wrap: false
+paginate: 8
 plugins:
   - jekyll-avatar
   - jekyll-feed
@@ -19,3 +20,11 @@ sass:
 
 title: Daniel Zhou's Chaos
 author: Daniel Zhou
+lang: en_GB
+url: nerddan.github.io
+social:
+  name: Daniel Zhou
+  links:
+    - https://github.com/nerdDan
+    - https://twitter.com/nerdDaniel
+    - https://douban.com/people/danielc/

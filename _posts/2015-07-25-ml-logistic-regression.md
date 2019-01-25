@@ -1,15 +1,15 @@
 ---
 layout: post
 title: "Machine learning: logistic regression"
-
 ---
+
 This is a lecture note about logistic regression.
 
 Logistic regression is actually an approach to classification problems instead of regression problems.
 
-## Definitions
+# Definitions
 
-### Input
+## Input
 
 $m$ denotes the number of training examples.
 
@@ -54,11 +54,11 @@ Let $\boldsymbol y$ be the column vector of the outputs of all the training exam
 
 $$\boldsymbol y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
 
-### Output
+## Output
 
 $$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
 
-### The problem
+## The problem
 
 The __[logistic function](https://en.wikipedia.org/wiki/Logistic_function)__ is
 
@@ -90,7 +90,7 @@ $$
 > $$J(\boldsymbol\theta)=\frac{1}{m}\left[\exp(-\boldsymbol X\boldsymbol\theta)^\mathsf T\boldsymbol y+\exp(\boldsymbol X\boldsymbol\theta)^\mathsf T(\boldsymbol1-\boldsymbol y)\right]\,,$$
 > since it is similar in shape to above?
 
-## Gradient descent
+# Gradient descent
 
 <div>
 $$\nabla J(\boldsymbol\theta)

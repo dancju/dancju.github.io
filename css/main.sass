@@ -1,83 +1,106 @@
 ---
 ---
 
-blockquote
-  font-size: 1em!important
+// variables
 
-footer
-  border-top: 1px solid #d9534f
-  margin-top: 128px
-  padding: 32px
-  text-align: center
-  box-shadow: 0 1px 0 rgba(255,255,255,0.15), inset 0 1px 5px rgba(0,0,0,0.075)
+$breakpoint-sm: 576px
+$breakpoint-md: 768px
+$breakpoint-lg: 992px
+$breakpoint-xl: 1200px
 
-footer > img
-  margin: 8px
-  width: 128px
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, PingFang TC, Microsoft JhengHei, Noto Sans CJK TC, "微軟正黑體", sans-serif
+$font-family-serif: Palatino Linotype, Songti TC, PMingLiU-ExtB, Noto Serif CJK TC, "新細明體", serif
+$font-family-monospace: Menlo, Monaco, Consolas, Courier New, monospace
+
+// global
+
+body
+  background-color: #f7f7f7
+  font-family: $font-family-sans-serif
+
+a, a:hover, .page-link, .page-link:hover
+  color: indianred
+
+pre
+  border: 1px solid #ccc
+  border-radius: 4px
+  padding: .5rem
+
+// navbar & footer
+
+.navbar
+  border-bottom: 2px solid indianred
+  padding: 0 1rem
 
 .navbar-brand
-  font-family: "Palatino Linotype", serif
+  font-family: $font-family-serif
   font-variant: small-caps
 
-.navbar-default .navbar-nav > .active > a
-  border-left: 2px solid #d9534f
+.navbar-toggler
+  margin: .5rem 0
 
-@media (min-width: 768px)
-  .navbar-default .navbar-nav > .active > a
-    border-left: none
-    border-top: 2px solid #d9534f
+.navbar-nav
+  > .nav-item > .nav-link
+    padding: 1rem .5rem
+  > .active > .nav-link
+    background-image: linear-gradient(to bottom, #f2f2f2 0, #fafafa 100%)
+
+@media (max-width: $breakpoint-sm)
+  .navbar-nav > .active > .nav-link
+    border-left: 2px solid indianred
+    box-shadow: inset 3px 0 9px rgba(0,0,0,0.075)
+
+@media (min-width: $breakpoint-sm)
+  .navbar-nav > .active > .nav-link
+    border-top: 2px solid indianred
+    box-shadow: inset 0 3px 9px rgba(0,0,0,0.075)
     padding-top: 13px
 
-.navbar-default .navbar-nav > .active > a
-  background-image: linear-gradient(to bottom, #f2f2f2 0, #fafafa 100%)
-  box-shadow: inset 0 3px 9px rgba(0,0,0,0.075)
-
-.flip-x
-  transform: scaleX(-1)
-
-.affix-bottom
-  position: absolute
-
-main h1
-  color: #d9534f
+#footer
+  border-top: 2px solid indianred
+  box-shadow: 0 1px 0 rgba(255,255,255,0.15), inset 0 1px 5px rgba(0,0,0,0.075)
+  padding: 32px
   text-align: center
 
-main h2
-  color: #d9534f
+// index
 
-main h3
-  color: gray
+.card
+  margin: 2rem 0
 
-main h4
+.card-title
+  font-family: $font-family-serif
   font-weight: bold
 
-aside > div
-  display: none
+// posts
+
+#main
+  #title
+    color: indianred
+    font-family: $font-family-serif
+    font-size: 2.5rem
+    font-weight: bold
+    text-align: center
+  h1, h2, h3
+    font-family: $font-family-serif
+    font-weight: bold
+  h1
+    color: indianred
+    font-size: 2rem
+  h2
+    color: gray
+    font-size: 1.67rem
+  h3
+    font-size: 1.5rem
+
+#section-nav
   a
     color: gray
-  .active > a
-    border-right: #d9534f solid 2px
+  a.active
+    border-right: indianred solid 2px
+    color: indianred
     font-weight: bold
-    color: #d9534f
-  > .nav .nav
+  > ul.nav > li.nav-item > a.nav-link + ul.nav
     display: none
     padding-left: 1em
-  > .nav > .active > .nav
-    display: block
-
-aside > div.affix
-  top: 20px
-
-@media (min-width: 992px)
-  aside > div
-    display: block
-    width: 213px
-
-@media (min-width: 1200px)
-  aside > div
-    display: block
-    width: 263px
-
-pre.highlight > code
-  tab-size: 4
-  white-space: pre
+  > ul.nav > li.nav-item > a.nav-link.active + ul.nav
+    display: flex

@@ -1,19 +1,19 @@
 ---
-layout: page
-title: Archive
+layout: base
+title: archive
 ---
 
-<div class="container">
+<div class="card" id="main">
+  <div class="card-body">
+    <h2>archive</h2>
 
-  <h2>archive</h2>
-
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        {{ post.date | date: " %d %b %Y" }}
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          {{ post.date | date: " %d %b %Y" }}
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

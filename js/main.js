@@ -1,31 +1,24 @@
-$('main').ready(function() {
-  var aside, main, ul;
-  main = $($('main').children()[1]);
-  aside = $('aside').children().children();
-  ul = void 0;
-  $.each(main.children(), function() {
-    var a, li;
-    if (this.nodeName === 'H2') {
-      a = $('<a>', {
-        href: '#' + this.id
-      }).text(this.innerHTML);
-      ul = $('<ul>').addClass('nav');
-      li = $('<li>').append(a).append(ul);
-      return aside.append(li);
-    } else if (this.nodeName === 'H3') {
-      a = $('<a>', {
-        href: '#' + this.id
-      }).text(this.innerHTML);
-      li = $('<li>').append(a);
-      return ul.append(li);
+$('main').ready(() => {
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      processEscapes: true
     }
   });
-  return $('#contents').affix({
-    offset: {
-      top: 51,
-      bottom: function() {
-        return this.bottom = $('footer').outerHeight(true) + $('#comments').outerHeight(true) + 41 + 155;
-      }
+
+  const main = $('#main > .card > .card-body');
+  const aside = $('aside > ul');
+  let ul;
+  main.children().each((_, tag) => {
+    if (tag.nodeName === 'H1') {
+      const a = $('<a>', { class: 'nav-link', href: '#' + tag.id }).text(tag.innerHTML);
+      ul = $('<ul>').addClass('nav flex-column');
+      const li = $('<li>', { class: 'nav-item' }).append(a).append(ul);
+      aside.append(li);
+    } else if (tag.nodeName === 'H2') {
+      const a = $('<a>', { class: 'nav-link', href: '#' + tag.id }).text(tag.innerHTML);
+      const li = $('<li>', { class: 'nav-item' }).append(a);
+      ul.append(li);
     }
   });
 });

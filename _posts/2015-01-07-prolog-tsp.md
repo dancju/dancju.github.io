@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Two Prolog solutions to TSP
-
 ---
+
 I'm posting these code here because I can not find a briefer solution.
 
-## Brute force search
+# Brute force search
 
 ```prolog
 arc(a, b, 10).
@@ -40,7 +40,7 @@ min_hami_cycle(Path, Cost) :-
     \+ (hami_cycle(_, T), T<Cost).
 ```
 
-## Held-Karp algorithm
+# Held-Karp algorithm
 
 This following implementation is far from elegance. You can perceive a C thinking style in this code. I tried to make a better one but bogged into bugs of mystery. Hopefully I would revise this piece of code someday.
 

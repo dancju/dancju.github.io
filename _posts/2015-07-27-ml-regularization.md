@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Machine learning: regularization"
-
 ---
+
 This is a lecture note about regularization.
 
-## Overfitting
+# Overfitting
 
 Overfitting is a situation that the hypothesis fits the training examples well but does not generalize on the whole input space. Such situation is usually caused by a complicated function with unnecessary features creating a lot of unnecessary curves and angles.
 
@@ -18,7 +18,7 @@ There are two main options to solve the issue of overfitting:
 
 Reducing redundant features is the decent approach, of which the regularization is a dumb simulation.
 
-## Linear regression
+# Linear regression
 
 Recall the original loss function is
 
@@ -32,7 +32,7 @@ The $\lambda$, or the regularization parameter, determines how much the costs of
 
 Note that the bias parameter $\theta_0$ is not penalized. That is because regularization is a dumb simulation of removing redundant features, while the bias feature $x_0$ is not the one we want to remove.
 
-### Gradient descent
+## Gradient descent
 
 <div>
 $$
@@ -56,7 +56,7 @@ $$
 $$
 </div>
 
-### Normal equation
+## Normal equation
 
 Solve the first-order condition $\nabla J(\boldsymbol\theta)=\boldsymbol0$ we obtain
 
@@ -68,7 +68,7 @@ where
 $$\boldsymbol L=\begin{pmatrix}0\\&1\\&&\ddots\\&&&1\end{pmatrix}\,.$$
 </div>
 
-## Logistic regression
+# Logistic regression
 
 Recall the original loss function is
 
@@ -91,7 +91,7 @@ J(\boldsymbol\theta)
 $$
 </div>
 
-### Gradient descent
+## Gradient descent
 
 <div>
 $$\nabla J(\boldsymbol\theta)

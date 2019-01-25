@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Machine learning: linear regression"
-
 ---
+
 This is a lecture note about linear regression.
 
-## Definitions
+# Definitions
 
-### Input
+## Input
 
 $m$ denotes the number of training examples.
 
@@ -52,11 +52,11 @@ Let $\boldsymbol y$ be the column vector of the outputs of all the training exam
 
 $$\boldsymbol y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
 
-### Output
+## Output
 
 $$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
 
-### The problem
+## The problem
 
 Consider the quadric loss function
 
@@ -75,7 +75,7 @@ There are several approaches to the optimum $\boldsymbol\theta$. The following t
 
 > Other approaches includes stochastic gradient, simulated annealing, etc.
 
-## Gradient descent
+# Gradient descent
 
 The __gradient descent__ algorithm iterately execute the following gradient descent rule for certain times or until the error is small enough.
 
@@ -111,7 +111,7 @@ The complexity of gradient descent is $O(kmn)\,,$ where $k$ is the number of ite
 
 Note that the gradient descent finds a numerical solution of the optimum $\boldsymbol\theta$.
 
-## Normal equation
+# Normal equation
 
 The __Normal equation__ is an approach by finding the optimum $\boldsymbol\theta$ via first-order condition, viz.
 

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Suffix automaton
-
 ---
+
 A suffix automaton is a Deterministic Finite Automaton (DFA) that accepts all suffix of a given string. I built [a web app](http://nerddan.github.io/sam) that converting strings to suffix automata.
 
-## The suffix automaton C++ class
+# The suffix automaton C++ class
 
 ```cpp
 template<uint8_t SIGMA, size_t CAPACITY> class SAM {
@@ -72,9 +72,9 @@ public:
 };
 ```
 
-## Problems
+# Problems
 
-### SPOJ LCS
+## SPOJ LCS
 
 Find the longest common substring of 2 strings in linear time.
 
@@ -104,7 +104,7 @@ int main() {
 }
 ```
 
-### SPOJ LCS2
+## SPOJ LCS2
 
 Find the longest common substring of no more than 10 strings in linear time.
 
@@ -153,7 +153,7 @@ int main() {
 }
 ```
 
-### SPOJ NSUBSTR
+## SPOJ NSUBSTR
 
 ```cpp
 const size_t N = 250000, M = 0x60000;
@@ -186,7 +186,7 @@ int main() {
 }
 ```
 
-### POJ 1743
+## POJ 1743
 
 ```cpp
 const int N = 20000, M = 33529;
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-### POJ 3415
+## POJ 3415
 
 ```cpp
 inline uint8_t c2i(char c) {
@@ -336,6 +336,6 @@ int main() {
 }
 ```
 
-### POJ 3294
+## POJ 3294
 
 [my solution](https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp "solution")
