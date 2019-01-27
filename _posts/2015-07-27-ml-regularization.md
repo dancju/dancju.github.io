@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Machine learning: regularization"
+title: 'Machine learning: regularization'
 ---
 
 This is a lecture note about regularization.
@@ -11,10 +11,10 @@ Overfitting is a situation that the hypothesis fits the training examples well b
 
 There are two main options to solve the issue of overfitting:
 
-* Reduce the number of features.
-  * Manually select which features to keep.
-  * Use a model selection algorithm.
-* Regularization: Keep all the features, but reduce the parameters $\boldsymbol\theta$.
+- Reduce the number of features.
+  - Manually select which features to keep.
+  - Use a model selection algorithm.
+- Regularization: Keep all the features, but reduce the parameters $\boldsymbol\theta$.
 
 Reducing redundant features is the decent approach, of which the regularization is a dumb simulation.
 

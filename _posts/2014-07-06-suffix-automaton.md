@@ -338,4 +338,4 @@ int main() {
 
 ## POJ 3294
 
-[my solution](https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp "solution")
+[my solution](https://github.com/nerdDan/solutions/blob/master/POJ/3294.cpp 'solution')

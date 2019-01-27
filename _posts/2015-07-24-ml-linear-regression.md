@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Machine learning: linear regression"
+title: 'Machine learning: linear regression'
 ---
 
 This is a lecture note about linear regression.
@@ -71,13 +71,13 @@ $$
 
 Our aim is finding the optimum $\boldsymbol\theta$ to minimize the loss function $J(\boldsymbol\theta)$.
 
-There are several approaches to the optimum $\boldsymbol\theta$. The following two sections introduces two of them, naming *gradient descent* and *normal equation*.
+There are several approaches to the optimum $\boldsymbol\theta$. The following two sections introduces two of them, naming _gradient descent_ and _normal equation_.
 
 > Other approaches includes stochastic gradient, simulated annealing, etc.
 
 # Gradient descent
 
-The __gradient descent__ algorithm iterately execute the following gradient descent rule for certain times or until the error is small enough.
+The **gradient descent** algorithm iterately execute the following gradient descent rule for certain times or until the error is small enough.
 
 The gradient descent rule can be expressed as:
 
@@ -113,7 +113,7 @@ Note that the gradient descent finds a numerical solution of the optimum $\bolds
 
 # Normal equation
 
-The __Normal equation__ is an approach by finding the optimum $\boldsymbol\theta$ via first-order condition, viz.
+The **Normal equation** is an approach by finding the optimum $\boldsymbol\theta$ via first-order condition, viz.
 
 $$\nabla J(\boldsymbol\theta)=\boldsymbol0\,.$$
 

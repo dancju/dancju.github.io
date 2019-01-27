@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Machine learning: logistic regression"
+title: 'Machine learning: logistic regression'
 ---
 
 This is a lecture note about logistic regression.
@@ -60,11 +60,11 @@ $$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatri
 
 ## The problem
 
-The __[logistic function](https://en.wikipedia.org/wiki/Logistic_function)__ is
+The **[logistic function](https://en.wikipedia.org/wiki/Logistic_function)** is
 
 $$g(x)=\frac{1}{1+e^{-x}}\,.$$
 
-The __hypothesis__ denotes the probability of the estimated output being $1\,,$ which is
+The **hypothesis** denotes the probability of the estimated output being $1\,,$ which is
 
 <div>
 $$
@@ -74,7 +74,7 @@ h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)
 $$
 </div>
 
-The __loss function__ is
+The **loss function** is
 
 <div>
 $$
