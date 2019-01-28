@@ -134,7 +134,7 @@ Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處�
 
 ## 安裝技巧
 
-不同於其他發行版的嚮導式、圖形化的安裝方式，Arch Linux 需要用戶從另一個 Linux（通常是光盤或閃存上的 Arch Linux）用一條條命令搭建。無論是新手還是熟練用戶，都須遵照<a href="https://wiki.archlinux.org/index.php/Installation_guide" target="_blank">這個官方 wiki 頁面</a>安裝 Arch Linux（因爲安裝步驟可能會變）。本節是給筆者的一些安裝經驗。
+不同於其他發行版的嚮導式、圖形化的安裝方式，Arch Linux 需要用戶從另一個 Linux（通常是光盤或閃存上的 Arch Linux）用一條條命令搭建。無論是新手還是熟練用戶，都須遵照<a href="https://wiki.archlinux.org/index.php/Installation_guide">這個官方 wiki 頁面</a>安裝 Arch Linux（因爲安裝步驟可能會變）。本節是給筆者的一些安裝經驗。
 
 ### 硬盤分區與文件系統
 
@@ -144,7 +144,7 @@ Yaourt 是 Arch 用戶社區貢獻的一個 Pacman 外殼。它能統一地處�
 
 ### 連接到互聯網
 
-對於虛擬機，或者帶有 DHCP 的以太網，網絡不需要手動配置。對於無線網絡，運行 `wifi-menu`。靜態 IP 的以太網配置較複雜，詳見 <a href="https://wiki.archlinux.org/index.php/Netctl" target="_blank">Netctl</a>。
+對於虛擬機，或者帶有 DHCP 的以太網，網絡不需要手動配置。對於無線網絡，運行 `wifi-menu`。靜態 IP 的以太網配置較複雜，詳見 <a href="https://wiki.archlinux.org/index.php/Netctl">Netctl</a>。
 
 ### 選擇鏡像
 

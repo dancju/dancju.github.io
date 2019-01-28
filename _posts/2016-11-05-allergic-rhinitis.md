@@ -57,8 +57,8 @@ comments:
   - 避免使用地毯和厚窗簾；
   - 使用新風系統（HEPA）或空氣淨化器；
   - 污染嚴重的時候避免出門；
-  - 室外帶防霾口罩（宜閱[此文](https://www.douban.com/note/345004477/){:target="_blank"}）；
-  - 遷徙至[潔淨之處](http://aqicn.org/map/world){:target="_blank"}；
+  - 室外帶防霾口罩（宜閱[此文](https://www.douban.com/note/345004477/)）；
+  - 遷徙至[潔淨之處](http://aqicn.org/map/world)；
 - 避免接觸黴菌；
   - 檢查織物、地毯、寵物、書、牆紙受否發黴，是否足夠乾燥；
   - 檢查管道系統、空調是否漏水；
@@ -74,7 +74,7 @@ comments:
 
 ## 鹽水洗鼻
 
-使用生理鹽水沖洗鼻腔可以有效清理附着在鼻黏膜表面的過敏源、細菌、粘液和膿。定期沖洗鼻腔可降低鼻竇感染的可能[^rabago2002]。兩歲以上兒童可以使用。沖洗方法宜參照[此文](http://zh.wikihow.com/%E4%BD%BF%E7%94%A8%E6%B4%97%E9%BC%BB%E5%A3%B6){:target="_blank"}和[此錄像](https://www.youtube.com/watch?v=I9cTqt2yPQE){:target="_blank"}。
+使用生理鹽水沖洗鼻腔可以有效清理附着在鼻黏膜表面的過敏源、細菌、粘液和膿。定期沖洗鼻腔可降低鼻竇感染的可能[^rabago2002]。兩歲以上兒童可以使用。沖洗方法宜參照[此文](http://zh.wikihow.com/%E4%BD%BF%E7%94%A8%E6%B4%97%E9%BC%BB%E5%A3%B6)和[此錄像](https://www.youtube.com/watch?v=I9cTqt2yPQE)。
 
 - 洗鼻工具可以在網上買到。應選擇方便使用、方便消毒的工具。
 - 使用濃度合適的鹽水。濃度過高或過低的鹽水會引起刺痛感，並損傷鼻黏膜。
@@ -106,14 +106,14 @@ comments:
 
 ## 抗組胺藥
 
-[抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5){:target="_blank"}（antihistamine）通常指 H<sub>1</sub> 受體拮抗劑（[H<sub>1</sub> antagonist](https://en.wikipedia.org/wiki/H1_antagonist){:target="_blank"}）。本文中的抗組胺藥都是 H<sub>1</sub> 受體拮抗劑。
+[抗組胺藥](https://zh.wikipedia.org/wiki/%E6%8A%97%E7%B5%84%E7%B9%94%E8%83%BA%E8%97%A5)（antihistamine）通常指 H<sub>1</sub> 受體拮抗劑（[H<sub>1</sub> antagonist](https://en.wikipedia.org/wiki/H1_antagonist)）。本文中的抗組胺藥都是 H<sub>1</sub> 受體拮抗劑。
 
 - 抗組胺鼻噴霧控制過敏症狀效果很好且副作用較小，在症狀不嚴重的時候也可以用。
 - 抗組胺滴眼液可以緩解眼睛癢。
 - 除非有全身性的過敏症狀，口服抗組胺藥物的必要性不大。
 - 某些抗組胺藥導致嗜睡，如果服用了這類藥應避免開車或從事其他有危險的活動。
 
-抗組胺藥分三代：第二代比第一代副作用更小；第三代比第二代副作用更小（第三代的優勢存爭議）。部分抗組胺藥列舉如下：
+抗組胺藥分三代：第二代比第一代副作用更小；第三代比第二代的優勢存在爭議。部分抗組胺藥列舉如下：
 
 <table class="table">
   <thead>
@@ -204,15 +204,19 @@ comments:
 
 白三烯抑制劑（antileukotriene）指與白三烯（leukotriene）相關的酶抑制劑或受體阻斷劑。研究表明白三烯抑制劑對過敏性鼻炎的效果與抗組胺藥效果相當[^rodrigo2006]。
 
+## 鼻腔支架
+
+AlaxoLito[^alaxolito] 是一种鼻腔支架，用於治療鼻塞及其引起的打鼾。由於它處於專利期[^US8998986B1]，所以價格較貴（很不幸，印度人並沒有仿製 AlaxoLito）。在世界上大多數地方可以憑處方購買，但在中國沒有醫療器械批號所以很難買到。
+
 ## 減充血劑（慎用）
 
-減充血劑（decongestant）鼻噴霧可減輕鼻塞。一旦停藥，鼻塞會反彈得更嚴重。不可連用超過三天至七天，過量使用可能引起比過敏性鼻炎更嚴重的藥物性鼻炎[^ramey2006]。若要使用，應嚴格遵醫囑。常見的減充血劑有：
+減充血劑（decongestant）鼻噴霧可減輕鼻塞。一旦停藥，鼻塞會反彈得更嚴重。不可連用超過三天至七天，過量使用可能引起藥物性鼻炎[^ramey2006]。若要使用，應嚴格遵醫囑。部分減充血劑列舉如下：
 
 {:.table}
 | 中文名         | 拉丁名                       | 美國法律 | 中國法律 | 備註             |
 | -------------- | ---------------------------- | -------- | -------- | ---------------- |
 | 麻黃鹼         | Ephedrine                    |
-| 鹽酸萘甲唑啉   | Naphazoline hydrocholoride   |          |          | 易引起藥物性鼻炎 |
+| 鹽酸萘甲唑啉   | Naphazoline hydrocholoride   |          |          | 易致藥物性鼻炎 |
 | 鹽酸羥甲唑啉   | Oxymetazoline hydrocholoride | OTC      | OTC
 | 去氧腎上腺素   | Phenylephrine                | OTC      |
 | 苯丙醇胺       | Phenylpropanolamine          | 禁用     |          | 易引起中風       |
@@ -223,26 +227,31 @@ comments:
 | 曲馬唑啉       | Tramazoline                  |
 | 賽洛唑啉       | Xylometazoline               | OTC      | OTC
 
-# 變應原免疫治療
+# 脫敏治療
 
-變應原免疫治療（allergen immunotherapy，AIT）
+變應原免疫治療（allergen immunotherapy，AIT）俗稱脫敏治療（desensitisation），其做法是給過敏個體反復注射（或舌下含服）小劑量致敏原，耗竭其體內效应物质。若其他治療不起作用且無法避免暴露於致敏原可考慮使用。治療需要在醫生的監督下進行，可能持續數年。
 
-# 替代療法／偏方
+# 未被充分驗證的療法
 
 ## 益生菌
 
+益生菌也許可以降低过敏性鼻炎的症狀，確鑿的結論需要更多研究來驗證[^vliagoftis2008]。
+
 ## 針灸
 
-調研認爲，目前的研究無法充分證明針刺和艾灸對過敏性鼻炎的療效。[^xiao2009] [^terr2004]針刺對某些常年性過敏性鼻炎（perennial allergic rhinitis，PAR）患者可能有效，需要更多實驗樣本以進一步論證針刺對過敏性鼻炎的效果。[^witt2010]
+調研認爲，目前的研究無法充分證明針刺和艾灸對過敏性鼻炎的療效[^xiao2009] [^terr2004]。針刺對某些常年性過敏性鼻炎（perennial allergic rhinitis，PAR）患者可能有效，但需要更多實驗樣本以進一步論證針刺對過敏性鼻炎的效果[^witt2010]。
 
 # 參考文獻
 
-[^fda]: [Is Rinsing Your Sinuses Safe?](http://www.fda.gov/ForConsumers/ConsumerUpdates/ucm316375.htm){:target="_blank"}
+[^alaxolito]: [The AlaxoLito Nasal Stent](http://www.alaxo.com/alaxolito_eng.html)
+[^US8998986B1]: [Nasal stent](https://patents.google.com/patent/US8998986B1)
+[^fda]: [Is Rinsing Your Sinuses Safe?](http://www.fda.gov/ForConsumers/ConsumerUpdates/ucm316375.htm)
 [^rabago2002]: Rabago, David, et al. "Efficacy of daily hypertonic saline nasal irrigation among patients with sinusitis: a randomized controlled trial." Journal of Family Practice 51.12 (2002): 1049-1055.
 [^ramey2006]: Ramey, J. T., E. Bailen, and R. F. Lockey. "Rhinitis medicamentosa." Journal of Investigational Allergology and Clinical Immunology 16.3 (2006): 148.
 [^rodrigo2006]: Rodrigo, Gustavo J., and Anahi Yañez. "The role of antileukotriene therapy in seasonal allergic rhinitis: a systematic review of randomized trials." Annals of Allergy, Asthma & Immunology 96.6 (2006): 779-786.
 [^talbot1997]: Talbot, Andrew R., Timothy M. Herr, and David S. Parsons. "Mucociliary clearance and buffered hypertonic saline solution." The Laryngoscope 107.4 (1997): 500-503.
 [^terr2004]: Terr, A. I. "Unproven and controversial forms of immunotherapy." Clinical allergy and immunology 18 (2004): 703.
+[^vliagoftis2008]: Vliagoftis, Harissios, et al. "Probiotics for the treatment of allergic rhinitis and asthma: systematic review of randomized controlled trials." Annals of Allergy, Asthma & Immunology 101.6 (2008): 570-579.
 [^witt2010]: Witt, C. M., and B. Brinkhaus. "Efficacy, effectiveness and cost-effectiveness of acupuncture for allergic rhinitis—an overview about previous and ongoing studies." Autonomic Neuroscience 157.1 (2010): 42-45.
 [^wheatley2015]: Wheatley, Lisa M., and Alkis Togias. "Allergic rhinitis." New England Journal of Medicine 372.5 (2015): 456-463.
 [^xiao2009]: Xiao, L., et al. "Systematic evaluation of the randomized controlled trials about acupuncture and moxibustion treatment of allergic rhinitis." Chinese acupuncture & moxibustion 29.6 (2009): 512-516.

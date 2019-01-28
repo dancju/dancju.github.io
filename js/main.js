@@ -1,4 +1,6 @@
 $('main').ready(() => {
+  $("a[href^='http']").attr('target', '_blank');
+
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
