@@ -7,13 +7,17 @@ title: archive
   <div class="card-body">
     <h2>archive</h2>
 
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          {{ post.date | date: " %d %b %Y" }}
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    <table>
+      <tbody id="archive">
+        {% for post in site.posts %}
+          <tr>
+            <td>{{ post.date | date: '%d %b %Y' }}</td>
+            <td>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 </div>
