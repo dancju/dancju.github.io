@@ -10,6 +10,14 @@ comments:
     content: >-
       &#x4E3B;&#x9875;&#x7ADF;&#x7136;&#x53C8;&#x6062;&#x590D;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x8D5E;&#xFF01;
     date: 2019-03-26T07:38:51.304Z
+  - author:
+      type: github
+      displayName: 647LiuSQ
+      url: 'https://github.com/647LiuSQ'
+      picture: 'https://avatars2.githubusercontent.com/u/27430946?v=4&s=73'
+    content: >-
+      &#x4E3B;&#x9875;&#x7ADF;&#x7136;&#x53C8;&#x6062;&#x590D;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x8D5E;&#xFF01;
+    date: 2019-03-26T07:39:45.066Z
 
 ---
 
