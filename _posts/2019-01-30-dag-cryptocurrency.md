@@ -1,6 +1,16 @@
 ---
 layout: post
 title: Comparison of DAG-based cryptocurrencies
+comments:
+  - author:
+      type: github
+      displayName: 647LiuSQ
+      url: 'https://github.com/647LiuSQ'
+      picture: 'https://avatars2.githubusercontent.com/u/27430946?v=4&s=73'
+    content: >-
+      &#x4E3B;&#x9875;&#x7ADF;&#x7136;&#x53C8;&#x6062;&#x590D;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x8D5E;&#xFF01;
+    date: 2019-03-26T07:38:51.304Z
+
 ---
 
 The linear data structure highly constrains the performance of blockchain. Let's forget about the Bitcoin bottlenecks like its 1MiB/10min constraint for now. Imagine we're designing a high-performance payment system. If users are only allowed to append transactions/blocks when they have the latest whole ledger, plenty of time would be wasted in communicating and ensuring their ledger synchronised, and therefore can't reach a throughput as high as MasterCard/Visa. In a traditional distributed system like MasterCard/Visa, sharding would be used so transactions could be stored in the geographically nearest data centre. However, in a decentralised system, it could be challenging to design a sharding protocol upon blockchain while keeping the tamper resistance.
