@@ -3,19 +3,19 @@ layout: post
 title: Comparison of DAG-based cryptocurrencies
 ---
 
-The linear data structure highly constrains the performance of blockchain. Let's forget about the Bitcoin bottlenecks like its 1MiB/10min constraint for now. Imagine we're designing a high-performance payment system. If users are only allowed to append transactions/blocks when they have the latest whole ledger, plenty of time would be wasted in communicating and ensuring their ledger synchronised, and therefore can't reach a throughput as high as MasterCard/Visa. In a traditional distributed system like MasterCard/Visa, sharding would be used so transactions could be stored in the geographically nearest data centre. However, in a decentralised system, it could be challenging to design a sharding protocol upon blockchain while keeping the tamper resistance.
+The linear data structure highly constrains the performance of blockchain. In most blockchain implementations like Bitcoin, users are only allowed to append transactions/blocks when they have the latest whole ledger, plenty of time would be wasted in communicating and ensuring their ledger synchronised, and therefore can't reach a throughput as high as MasterCard/Visa. In a traditional distributed system like MasterCard/Visa, sharding would be used so transactions could be stored in the geographically nearest data centre. However, in blockchain systems, introducing of a sharding protocol, or any other manner of reducing geographic redundancy, would damage its tamper resistance, and therefore a balance between tamper resistance and low geographic redundancy is required.
 
-Many cryptocurrencies try to fix this contradiction by replacing the linear chain with a directed acyclic graph (DAG), with which users are allowed to append their transactions/blocks to a slightly out-dated ledger, and finally, their modifications would be jointly confirmed. This approach shares the basic idea of sharding: data could be stored in a regional node for a regional consensus, and finally become a global consensus. With such compromise, performance (throughput) and security (tamper resistance) could be balanced.
+Many cryptocurrencies try to fix this contradiction by replacing the linear chain with a directed acyclic graph (DAG), with which users are allowed to append their transactions/blocks to a slightly out-dated ledger, and finally, their modifications would be jointly confirmed. This approach shares the basic idea of sharding: data could be stored in a regional node for a regional consensus, and finally become a global consensus. With such compromise, a balance between performance (throughput) and security (tamper resistance) is possible.
 
-In this article, 3 DAG-based cryptocurrencies, _IOTA_, _Obyte_, and _Conflux_ will be introduced. All of them are claimed to reach a high throughput, and the only performance bottleneck is the network infrastructure. In all of them, the following topics will be illustrated.
+In this article, 3 DAG-based cryptocurrencies, _IOTA_, _Obyte_, and _Conflux_ will be introduced. All of them are claimed to reach a high throughput, and the only performance bottleneck is the network infrastructure. In all of them, the following topics will be discussed.
 
-1. How transactions were organised into a DAG instead of a blockchain;
+1. How transactions were organised into a DAG instead of a linear chain;
 1. Why they were designed as the way they are; and
-1. How the tamper resistance is maintained.
+1. How tamper resistance is maintained.
 
 Other subordinate topics regarding cryptocurrency, such as PoW/PoS, smart contract VM, will not be discussed. I will try to avoid mentioning the terms defined in their documents to make this article less painful to read.
 
-**WARNING:** There's no investment advice rendered in this article.
+**Of course, no investment advices would be rendered in this article.**
 
 # IOTA
 
@@ -24,6 +24,8 @@ The ledger of IOTA is topologically a DAG, of which each vertex is a transaction
 This structure arises a problem. When two transactions conflict, and there's no partial order between them, it'd be hard to decide which one is valid and which one is not. In other words, it's hard to design a decentralised, deterministic, and self-governed mechanism to resolve double-spendings in such structure. In Bitcoin, the longest chain is valid while others are abandoned orphans. However, in a DAG, since there's no total order exists, you can hardly say transaction A is inferior to transaction B thus shall be abandoned.
 
 In IOTA, it's an authority called _coordinator_, [whose address is hard coded](https://github.com/iotaledger/iri/blob/bf402225942f790e056e04cd893141f802f7b90c/src/main/java/com/iota/iri/conf/BaseIotaConfig.java#L825), that is responsible for resolving all double-spendings. The coordinator referees which transaction is valid over others. Meanwhile, an attacker who knows the private key of the coordinator address can launch double-spending attacks at nearly zero cost.
+
+IOTA is the first DAG-based crypto with a major market cap. When they published their paper in 2017 I read it at first time. At the time I've been thinking about DAG crypto for a while. However, their paper didn't mention the only key problem I cared about, which is also the biggest focus of the Bitcoin whitepaper: how double spendings are resolved and how tamper resistance is assured. Now the truth has showed us an "elephant in the room" and why the IOTA team didn't want to talk about it.
 
 # Obyte
 
@@ -47,9 +49,9 @@ Once the height of blocks is defined, the total order upon blocks and _number of
 
 Replacing blockchain with block-DAG helps IOTA, Obyte, and Conflux reach a high throughput. Conflux claims in the paper that it "achieves 2.88G/h under 4MB block and 5s generation interval."
 
-However, IOTA and Obyte fail to find a way to resolve double-spendings autonomously and introduce authorities as the resolver of double-spending, which makes their networks vulnerable to _cyber attacks_ and _politics_. If a) the attacker controls the IOTA coordinator or controls 7 of the 12 Obyte witnesses, or b) the IOTA coordinator do evil or 7 of the 12 Obyte witnesses conspire for evil, the marginal cost of launching double-spending attacks would be almost zero.
+However, IOTA and Obyte fail to find a way to resolve double-spendings autonomously and introduce stakeholders as the resolver of double-spending, which makes their networks vulnerable to _cyber attacks_ and _politics_. If a) the attacker controls the IOTA coordinator or controls 7 of the 12 Obyte witnesses, or b) the IOTA coordinator do evil or 7 of the 12 Obyte witnesses conspire for evil, the marginal cost of launching double-spending attacks would be negligible.
 
-In Bitcoin and Conflux, in contrast, double-spendings are resolved in a decentralised manner which is more robust than the authority-led approach. Even though attackers can rent hash power to launch 51% attacks, each attack takes a considerable cost, i.e. the marginal cost is high.
+In Bitcoin and Conflux, in contrast, double-spendings are resolved in a decentralised manner which is more robust than the authority-led approach. Even though attackers can rent hash power to launch 51% attacks, its cost would very possibly be higher than the return.
 
 # References
 
