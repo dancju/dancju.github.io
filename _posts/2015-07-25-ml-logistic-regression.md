@@ -5,7 +5,7 @@ title: 'Machine learning: logistic regression'
 
 This is a lecture note about logistic regression.
 
-Logistic regression is actually an approach to classification problems instead of regression problems.
+Logistic regression is an approach to classification problems instead of regression problems despite its name contains "regression".
 
 # Definitions
 
@@ -29,7 +29,6 @@ $$\boldsymbol x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatri
 
 Let $\boldsymbol X$ be a matrix whose rows are all the features of all the training examples, viz.
 
-<div>
 $$
 \boldsymbol X
 =
@@ -46,7 +45,6 @@ x_0^{(m)}&\cdots&x_n^{(m)}
 \end{pmatrix}
 \,.
 $$
-</div>
 
 $y^{(i)}$ denotes the output of the $i$-th training example. For all training examples, the output $y^{(i)}\in\\{0,1\\}\,.$
 
@@ -66,17 +64,14 @@ $$g(x)=\frac{1}{1+e^{-x}}\,.$$
 
 The **hypothesis** denotes the probability of the estimated output being $1\,,$ which is
 
-<div>
 $$
 h\left(\boldsymbol x^{(i)};\boldsymbol\theta\right)
 =g\left(\sum_{j=0}^n\theta_jx_j^{(i)}\right)
 =g\left(\boldsymbol x^{(i)}\boldsymbol\theta\right)\,.
 $$
-</div>
 
 The **loss function** is
 
-<div>
 $$
 \begin{align}
 J(\boldsymbol\theta)
@@ -84,16 +79,16 @@ J(\boldsymbol\theta)
 &=-\frac{1}{m}\left(\ln\left[g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\boldsymbol y+\ln\left[\boldsymbol 1-g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\left(\boldsymbol 1-\boldsymbol y\right)\right)\,.
 \end{align}
 $$
-</div>
 
-> It is feasible to define the loss function as
+{:.blockquote.alert.alert-danger}
+> Is it feasible to define the loss function as
 > $$J(\boldsymbol\theta)=\frac{1}{m}\left[\exp(-\boldsymbol X\boldsymbol\theta)^\mathsf T\boldsymbol y+\exp(\boldsymbol X\boldsymbol\theta)^\mathsf T(\boldsymbol1-\boldsymbol y)\right]\,,$$
 > since it is similar in shape to above?
 
 # Gradient descent
 
-<div>
-$$\nabla J(\boldsymbol\theta)
+$$
+\nabla J(\boldsymbol\theta)
 =
 \begin{pmatrix}\frac{\partial J(\boldsymbol\theta)}{\partial\theta_0}\\\vdots\\\frac{\partial J(\boldsymbol\theta)}{\partial\theta_n}\end{pmatrix}
 =
@@ -104,7 +99,7 @@ $$\nabla J(\boldsymbol\theta)
 \begin{pmatrix}\boldsymbol x_0^\mathsf T[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y]\\\vdots\\\boldsymbol x_n^\mathsf T[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y]\end{pmatrix}
 =
 \frac{1}{m}\boldsymbol X^\mathsf T\left[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y\right]
-\,.$$
-</div>
+\,.
+$$
 
-The rest part are same with the linear regression.
+The rest part is identical with the linear regression.

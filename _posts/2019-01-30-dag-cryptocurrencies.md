@@ -40,7 +40,7 @@ The Obyte paper acknowledged the problem which was absent in the IOTA paper and 
 In Conflux, each vertex in the DAG is a block, and each block contains multiple transactions. A _pivotal chain_ is selected throughout the DAG from the genesis block to a childless block with a deterministic algorithm. With the pivotal chain, each block is classified into one of these categories:
 
 1. _a (confirmed) pivotal block_ if it is on the pivotal chain,
-1. _a confirmed non-pivotal block_ if there are one or more paths from a pivotal block to it, or
+1. _a confirmed non-pivotal block_ if there are one or more paths from a pivotal block to it, and
 1. _an unconfirmed non-pivotal block_ if otherwise.
 
 Their heights are defined as follows:

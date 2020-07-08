@@ -11,7 +11,7 @@ comments:
     date: 2016-12-02T14:41:19.508Z
 ---
 
-本文試圖儘量全面地總結當前可靠的過敏性鼻炎治療方法。
+本文總結了所有我所知的過敏性鼻炎治療方法。
 
 # 成因
 
@@ -206,7 +206,7 @@ comments:
 
 ## 鼻腔支架
 
-AlaxoLito[^alaxolito] 是一种鼻腔支架，用於治療鼻塞及其引起的打鼾。由於它處於專利期[^US8998986B1]，所以價格較貴（很不幸，印度人並沒有仿製 AlaxoLito）。在世界上大多數地方可以憑處方購買，但在中國沒有醫療器械批號所以很難買到。
+AlaxoLito[^alaxolito] 是一种鼻腔支架，用於治療鼻塞及其引起的打鼾。由於它處於專利期[^us8998986b1]，所以價格較貴（很不幸，印度人並沒有仿製 AlaxoLito）。在世界上大多數地方可以憑處方購買，但在中國沒有醫療器械批號所以很難買到。
 
 ## 減充血劑（慎用）
 
@@ -244,7 +244,7 @@ AlaxoLito[^alaxolito] 是一种鼻腔支架，用於治療鼻塞及其引起的�
 # 參考文獻
 
 [^alaxolito]: [The AlaxoLito Nasal Stent](http://www.alaxo.com/alaxolito_eng.html)
-[^US8998986B1]: [Nasal stent](https://patents.google.com/patent/US8998986B1)
+[^us8998986b1]: [Nasal stent](https://patents.google.com/patent/us8998986b1)
 [^fda]: [Is Rinsing Your Sinuses Safe?](http://www.fda.gov/ForConsumers/ConsumerUpdates/ucm316375.htm)
 [^rabago2002]: Rabago, David, et al. "Efficacy of daily hypertonic saline nasal irrigation among patients with sinusitis: a randomized controlled trial." Journal of Family Practice 51.12 (2002): 1049-1055.
 [^ramey2006]: Ramey, J. T., E. Bailen, and R. F. Lockey. "Rhinitis medicamentosa." Journal of Investigational Allergology and Clinical Immunology 16.3 (2006): 148.

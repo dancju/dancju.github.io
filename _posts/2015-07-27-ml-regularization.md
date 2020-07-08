@@ -34,7 +34,6 @@ Note that the bias parameter $\theta_0$ is not penalized. That is because regula
 
 ## Gradient descent
 
-<div>
 $$
 \nabla J(\boldsymbol\theta)
 =
@@ -44,17 +43,14 @@ $$
 \frac{\lambda}{m}\boldsymbol l
 \,,
 $$
-</div>
 
 where
 
-<div>
 $$
 \boldsymbol l^\mathsf T
 =
 \begin{pmatrix}0&\theta_1&\cdots&\theta_n\end{pmatrix}\,.
 $$
-</div>
 
 ## Normal equation
 
@@ -64,24 +60,19 @@ $$\boldsymbol\theta=\left(\boldsymbol{X^\mathsf TX+}\lambda\boldsymbol L\right)^
 
 where
 
-<div>
 $$\boldsymbol L=\begin{pmatrix}0\\&1\\&&\ddots\\&&&1\end{pmatrix}\,.$$
-</div>
 
 # Logistic regression
 
 Recall the original loss function is
 
-<div>
 $$
 J(\boldsymbol\theta)
 =-\frac{1}{m}\left\{\ln\left[g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\boldsymbol y+\ln\left[\boldsymbol 1-g\left(\boldsymbol X\boldsymbol\theta\right)\right]^\mathsf T\left(\boldsymbol 1-\boldsymbol y\right)\right\}\,.
 $$
-</div>
 
 Similarly to the linear regression, the regularized loss function of logistic regression is
 
-<div>
 $$
 J(\boldsymbol\theta)
 =
@@ -89,25 +80,22 @@ J(\boldsymbol\theta)
 +\frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2
 \,.
 $$
-</div>
 
 ## Gradient descent
 
-<div>
-$$\nabla J(\boldsymbol\theta)
+$$
+\nabla J(\boldsymbol\theta)
 =
 \frac{1}{m}\boldsymbol X^\mathsf T\left[g(\boldsymbol X\boldsymbol\theta)-\boldsymbol y\right]
 +
 \frac{\lambda}{m}\boldsymbol l
-\,,$$
-</div>
+\,,
+$$
 
 where
 
-<div>
 $$
 \boldsymbol l^\mathsf T
 =
 \begin{pmatrix}0&\theta_1&\cdots&\theta_n\end{pmatrix}\,.
 $$
-</div>

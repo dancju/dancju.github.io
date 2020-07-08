@@ -27,7 +27,6 @@ $$\boldsymbol x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatri
 
 Let $\boldsymbol X$ be a matrix whose rows are all the features of all the training examples, viz.
 
-<div>
 $$
 \boldsymbol X
 =
@@ -44,7 +43,6 @@ x_0^{(m)}&\cdots&x_n^{(m)}
 \end{pmatrix}
 \,.
 $$
-</div>
 
 $y^{(i)}$ denotes the output of the $i$-th training example.
 
@@ -60,24 +58,23 @@ $$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatri
 
 Consider the quadric loss function
 
-<div>
 $$
 J(\theta)
 =
 \frac{1}{2m}\sum_{i=1}^m\left(\sum_{j=0}^n\theta_j x_j^{(i)}-y^{(i)}\right)^2
 =\frac{1}{2m}\left|\boldsymbol X\boldsymbol\theta-\boldsymbol y\right|^2\,.
 $$
-</div>
 
 Our aim is finding the optimum $\boldsymbol\theta$ to minimize the loss function $J(\boldsymbol\theta)$.
 
 There are several approaches to the optimum $\boldsymbol\theta$. The following two sections introduces two of them, naming _gradient descent_ and _normal equation_.
 
+{:.blockquote.alert.alert-danger}
 > Other approaches includes stochastic gradient, simulated annealing, etc.
 
 # Gradient descent
 
-The **gradient descent** algorithm iterately execute the following gradient descent rule for certain times or until the error is small enough.
+The **gradient descent** algorithm iteratively execute the following gradient descent rule for certain times or until the error is small enough.
 
 The gradient descent rule can be expressed as:
 
@@ -85,7 +82,6 @@ $$\boldsymbol\theta\gets\boldsymbol\theta-\alpha\nabla J(\boldsymbol\theta)\,,$$
 
 where
 
-<div>
 $$
 \nabla J(\boldsymbol\theta)
 =
@@ -101,7 +97,6 @@ $$
 \boldsymbol X^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)
 \,.
 $$
-</div>
 
 Hence, the gradient descent rule is equivalent to
 
@@ -121,8 +116,9 @@ Solving the equation yields
 
 $$\boldsymbol\theta=\left(\boldsymbol X^\mathsf T\boldsymbol X\right)^{-1}\boldsymbol X^\mathsf T\boldsymbol y\,.$$
 
+{:.blockquote.alert.alert-danger}
 > Conjecture: $\boldsymbol X^\mathsf T\boldsymbol X$ is non-invertible iff local optima exist.
 
-The complexity of normal equation could be $O\left(mn^2+n^{2.373}\right)$ if optimized CW-like algorithms are applied.
+The complexity of the normal equation could be $O\left(mn^2+n^{2.373}\right)$ if optimized CW-like algorithms are applied.
 
-Note that the gradient descent finds a algebraic solution of the optimum $\boldsymbol\theta$.
+Note that the gradient descent finds an algebraic solution of the optimum $\boldsymbol\theta$.

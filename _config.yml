@@ -1,3 +1,6 @@
+# https://jekyllrb.com/docs/configuration/
+# https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
+
 encoding: UTF-8
 future: true
 gfm_quirks: paragraph_end

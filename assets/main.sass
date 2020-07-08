@@ -3,11 +3,6 @@
 
 // variables
 
-$breakpoint-sm: 576px
-$breakpoint-md: 768px
-$breakpoint-lg: 992px
-$breakpoint-xl: 1200px
-
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, PingFang TC, Microsoft JhengHei, Noto Sans CJK TC, "微軟正黑體", sans-serif
 $font-family-serif: Palatino Linotype, Songti TC, PMingLiU-ExtB, Noto Serif CJK TC, "新細明體", serif
 $font-family-monospace: Menlo, Monaco, Consolas, Courier New, monospace
@@ -15,7 +10,7 @@ $font-family-monospace: Menlo, Monaco, Consolas, Courier New, monospace
 // global
 
 body
-  background-color: #f7f7f7
+  background-color: var(--light)
   font-family: $font-family-sans-serif
 
 a, a:hover, .page-link, .page-link:hover
@@ -25,6 +20,9 @@ a, a:hover, .page-link, .page-link:hover
   font-size: 1rem
   font-style: italic
   margin: 1em 2.5em
+
+.blockquote > p
+  margin: 0
 
 pre
   border: 1px solid #ccc
@@ -51,14 +49,14 @@ pre
   > .nav-item > .nav-link
     padding: 1rem .5rem
   > .active > .nav-link
-    background-image: linear-gradient(to bottom, #f2f2f2 0, #fafafa 100%)
+    background-image: linear-gradient(to bottom, #eee 0, var(--light) 100%)
 
-@media (max-width: $breakpoint-sm)
+@media (max-width: var(--breakpoint-sm))
   .navbar-nav > .active > .nav-link
     border-left: 2px solid indianred
     box-shadow: inset 3px 0 9px rgba(0,0,0,0.075)
 
-@media (min-width: $breakpoint-sm)
+@media (min-width: var(--breakpoint-sm))
   .navbar-nav > .active > .nav-link
     border-top: 2px solid indianred
     box-shadow: inset 0 3px 9px rgba(0,0,0,0.075)
@@ -78,16 +76,6 @@ pre
 .card-title
   font-family: $font-family-serif
   font-weight: bold
-
-// archive
-
-#archive > tr
-  > td:first-child
-    min-width: 98px
-    text-align: right
-    vertical-align: top
-  > td:last-child
-    padding: 0 0 1rem 1rem
 
 // posts
 
