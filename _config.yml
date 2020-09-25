@@ -10,6 +10,7 @@ kramdown:
   input: GFM
   hard_wrap: false
 paginate: 8
+paginate_path: "/posts/:num"
 plugins:
   - jekyll-avatar
   - jekyll-feed

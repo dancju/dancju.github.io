@@ -55,7 +55,7 @@ comments:
   - 頻繁清洗枕頭和牀蓐；
   - 避免穿著羊毛衣物、接觸公仔；
   - 避免使用地毯和厚窗簾；
-  - 使用新風系統（HEPA）或空氣淨化器；
+  - 使用新風系統（HVAC system with HEPA filters）或空氣淨化器；
   - 污染嚴重的時候避免出門；
   - 室外帶防霾口罩（宜閱[此文](https://www.douban.com/note/345004477/)）；
   - 遷徙至[潔淨之處](http://aqicn.org/map/world)；

@@ -1,34 +1,65 @@
 ---
 layout: base
+title: about me
 ---
 
-<div class="offset-lg-2 col-lg-8">
-  {% for post in paginator.posts %}
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
-        <h6 class="card-subtitle text-muted">{{ post.date | date_to_string }}</h6>
-        <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 64 }}</p>
-      </div>
-    </div>
-  {% endfor %}
+<div class="card" id="main">
+  <div class="card-body">
+    <h2>about me</h2>
 
-  <ul class="pagination justify-content-center">
-    <li class="page-item {% if paginator.previous_page == nil %}disabled{% endif %}">
-      <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">&laquo; prev</a>
-    </li>
-    {% for page in (1..paginator.total_pages) %}
-      <li class="page-item {% if page == paginator.page %}disabled{% endif %}">
-        <a
-          class="page-link"
-          href="{% if page == 1 %}/{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}"
-        >
-          {{ page }}
-        </a>
-      </li>
-    {% endfor %}
-    <li class="page-item {% if paginator.next_page == nil %}disabled{% endif %}">
-      <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">next &raquo;</a>
-    </li>
-  </ul>
+    <!-- <img style="margin: 2em; max-height: 256px" src="/assets/photo.jpg" class="rounded-circle mx-auto d-block"> -->
+
+    <p>I am <span style="font-variant: small-caps">Daniel Zhou</span>, just another geek. Welcome to my blog.</p>
+
+    <dl class="dl-horizontal">
+      <dt>INTERESTS</dt>
+      <dd>
+        <ul class="list-inline">
+          <li class="list-inline-item">quantitative trading</li>
+          <li class="list-inline-item">distributed ledger (blockchain)</li>
+        </ul>
+      </dd>
+      <dt>TAGS</dt>
+      <dd>
+        <ul class="list-inline">
+          <li class="list-inline-item">existentialist</li>
+          <li class="list-inline-item">buddhist</li>
+          <li class="list-inline-item">libertarian</li>
+          <li class="list-inline-item">cypherpunk</li>
+          <li class="list-inline-item">programmer</li>
+        </ul>
+      </dd>
+      <dt>IDOLS</dt>
+      <dd>
+        <ul class="list-inline">
+          <li class="list-inline-item">David Hume</li>
+          <li class="list-inline-item">Albert Camus</li>
+          <li class="list-inline-item">Buddha</li>
+          <li class="list-inline-item">Ludwig von Mises</li>
+        </ul>
+      </dd>
+      <dt>SOCIAL NETWORKS</dt>
+      <dd>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://github.com/nerdDan">GitHub</a></li>
+          <li class="list-inline-item"><a href="https://www.linkedin.com/in/danichau">LinkedIn</a></li>
+          <!--
+          <li class="list-inline-item"><a href="https://twitter.com/nerdDaniel">twitter</a></li>
+          <li class="list-inline-item"><a href="https://www.quora.com/Daniel-Chau-3">Quora</a></li>
+          <li class="list-inline-item"><a href="http://www.douban.com/people/danielc">豆瓣</a></li>
+          -->
+        </ul>
+      </dd>
+      <dt>OpenPGP FINGERPRINT</dt>
+      <dd>
+        <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x604EF359AFA8689A"><code>604E F359 AFA8 689A</code></a>
+      </dd>
+    </dl>
+
+    <p class="text-muted">My email address could be found in your browser console.</p>
+  </div>
 </div>
+
+<script>
+  console.log(`Send me emails to atob('ZGFuY2p1QHR1dGEuaW8=').`);
+</script>
