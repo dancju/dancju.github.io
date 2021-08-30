@@ -1,5 +1,5 @@
-$('main').ready(() => {
-  $('a[href^="http"]').attr('target', '_blank');
+window.onload = () => {
+  document.querySelectorAll('a[href^="http"]').forEach(e => e.setAttribute('target', '_blank'));
 
   MathJax.Hub.Config({
     tex2jax: {
@@ -8,19 +8,35 @@ $('main').ready(() => {
     }
   });
 
-  const main = $('#main > .card > .card-body');
-  const aside = $('aside > ul');
-  let ul;
-  main.children().each((_, tag) => {
-    if (tag.nodeName === 'H1') {
-      const a = $('<a>', { class: 'nav-link', href: '#' + tag.id }).text(tag.innerHTML);
-      ul = $('<ul>').addClass('nav flex-column');
-      const li = $('<li>', { class: 'nav-item' }).append(a).append(ul);
-      aside.append(li);
-    } else if (tag.nodeName === 'H2') {
-      const a = $('<a>', { class: 'nav-link', href: '#' + tag.id }).text(tag.innerHTML);
-      const li = $('<li>', { class: 'nav-item' }).append(a);
-      ul.append(li);
-    }
-  });
-});
+  (() => {
+    const content = document.getElementById('content');
+    const toc = document.querySelector('#toc > ul');
+    if (!content || !toc) return;
+    let ul;
+    content.childNodes.forEach(e => {
+      if (e.nodeName === 'H1') {
+        const a = document.createElement("a");
+        a.setAttribute('class', 'nav-link');
+        a.setAttribute('href', '#' + e.id);
+        a.textContent = e.textContent;
+        ul = document.createElement('ul');
+        ul.setAttribute('class', 'nav flex-column');
+        const li = document.createElement('li');
+        li.setAttribute('class', 'nav-item');
+        li.appendChild(a);
+        li.appendChild(ul);
+        toc.appendChild(li);
+      } else if (e.nodeName == 'H2') {
+        const a = document.createElement("a");
+        a.setAttribute('class', 'nav-link');
+        a.setAttribute('href', '#' + e.id);
+        a.textContent = e.textContent;
+        const li = document.createElement('li');
+        li.setAttribute('class', 'nav-item');
+        li.appendChild(a);
+        ul.appendChild(li);
+      }
+    });
+    new bootstrap.ScrollSpy(document.body, { target: '#toc' });
+  })();
+};

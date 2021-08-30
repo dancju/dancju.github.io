@@ -1,69 +1,36 @@
----
-layout: base
----
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
 
-<div class="row">
-  <aside class="d-none d-lg-block col-lg-2" id="section-nav"><ul class="flex-column nav sticky-top"></ul></aside>
-  <main class="col-lg-10" id="main">
-    <div class="card">
-      <div class="card-body">
-        <div id="title">{{ page.title }}</div>
-        <hr />
-        {{ content }}
-        <hr />
-        <p>
-          Created by <i>Daniel Zhou</i> on <b>{{ page.date | date_to_string }}</b>, this work is licensed under the
-          <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
-            Creative Commons Attribution 4.0 International License
-          </a>
-          .
-        </p>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="d-none d-xl-block col-xl-3">
+        {% include nav.html %}
+        <div class="sticky-top" id="toc">
+          <ul class="flex-column nav"></ul>
+        </div>
       </div>
-    </div>
-  </main>
-</div>
-
-<hr />
-
-<div class="row">
-  <div class="col-lg-10" id="comments">
-    {%if page.comments %}
-      {% assign sorted_comments = page.comments | sort: 'date' %}
-      {% for c in sorted_comments %}
+      <div class="col">
         <div class="card">
-          <div class="card-body">
-            <div class="media">
-              <img
-                src="{{ c.author.picture }}"
-                alt="{{ c.author.displayName }}"
-                class="rounded-circle mr-3"
-                height="64"
-                width="64"
-              />
-              <div class="media-body">
-                <p class="text-muted">
-                  <a href="{{ c.author.url }}">{{ c.author.displayName }}</a> on {{ c.date | date_to_string }}
-                </p>
-                <p>{{ c.content | newline_to_br }}</p>
-              </div>
-            </div>
+          <div class="card-body" id="content">
+            <div id="title">{{ page.title }}</div>
+            <hr />
+            {{ content }}
+            <hr />
+            <p>
+              Created by <span style="font-variant: small-caps">Daniel Zhou</span> on
+              <b>{{ page.date | date_to_string }}</b>, this work is licensed under the
+              <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+                Creative Commons Attribution 4.0 International License
+              </a>
+              .
+            </p>
           </div>
         </div>
-      {% endfor %}
-    {% else %}
-      <p>There are no comments on this post.</p>
-    {% endif %}
-    <div id="commentit"></div>
+      </div>
+    </div>
   </div>
-  <script>
-    const commentitUsername = 'nerdDan';
-    const commentitRepo = 'nerdDan/nerdDan.github.io';
-    const commentitPath = '{{ page.path }}';
-    (() => {
-      const commentit = document.createElement('script');
-      commentit.async = true;
-      commentit.src = 'https://commentit.io/static/embed/dist/commentit.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
-    })();
-  </script>
-</div>
+</body>
+
+</html>

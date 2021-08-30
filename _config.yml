@@ -10,7 +10,7 @@ kramdown:
   input: GFM
   hard_wrap: false
 paginate: 8
-paginate_path: "/posts/:num"
+paginate_path: "/archive/:num"
 plugins:
   - jekyll-avatar
   - jekyll-feed
@@ -27,11 +27,3 @@ title: Daniel Zhou's Chaos
 author: Daniel Zhou
 lang: en_GB
 url: nerddan.github.io
-social:
-  name: Daniel Zhou
-  links:
-    - https://douban.com/people/danielc
-    - https://github.com/nerdDan
-    - https://linkedin.com/in/danichau
-    - https://quora.com/Daniel-Chau-3
-    - https://twitter.com/nerdDaniel

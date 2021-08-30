@@ -1,17 +1,42 @@
 ---
 ---
 
-// variables
+// Fonts
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, PingFang TC, Microsoft JhengHei, Noto Sans CJK TC, "微軟正黑體", sans-serif
-$font-family-serif: Palatino Linotype, Songti TC, PMingLiU-ExtB, Noto Serif CJK TC, "新細明體", serif
-$font-family-monospace: Menlo, Monaco, Consolas, Courier New, monospace
+.font-sans
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, PingFang TC, Microsoft JhengHei, Noto Sans CJK TC, "微軟正黑體", sans-serif
 
-// global
+.font-serif
+  font-family: Palatino Linotype, Songti TC, PMingLiU-ExtB, Noto Serif CJK TC, "新細明體", serif
+
+.font-monospace
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace
+
+// Global
 
 body
+  @extend .font-sans
   background-color: var(--light)
-  font-family: $font-family-sans-serif
+
+.card
+  margin: 2rem 0
+
+.card-title
+  @extend .font-serif
+  font-size: 1.25rem
+  font-weight: bold
+  text-decoration: none
+
+.list-group-item.active
+  background-color: indianred
+  border-color: indianred
+
+@media (min-width: 768px)
+  .col > .card > .card-body
+    margin: auto
+    width: 42rem
+
+// Typography
 
 a, a:hover, .page-link, .page-link:hover
   color: indianred
@@ -32,74 +57,32 @@ pre
 .list-inline-item:not(:last-child)
   margin-right: 1rem
 
-// navbar & footer
+// Posts
 
-.navbar
-  border-bottom: 2px solid indianred
-  padding: 0 1rem
-
-.navbar-brand
-  font-family: $font-family-serif
-  font-variant: small-caps
-
-.navbar-toggler
-  margin: .5rem 0
-
-.navbar-nav
-  > .nav-item > .nav-link
-    padding: 1rem .5rem
-  > .active > .nav-link
-    background-image: linear-gradient(to bottom, #eee 0, var(--light) 100%)
-
-@media (max-width: var(--breakpoint-sm))
-  .navbar-nav > .active > .nav-link
-    border-left: 2px solid indianred
-    box-shadow: inset 3px 0 9px rgba(0,0,0,0.075)
-
-@media (min-width: var(--breakpoint-sm))
-  .navbar-nav > .active > .nav-link
-    border-top: 2px solid indianred
-    box-shadow: inset 0 3px 9px rgba(0,0,0,0.075)
-    padding-top: 13px
-
-#footer
-  border-top: 2px solid indianred
-  box-shadow: 0 1px 0 rgba(255,255,255,0.15), inset 0 1px 5px rgba(0,0,0,0.075)
-  padding: 32px
-  text-align: center
-
-// index
-
-.card
-  margin: 2rem 0
-
-.card-title
-  font-family: $font-family-serif
-  font-weight: bold
-
-// posts
-
-#main
+#content
   #title
+    @extend .font-serif
     color: indianred
-    font-family: $font-family-serif
     font-size: 2rem
     font-weight: bold
     text-align: center
-  h1, h2, h3
-    font-family: $font-family-serif
-    font-weight: bold
   h1
+    @extend .font-serif
     color: indianred
     font-size: 1.75rem
+    font-weight: bold
   h2
+    @extend .font-sans
     color: darken(indianred, 12%)
     font-size: 1.5rem
+    font-weight: bold
   h3
+    @extend .font-sans
     color: darken(indianred, 25%)
     font-size: 1.25rem
+    font-weight: bold
 
-#section-nav
+#toc
   padding: 2rem 0
   a
     color: gray
