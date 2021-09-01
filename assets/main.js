@@ -1,12 +1,21 @@
 window.onload = () => {
   document.querySelectorAll('a[href^="http"]').forEach(e => e.setAttribute('target', '_blank'));
 
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      processEscapes: true
-    }
-  });
+  (() => {
+    const content = document.getElementById('content');
+    if (!content) return;
+    renderMathInElement(content, {
+      delimiters: [
+        { left: '$', right: '$', display: false },
+        { left: '$$', right: '$$', display: true },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true },
+      ],
+      macros: {
+        "\\tran": "^{\\mkern-1.5mu\\mathsf{T}}",
+      },
+    });
+  })();
 
   (() => {
     const content = document.getElementById('content');

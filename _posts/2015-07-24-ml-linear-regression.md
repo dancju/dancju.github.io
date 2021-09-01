@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Machine learning: linear regression'
+title: 'Machine Learning: Linear Regression'
 ---
 
 This is a lecture note about linear regression.
@@ -13,27 +13,27 @@ $m$ denotes the number of training examples.
 
 $n$ denotes the number of features.
 
-$x_j^{(i)}$ denotes the $j^\rm{th}$ feature of the $i^\rm{th}$ training example.
+$x_j^{(i)}$ denotes the $j^\text{th}$ feature of the $i^\text{th}$ training example.
 
-Let $\boldsymbol x^{(i)}$ be the row vector of all the features of the $i$-th training example, viz.
+Let $\bm x^{(i)}$ be the row vector of all the features of the $i$-th training example, viz.
 
-$$\boldsymbol x^{(i)}=\begin{pmatrix}x_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
+$$\bm x^{(i)}=\begin{pmatrix}x_0^{(i)}&\cdots&x_n^{(i)}\end{pmatrix}\,,$$
 
 where $x_0^{(i)}=1$ for all $i\,.$
 
-Let $\boldsymbol x_j$ be the column vector of all the $j$-th features of all the training examples, viz.
+Let $\bm x_j$ be the column vector of all the $j$-th features of all the training examples, viz.
 
-$$\boldsymbol x_j^\mathsf T=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
+$$\bm x_j\tran=\begin{pmatrix}x_j^{(1)}&\cdots&x_j^{(m)}\end{pmatrix}\,.$$
 
-Let $\boldsymbol X$ be a matrix whose rows are all the features of all the training examples, viz.
+Let $\bm X$ be a matrix whose rows are all the features of all the training examples, viz.
 
 $$
-\boldsymbol X
+\bm X
 =
 \begin{pmatrix}
-\boldsymbol x^{(1)}\\
+\bm x^{(1)}\\
 \vdots\\
-\boldsymbol x^{(m)}
+\bm x^{(m)}
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -46,13 +46,13 @@ $$
 
 $y^{(i)}$ denotes the output of the $i$-th training example.
 
-Let $\boldsymbol y$ be the column vector of the outputs of all the training examples, viz.
+Let $\bm y$ be the column vector of the outputs of all the training examples, viz.
 
-$$\boldsymbol y^\mathsf T=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
+$$\bm y\tran=\begin{pmatrix}y^{(1)}&\cdots&y^{(m)}\end{pmatrix}\,.$$
 
 ## Output
 
-$$\boldsymbol\theta^\mathsf T=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
+$$\bm\theta\tran=\begin{pmatrix}\theta_0&\cdots&\theta_n\end{pmatrix}\,.$$
 
 ## The problem
 
@@ -62,12 +62,12 @@ $$
 J(\theta)
 =
 \frac{1}{2m}\sum_{i=1}^m\left(\sum_{j=0}^n\theta_j x_j^{(i)}-y^{(i)}\right)^2
-=\frac{1}{2m}\left|\boldsymbol X\boldsymbol\theta-\boldsymbol y\right|^2\,.
+=\frac{1}{2m}\left|\bm X\bm\theta-\bm y\right|^2\,.
 $$
 
-Our aim is finding the optimum $\boldsymbol\theta$ to minimize the loss function $J(\boldsymbol\theta)$.
+Our aim is finding the optimum $\bm\theta$ to minimize the loss function $J(\bm\theta)$.
 
-There are several approaches to the optimum $\boldsymbol\theta$. The following two sections introduces two of them, naming _gradient descent_ and _normal equation_.
+There are several approaches to the optimum $\bm\theta$. The following two sections introduces two of them, namely _gradient descent_ and _normal equation_.
 
 {:.blockquote.alert.alert-danger}
 > Other approaches includes stochastic gradient, simulated annealing, etc.
@@ -78,47 +78,47 @@ The **gradient descent** algorithm iteratively execute the following gradient de
 
 The gradient descent rule can be expressed as:
 
-$$\boldsymbol\theta\gets\boldsymbol\theta-\alpha\nabla J(\boldsymbol\theta)\,,$$
+$$\bm\theta\gets\bm\theta-\alpha\nabla J(\bm\theta)\,,$$
 
 where
 
 $$
-\nabla J(\boldsymbol\theta)
+\nabla J(\bm\theta)
 =
 \begin{pmatrix}\frac{\partial J(\theta)}{\partial\theta_0}\\\vdots\\\frac{\partial J(\theta)}{\partial\theta_n}\end{pmatrix}
 =
 \frac{1}{m}
-\begin{pmatrix}\sum_{i=1}^mx_0^{(i)}\left[\boldsymbol x^{(i)}\boldsymbol\theta-y^{(i)}\right]\\\vdots\\\sum_{i=1}^mx_n^{(i)}\left[\boldsymbol x^{(i)}\boldsymbol\theta-y^{(i)}\right]\end{pmatrix}
+\begin{pmatrix}\sum_{i=1}^mx_0^{(i)}\left(\bm x^{(i)}\bm\theta-y^{(i)}\right)\\\vdots\\\sum_{i=1}^mx_n^{(i)}\left(\bm x^{(i)}\bm\theta-y^{(i)}\right)\end{pmatrix}
 =
 \frac{1}{m}
-\begin{pmatrix}\boldsymbol x_0^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)\\\vdots\\\boldsymbol x_n^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)\end{pmatrix}
+\begin{pmatrix}\bm x_0\tran\left(\bm X\bm\theta-\bm y\right)\\\vdots\\\bm x_n\tran\left(\bm X\bm\theta-\bm y\right)\end{pmatrix}
 =
 \frac{1}{m}
-\boldsymbol X^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)
+\bm X\tran\left(\bm X\bm\theta-\bm y\right)
 \,.
 $$
 
 Hence, the gradient descent rule is equivalent to
 
-$$\boldsymbol\theta\gets\boldsymbol\theta-\frac{\alpha}{m}\boldsymbol X^\mathsf T\left(\boldsymbol X\boldsymbol\theta-\boldsymbol y\right)\,.$$
+$$\bm\theta\gets\bm\theta-\frac{\alpha}{m}\bm X\tran\left(\bm X\bm\theta-\bm y\right)\,.$$
 
 The complexity of gradient descent is $O(kmn)\,,$ where $k$ is the number of iteration.
 
-Note that the gradient descent finds a numerical solution of the optimum $\boldsymbol\theta$.
+Note that the gradient descent finds a numerical solution of the optimum $\bm\theta$.
 
 # Normal equation
 
-The **Normal equation** is an approach by finding the optimum $\boldsymbol\theta$ via first-order condition, viz.
+The **Normal equation** is an approach by finding the optimum $\bm\theta$ via first-order condition, viz.
 
-$$\nabla J(\boldsymbol\theta)=\boldsymbol0\,.$$
+$$\nabla J(\bm\theta)=\boldsymbol0\,.$$
 
 Solving the equation yields
 
-$$\boldsymbol\theta=\left(\boldsymbol X^\mathsf T\boldsymbol X\right)^{-1}\boldsymbol X^\mathsf T\boldsymbol y\,.$$
+$$\bm\theta=\left(\bm X\tran\bm X\right)^{-1}\bm X\tran\bm y\,.$$
 
 {:.blockquote.alert.alert-danger}
-> Conjecture: $\boldsymbol X^\mathsf T\boldsymbol X$ is non-invertible iff local optima exist.
+> Conjecture: $\bm X\tran\bm X$ is non-invertible iff local optima exist.
 
 The complexity of the normal equation could be $O\left(mn^2+n^{2.373}\right)$ if optimized CW-like algorithms are applied.
 
-Note that the gradient descent finds an algebraic solution of the optimum $\boldsymbol\theta$.
+Note that the gradient descent finds an algebraic solution of the optimum $\bm\theta$.

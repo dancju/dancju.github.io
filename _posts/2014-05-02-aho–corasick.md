@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Aho–Corasick string matching algorithm
+title: Aho–Corasick String Matching Algorithm
 ---
 
-For a given string $s$ and a given set of patterns $p\_i\|\_{i=1}^n$, the algorithm [^aho1975efficient] finds all sub-strings of $s$ which equals to any pattern $p\_i$. The asymptotic time complexity is $O\left(\|s\|+\sum_i\|p_i\|\right)$.
+Given string $s$ and a set of strings $\left.p\_i\middle\|\_{i=1}^n\right.$ (the "patterns"), the algorithm [^aho1975efficient] finds all sub-strings of $s$ that equals to any pattern $p\_i$. The time complexity is $O\left(\|s\|+\sum_i\|p_i\|\right)$.
 
-Numerous introductions to Aho–Corasick algorithm can be found online and on textbooks. My personal suggestion is if you feel hard to understand Knuth–Morris–Pratt algorithm, maybe try to learn AC first, even though many textbooks put it after KMP. Strangely, even though AC is more complex than and actually an extension of KMP, but it's easier to understand. The following is my own implementation of the Aho-Corasick automaton in C++ class, and solutions to some problems.
+The Knuth–Morris–Pratt algorithm (KMP algorithm) is the special case of the AC algorithm where only one pattern string is allowed, which is why textbooks usually put KMP before AC. Counter-intuitively, in my experience, AC is easier to understand than KMP, even if it is logically more complex. If you find the "failure function" (a.k.a. "partial match table") in KMP difficult to understand, try learning AC first, where the failure function represented as a topological diagram may give you some insight.
 
-# The Aho–Corasick automaton in C++ class
+# A C++ implementation
+
+The following is my implementation of the Aho-Corasick automaton in C++ for competitive programming, where "virtual pointers" denoted by indices of the nodes in an array instead of actual C pointers represent the automaton. Such an implementation saves time on memory allocation and deallocation, which makes it advantageous in competitive programming.
 
 ```cpp
 template<uint8_t SIGMA> struct AC {

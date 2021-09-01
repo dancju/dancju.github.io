@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Machine learning: neural networks"
+title: "Machine Learning: Neural Networks"
 ---
 
 This post is a lecture note about artificial neural networks.
@@ -22,7 +22,7 @@ $$
 \delta^{(i)}=\left\{
 \begin{array}{ll}
 \mathbf a^{(L)}-\mathbf y&i=L\,,\\
-\left[\left(\Theta^{(i)}\right)^\mathsf T\delta^{(i+1)}\right]\cdot g'\left(\Theta^{(i-1)}\mathbf a^{(i-1)}\right)&\text{else.}
+\left[\left(\Theta^{(i)}\right)\tran\delta^{(i+1)}\right]\cdot g'\left(\Theta^{(i-1)}\mathbf a^{(i-1)}\right)&\text{else.}
 \end{array}
 \right.
 $$
@@ -31,7 +31,7 @@ $$
 \delta^{(i)}=\left\{
 \begin{array}{ll}
 \mathbf a^{(L)}-\mathbf y&i=L\,,\\
-\left[\left(\Theta^{(i)}\right)^\mathsf T\delta^{(i+1)}\right]\cdot\mathbf a^{(i)}\cdot\left(\mathbf1-\mathbf a^{(i)}\right)&\text{else.}
+\left[\left(\Theta^{(i)}\right)\tran\delta^{(i+1)}\right]\cdot\mathbf a^{(i)}\cdot\left(\mathbf1-\mathbf a^{(i)}\right)&\text{else.}
 \end{array}
 \right.
 $$
@@ -41,7 +41,7 @@ Recall the regularized cost function of the logistic regression is
 $$
 J(\theta)
 =
--\frac{1}{m}\left\{\ln\left[g\left(\mathbf X\theta\right)\right]^\mathsf T\mathbf y+\ln\left[1-g\left(\mathbf X\theta\right)\right]^\mathsf T\left(1-\mathbf y\right)\right\}
+-\frac{1}{m}\left\{\ln\left[g\left(\mathbf X\theta\right)\right]\tran\mathbf y+\ln\left[1-g\left(\mathbf X\theta\right)\right]\tran\left(1-\mathbf y\right)\right\}
 +\frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2
 \,.
 $$
