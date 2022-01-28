@@ -85,7 +85,7 @@ title: 過敏性鼻炎患者生存指南
 {:.table}
 | 中文名         | 拉丁名                      | 美國法律 |
 | -              | -                           | -        |
-| 二丙酸倍氯米鬆 | Beclomethasone dipropionate |          |
+| 二丙酸倍氯米鬆 | Beclomethasone dipropionate | ℞        |
 | 布地奈德       | Budesonide                  |          |
 | 環索奈德       | Ciclesonide                 | ℞        |
 | 地塞米松       | Dexamethasone               | ℞        |
@@ -95,7 +95,7 @@ title: 過敏性鼻炎患者生存指南
 | 糠酸莫米鬆     | Mometasone furoate          | ℞        |
 | 潑尼松龍       | Prednisolone                | ℞        |
 |                | Tixocortol pivalate         |          |
-| 曲安奈德       | Triamcinolone acetonide     |          |
+| 曲安奈德       | Triamcinolone acetonide     | OTC      |
 
 皮質類固醇是激素類物質，但上表所列的幾種皮質類固醇經鼻黏膜給藥後，生物利用率（bioavailability）極低，因此可以長期使用。
 
