@@ -55,7 +55,7 @@ which is a hyperbola on the $\mu$-$\sigma$ plane, whose upper part is the _Marko
 
 # Capital allocation line
 
-The previous sections analysed the case where all the available assets are risky. This section extends the analysis by keeping the same risky assets as before and adding a risk-free asset with a guaranteed return $r_0$. In an analogous way to the previous section, we will build a portfolio such that the weights of risky assets form vector $\bm w$ and the weight of the risk-free asset is $w_0$.
+The previous sections analysed the case where all the available assets are risky. In this section, we extend the analysis by keeping the same risky assets as before and adding a risk-free asset with a guaranteed return $r_0$. In an analogous way to the previous section, we will build a portfolio such that the weights of risky assets form vector $\bm w$ and the weight of the risk-free asset is $w_0$.
 
 To find the efficient frontier, we can minimize the variance of the portfolio return for every possible expected portfolio return such that
 
