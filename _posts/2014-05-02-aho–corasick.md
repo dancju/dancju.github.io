@@ -3,7 +3,7 @@ layout: post
 title: Aho–Corasick String Matching Algorithm
 ---
 
-Given string $s$ and a set of strings $\left.p\_i\middle\|\_{i=1}^n\right.$ (the "patterns"), the algorithm [^aho1975efficient] finds all sub-strings of $s$ that equals to any pattern $p\_i$. The time complexity is $O\left(\|s\|+\sum_i\|p_i\|\right)$.
+Given string $s$ and a set of strings $\left.p\_i\middle\|\_{i=1}^n\right.$ (the "patterns"), the Aho–Corasick algorithm [^aho1975efficient] finds all sub-strings of $s$ that equals to any pattern $p\_i$. The time complexity is $O\left(\|s\|+\sum_i\|p_i\|\right)$.
 
 The Knuth–Morris–Pratt algorithm (KMP algorithm) is the special case of the AC algorithm where only one pattern string is allowed, which is why textbooks usually put KMP before AC. Counter-intuitively, in my experience, AC is easier to understand than KMP, even if it is logically more complex. If you find the "failure function" (a.k.a. "partial match table") in KMP difficult to understand, try learning AC first, where the failure function represented as a topological diagram may give you some insight.
 

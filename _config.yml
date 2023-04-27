@@ -14,16 +14,14 @@ paginate_path: "/archive/:num"
 plugins:
   - jekyll-avatar
   - jekyll-feed
-  - jekyll-mentions
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jemoji
 sass:
   style: :compressed
 
-title: Daniel Zhou's Chaos
-author: Daniel Zhou
+title: Chao's Chaos
+author: Chao Zhou
 lang: en_GB
 url: nerddan.github.io
