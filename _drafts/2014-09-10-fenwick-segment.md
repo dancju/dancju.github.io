@@ -95,117 +95,153 @@ int main() {
 ### POJ 3225
 
 ```cpp
-#include <cstdio>
+#include <vector>
 
-const size_t N = 1 << 17;
-inline size_t x(size_t _) { return 63 - __builtin_clzll(_); }
-inline size_t y(size_t _) { return _ - (1 << x(_)); }
-inline size_t length(size_t _) { return N >> x(_); }
-inline size_t left(size_t _) { return y(_) * length(_); }
-inline size_t right(size_t _) { return (1 + y(_)) * length(_); }
+template <uint8_t B, typename Node> struct segment_tree {
+  const static size_t N = 1 << B;
+  static size_t x(size_t _) { return 63 - __builtin_clzll(_); }
+  static size_t y(size_t _) { return _ - (1 << x(_)); }
+  static size_t length(size_t _) { return N >> x(_); }
+  static size_t left(size_t _) { return y(_) * length(_); }
+  static size_t right(size_t _) { return (1 + y(_)) * length(_); }
+  static size_t mid(size_t _) { return right(_ << 1); }
 
-char tree[N << 1] = {0, 1};
+  Node val[N * 2];
 
-inline void pushDown(size_t _) {
-  if (tree[_] == 3)
-    return;
-  if (!tree[_]) {
-    tree[_ << 1] ^= 3;
-    tree[_ << 1 | 1] ^= 3;
-  } else
-    tree[_ << 1] = tree[_ << 1 | 1] = tree[_];
-  tree[_] = 3;
-}
+  void sink(size_t);
+  void swim(size_t);
+};
 
-inline void pushUp(size_t _) {
-  _ <<= 1;
-  if (tree[_] == tree[_ | 1] && (tree[_] == 1 || tree[_] == 2))
-    tree[_ >> 1] = tree[_];
-}
+struct array_bool : segment_tree<17, uint8_t> {
+  array_bool() { val[1] = 1; }
 
-void update(size_t lo, size_t hi, bool val, size_t _ = 1) {
-  if (lo <= left(_) && right(_) <= hi) {
-    tree[_] = 1 << val;
-    return;
+  void sink(size_t _) {
+    if (val[_] == 3) // FORK
+      return;
+    if (val[_] == 0) { // FORK_FLIP
+      val[_ << 1] ^= 3;
+      val[_ << 1 | 1] ^= 3;
+      val[_] = 3;
+      return;
+    }
+    // FALSE/TRUE
+    val[_ << 1] = val[_ << 1 | 1] = val[_];
+    val[_] = 3;
   }
-  pushDown(_);
-  if (lo < right(_ << 1))
-    update(lo, hi, val, _ << 1);
-  if (hi > right(_ << 1))
-    update(lo, hi, val, _ << 1 | 1);
-  pushUp(_);
-}
 
-void flip(size_t lo, size_t hi, size_t _ = 1) {
-  if (lo <= left(_) && right(_) <= hi) {
-    tree[_] ^= 3;
-    return;
+  void swim(size_t _) {
+    _ <<= 1;
+    if (val[_] == val[_ | 1] && (val[_] == 1 || val[_] == 2))
+      val[_ >> 1] = val[_];
   }
-  pushDown(_);
-  if (lo < right(_ << 1))
-    flip(lo, hi, _ << 1);
-  if (hi > right(_ << 1))
-    flip(lo, hi, _ << 1 | 1);
-  pushUp(_);
-}
 
-int lo, hi;
-bool first = 1;
+  void fill(size_t lo, size_t hi, bool v, size_t _ = 1) {
+    assert(lo < hi);
+    assert(lo < right(_) || hi > left(_));
+    if (lo <= left(_) && right(_) <= hi) {
+      val[_] = 1 << v;
+      return;
+    }
+    sink(_);
+    if (lo < mid(_))
+      fill(lo, hi, v, _ << 1);
+    if (hi > mid(_))
+      fill(lo, hi, v, _ << 1 | 1);
+    swim(_);
+  }
 
-inline void print() {
-  if (!~lo)
-    return;
-  if (first)
-    first = 0;
-  else
-    putchar(' ');
-  printf("%c%d,%d%c", lo & 1 ? '(' : '[', lo >> 1, hi >> 1, hi & 1 ? ']' : ')');
-}
+  void flip(size_t lo, size_t hi, size_t _ = 1) {
+    assert(lo < hi);
+    assert(lo < right(_) || hi > left(_));
+    if (lo <= left(_) && right(_) <= hi) {
+      val[_] ^= 3;
+      return;
+    }
+    sink(_);
+    if (lo < mid(_))
+      flip(lo, hi, _ << 1);
+    if (hi > mid(_))
+      flip(lo, hi, _ << 1 | 1);
+    swim(_);
+  }
 
-void query(size_t _ = 1) {
-  if (!tree[_]) {
-    tree[_ << 1] ^= 3;
-    tree[_ << 1 | 1] ^= 3;
-    tree[_] = 3;
-    query(_ << 1);
-    query(_ << 1 | 1);
-  } else if (tree[_] == 3) {
-    query(_ << 1);
-    query(_ << 1 | 1);
-  } else if (tree[_] == 2) {
-    if (left(_) == hi)
-      hi = right(_);
-    else {
-      print();
-      lo = left(_);
-      hi = right(_);
+  void query(std::vector<std::pair<size_t, size_t> > &res, size_t _) {
+    if (val[_] == 0) { // FORK_FLIP
+      val[_ << 1] ^= 3;
+      val[_ << 1 | 1] ^= 3;
+      val[_] = 3;
+      query(res, _ << 1);
+      query(res, _ << 1 | 1);
+    } else if (val[_] == 3) { // FORK
+      query(res, _ << 1);
+      query(res, _ << 1 | 1);
+    } else if (val[_] == 2) { // TRUE
+      if (res.size() && res.back().second == left(_))
+        res.back().second = right(_);
+      else
+        res.push_back(std::make_pair(left(_), right(_)));
     }
   }
+
+  std::vector<std::pair<size_t, size_t> > query() {
+    std::vector<std::pair<size_t, size_t> > res;
+    query(res, 1);
+    return res;
+  }
+};
+
+void main1(array_bool &arr) {
+  char o0, o1, o2;
+  uint32_t lo, hi;
+  while (~scanf("%c %c%u,%u%c\n", &o0, &o1, &lo, &hi, &o2)) {
+    lo = lo * 2 + (o1 == '(');
+    hi = hi * 2 - (o2 == ')') + 1;
+    if (o0 == 'U') {
+      if (lo < hi)
+        arr.fill(lo, hi, 1);
+    } else if (o0 == 'I') {
+      if (0 < lo)
+        arr.fill(0, lo, 0);
+      if (hi < array_bool::N)
+        arr.fill(hi, array_bool::N, 0);
+    } else if (o0 == 'D') {
+      if (lo < hi)
+        arr.fill(lo, hi, 0);
+    } else if (o0 == 'C') {
+      if (0 < lo)
+        arr.fill(0, lo, 0);
+      if (lo < hi)
+        arr.flip(lo, hi);
+      if (hi < array_bool::N)
+        arr.fill(hi, array_bool::N, 0);
+    } else if (o0 == 'S') {
+      if (lo < hi)
+        arr.flip(lo, hi);
+    } else
+      assert(false);
+  }
+}
+
+void main2(array_bool &arr) {
+  std::vector<std::pair<size_t, size_t> > res = arr.query();
+  if (res.empty()) {
+    puts("empty set");
+    return;
+  }
+  for (std::vector<std::pair<size_t, size_t> >::iterator i = res.begin();
+       i < res.end(); i++) {
+    if (i != res.begin())
+      putchar(' ');
+    printf("%c%lu,%lu%c", i->first & 1 ? '(' : '[', i->first >> 1,
+           i->second >> 1, i->second & 1 ? ']' : ')');
+  }
+  puts("");
 }
 
 int main() {
-  char o0, o1, o2;
-  while (~scanf("%c %c%d,%d%c\n", &o0, &o1, &lo, &hi, &o2)) {
-    lo = lo + lo + (o1 == '(');
-    hi = hi + hi - (o2 == ')') + 1;
-    if (o0 == 'U')
-      update(lo, hi, 1);
-    else if (o0 == 'I') {
-      update(0, lo, 0);
-      update(hi, N, 0);
-    } else if (o0 == 'D')
-      update(lo, hi, 0);
-    else if (o0 == 'C') {
-      update(0, lo, 0);
-      update(hi, N, 0);
-      flip(lo, hi);
-    } else
-      flip(lo, hi);
-  }
-  lo = hi = -1;
-  query();
-  print();
-  puts(first ? "empty set" : "");
+  array_bool arr;
+  main1(arr);
+  main2(arr);
   return 0;
 }
 ```
