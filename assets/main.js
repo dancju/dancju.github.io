@@ -1,21 +1,21 @@
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    tags: 'ams',
+    macros: {
+      bm: ["{\\boldsymbol #1}", 1],
+      diff: "\\mathop{}\\!\\mathrm{d}",
+      tran: "^{\\mkern-1.5mu\\mathsf{T}}",
+      Cov: "{\\mathop{\\mathrm{Cov}}}",
+      E: "{\\mathop{\\mathrm{E}}}",
+      Var: "{\\mathop{\\mathrm{Var}}}",
+    }
+  },
+  svg: { fontCache: 'global' }
+};
+
 window.onload = () => {
   document.querySelectorAll('a[href^="http"]').forEach(e => e.setAttribute('target', '_blank'));
-
-  (() => {
-    const content = document.getElementById('content');
-    if (!content) return;
-    renderMathInElement(content, {
-      delimiters: [
-        { left: '$', right: '$', display: false },
-        { left: '$$', right: '$$', display: true },
-        { left: '\\(', right: '\\)', display: false },
-        { left: '\\[', right: '\\]', display: true },
-      ],
-      macros: {
-        "\\tran": "^{\\mkern-1.5mu\\mathsf{T}}",
-      },
-    });
-  })();
 
   (() => {
     const content = document.getElementById('content');
