@@ -20,7 +20,7 @@ title: archive
   {% for page in (1..paginator.total_pages) %}
   <li class="page-item {% if page == paginator.page %}disabled{% endif %}">
     <a class="page-link"
-      href="{% if page == 1 %}/{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">
+      href="{% if page == 1 %}/archive/{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}">
       {{ page }}
     </a>
   </li>
