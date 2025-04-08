@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fenwick trees and Segment trees
+title: Fenwick tree and Segment tree
 ---
 
 Fenwick 树與線段樹用於解決區間上的統計問題。
