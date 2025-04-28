@@ -70,28 +70,3 @@ Similar to the original StableSwap, we can solve Equation (0) for $D$ using the 
 $$D':=\frac{A \sum r_i x_i+\eta D\prod\left(\frac{w_iD}{x_i}\right)^{r_iw_i}}{A\eta-1+(\eta+1)\prod\left(\frac{w_iD}{x_i}\right)^{r_iw_i}}\,,$$
 
 where $\eta=\sum r_i w_i\,.$
-
-# Solving for $x_k$
-
-We need to solve Equation (0) for $x_k$. Let's break this down step by step:
-
-First, let's isolate $x_k$:
-
-$$r_kx_k^{1+r_kw_k}+\left(\sum'+\frac{D}{A}-D\sum r_iw_i\right)x_k^{r_kw_k}=\frac{D(w_kD)^{r_kw_k}\prod'}{A}$$
-
-where $\sum'=\sum_{i \ne k} r_i x_i$ and $\prod'=\prod_{i \ne k}\left(\frac{w_iD}{x_i}\right)^{r_iw_i}$.
-
-The non-linearity of this equation gives a complex Newton-Raphson iteration, which is not suitable for on-chain computation.
-
-<details>
-In case you are curious, the explicit Newton-Raphson iteration is
-$$x_k'=\frac{r_k^2w_kx_k+\left(\sum'+\frac{D}{A}-D\sum r_iw_i\right)(r_kw_k-1)+\frac{D(w_kD)^{r_kw_k}\prod'}{Ax_k^{r_kw_k}}}{r_k(1+r_kw_k)+\left(\sum'+\frac{D}{A}-D\sum r_iw_i\right)\frac{r_kw_k}{x_k}}\,.$$
-</details>
-
-By simply tempering the equation, we get a simpler iteration:
-
-$$x_k'=\left(\frac{\frac{D(w_kD)^{r_kw_k}\prod'}{A}-r_kx_k^{1+r_kw_k}}{\sum'+\frac{D}{A}-D\sum r_iw_i}\right)^{\frac{1}{r_kw_k}}\,.$$
-
-$$x_k'=x_k\left(\frac{\frac{\prod'}{A}\left(\frac{w_kD}{x_k}\right)^{r_kw_k}-\frac{r_kx_k}{D}}{\frac{\sum'}{D}+\frac{1}{A}-\sum r_iw_i}\right)^{\frac{1}{r_kw_k}}\,.$$
-
-This iterative method allows us to efficiently approximate the value of $x_k$ that satisfies our original equation.

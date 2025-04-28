@@ -18,13 +18,13 @@ where:
 
 # Price Dynamics
 
-To better understand how StableSwap maintains stable prices, let's examine the marginal price as a function of token amount. For simplicity, we'll focus on a two-token pool ($n=2$), where we replace $x_{1,2}$ with $b$ and $q$:
+To better understand how StableSwap maintains stable prices, let's examine the marginal price as a function of token amount. For simplicity, we'll focus on a two-token pool ($n=2$):
 
-$$4A(b+q)+D=4AD+\frac{D^3}{4bq}\,.$$
+$$4A(x_1+x_2)+D=4AD+\frac{D^3}{4x_1x_2}\,.$$
 
 The marginal price is defined by:
 
-$$x=-\diff q/\diff b\,.$$
+$$p=-\diff x_2/\diff x_1\,.$$
 
 The solution reveals:
 
@@ -40,7 +40,7 @@ PowerExpand[FullSimplify[Solve[
 </pre>
 </details>
 
-$$x=\frac12+\frac{8 A b^2 (D-b)-2 b^2 D+D^3}{4 b^{3/2} \sqrt{4 A b+D} \sqrt{4 A (b-D)^2+b D}}\,.\tag{1}$$
+$$p=\frac12+\frac{8 A x_1^2 (D-x_1)-2 x_1^2 D+D^3}{4 x_1^{3/2} \sqrt{4 A x_1+D} \sqrt{4 A (x_1-D)^2+x_1 D}}\,.\tag{1}$$
 
 The resulting order book shape demonstrates StableSwap's remarkable ability to maintain stable prices over a narrow range around the predetermined price:
 
@@ -70,7 +70,7 @@ DynamicModule[
 
 The true power of StableSwap becomes apparent when we analyze its implied order book. The marginal price and order book depth are defined by:
 
-$$f(x)=-\diff b/\diff x\,.$$
+$$f(p)=-\diff x_1/\diff p\,.$$
 
 After solving:
 
@@ -81,13 +81,13 @@ FullSimplify[-1/D[1/4 (2 + (-2 b^2 D + D^3 + 8 A b^2 (-b + D))/(b^(3/2) Sqrt[4 A
 </pre>
 </details>
 
-$$f(x)=\frac{2 b^{5/2} (4 A b+D)^{3/2} \left(4 A (b-D)^2+b D\right)^{3/2}}{D^3 \left(48 A^2 b^3+12 (1-4 A) A b^2 D+(1-4 A)^2 b D^2+3 A D^3\right)}\,.\tag{2}$$
+$$f(p)=\frac{2 x_1^{5/2} (4 A x_1+D)^{3/2} \left(4 A (x_1-D)^2+x_1 D\right)^{3/2}}{D^3 \left(48 A^2 x_1^3+12 (1-4 A) A x_1^2 D+(1-4 A)^2 x_1 D^2+3 A D^3\right)}\,.\tag{2}$$
 
-Equations (1) and (2) define function $f(x)$ in parametric form:
+Equations (1) and (2) define function $f(p)$ in parametric form:
 
 <details>
-  <summary>Mathematica</summary>
-  <pre><code>
+<summary>Mathematica</summary>
+<pre>
 DynamicModule[
   {D = 100},
   ParametricPlot[
@@ -104,7 +104,7 @@ DynamicModule[
     PlotLegends -> LineLegend[{0, 10, 100}, LegendLabel -> A]
   ]
 ]
-  </code></pre>
+</pre>
 </details>
 
 <p align="center">
@@ -147,9 +147,9 @@ we can isolate $x_k$:
 
 $$An^nx_k+An^n\sum_{i\ne k}x_i+D=ADn^n+\frac{D^{n+1}}{n^nx_k\prod_{i\ne k}x_i}\,.$$
 
-Let's denote $\sum' = \sum_{i\ne k}x_i$ and $\prod' = \prod_{i\ne k}x_i$ for clarity. Multiplying both sides by $x_k$ and rearranging terms gives us a quadratic equation:
+Let's denote $\sum' = \sum_{i\ne k}x_i$ and $\prod' = \prod_{i\ne k}\frac{D}{x_i}$ for clarity. Multiplying both sides by $x_k$ and rearranging terms gives us a quadratic equation:
 
-$$An^nx_k^2+\left(An^n\sum'+D-ADn^n\right)x_k=\frac{D^{n+1}}{n^n\prod'}\,.$$
+$$An^nx_k^2+\left(An^n\sum'+D-ADn^n\right)x_k=\frac{D\prod'}{n^n}\,.$$
 
 This can be written in the standard quadratic form:
 
@@ -159,11 +159,11 @@ where:
 
 $$b=\sum'+\frac{D}{An^n}-D\,,$$
 
-$$c=\frac{D^{n+1}}{An^{2n}\prod'}\,.$$
+$$c=\frac{D\prod'}{An^{2n}}\,.$$
 
 To solve this equation numerically, we can use the Newton-Raphson method, which provides fast convergence. The iterative formula is:
 
-$$x_k'=\frac{x_k^2+c}{2x_k+b}=\frac{x_k^2+\frac{D^{n+1}}{An^{2n}\prod'}}{2x_k+\sum'+\frac{D}{An^n}-D}\,.$$
+$$x_k'=\frac{x_k^2+c}{2x_k+b}=\frac{x_k^2+\frac{D\prod'}{An^{2n}}}{2x_k+\sum'+\frac{D}{An^n}-D}\,.$$
 
 Again, this approach was also first implemented by [Curve Finance](https://github.com/curvefi/stableswap-ng/blob/fd54b9a1a110d0e2e4f962583761d9e236b70967/contracts/main/CurveStableSwapNGMath.vy#L18) in their smart contracts.
 
